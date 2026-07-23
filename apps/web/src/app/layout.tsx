@@ -17,8 +17,9 @@ export const viewport: Viewport = {
 // Applies the stored theme before paint to avoid a flash of the wrong theme.
 const themeScript = `(function(){try{var t=localStorage.getItem('sthir-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();`;
 
-// Registers the service worker so the app shell loads offline.
-const swScript = `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}`;
+// Removes any previously-installed service worker + its caches (a caching SW
+// could leave the app stuck on a stale shell). No SW is registered now.
+const swScript = `if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.unregister();});}).catch(function(){});}if(window.caches){caches.keys().then(function(ks){ks.forEach(function(k){caches.delete(k);});}).catch(function(){});}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
