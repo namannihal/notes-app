@@ -204,6 +204,17 @@ body {
   max-width: 100%;
   border-radius: var(--radius);
 }
+
+/* Keep text in a readable column, but let tables use the full editor width
+   (so widening a column expands toward the page edge before the table gets
+   its own horizontal scrollbar). */
+.tiptap > * {
+  max-width: 48rem;
+}
+.tiptap > .tableWrapper {
+  max-width: 100%;
+}
+
 .tiptap :where(table) {
   border-collapse: collapse;
   width: 100%;

@@ -123,7 +123,7 @@ function NoteEditor({ note }: { note: Note }) {
     immediatelyRender: false,
     editorProps: {
       attributes: {
-        class: 'tiptap min-h-[60vh] max-w-3xl focus:outline-none',
+        class: 'tiptap min-h-[60vh] w-full focus:outline-none',
       },
       handlePaste: (_view, event) => {
         const files = Array.from(event.clipboardData?.files ?? []).filter(

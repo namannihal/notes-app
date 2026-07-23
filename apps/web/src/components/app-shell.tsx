@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import {
   Cloud,
   CloudOff,
+  KeyRound,
   LogOut,
   Moon,
   PanelLeft,
@@ -23,6 +24,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { DialogProvider } from '@/components/dialog-provider';
 import { LoginScreen } from '@/components/login-screen';
+import { ChangePasswordDialog } from '@/components/change-password-dialog';
 import { Tree } from '@/components/tree';
 import { NoteList } from '@/components/note-list';
 import { Editor } from '@/components/Editor/Editor';
@@ -33,6 +35,7 @@ function SyncStatus() {
   const logout = useAuthStore((s) => s.logout);
   const authed = status === 'authed';
   const { state } = useSync(authed);
+  const [pwOpen, setPwOpen] = useState(false);
 
   if (!authed) {
     return (
@@ -58,6 +61,14 @@ function SyncStatus() {
       <Button
         variant="ghost"
         size="icon-sm"
+        title="Change password"
+        onClick={() => setPwOpen(true)}
+      >
+        <KeyRound />
+      </Button>
+      <Button
+        variant="ghost"
+        size="icon-sm"
         title="Sign out"
         onClick={() => {
           resetSyncCursor();
@@ -66,6 +77,7 @@ function SyncStatus() {
       >
         <LogOut />
       </Button>
+      <ChangePasswordDialog open={pwOpen} onOpenChange={setPwOpen} />
     </div>
   );
 }

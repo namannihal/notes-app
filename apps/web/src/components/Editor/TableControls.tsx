@@ -127,7 +127,7 @@ export function TableControls({
       const lt = lastTable.current;
       if (lt && cont && cont.contains(lt)) {
         const r = lt.getBoundingClientRect();
-        const m = BAR + 16;
+        const m = BAR * 2 + 20;
         if (
           e.clientX >= r.left - m &&
           e.clientX <= r.right + m &&
@@ -230,11 +230,25 @@ export function TableControls({
     editor.chain().focus().setTextSelection(last.cellPos + 2).addRowAfter().run();
   }
 
+  function addRowTop() {
+    const g = geomRef.current;
+    if (!g || g.rows.length === 0) return;
+    const first = g.rows[0];
+    editor.chain().focus().setTextSelection(first.cellPos + 2).addRowBefore().run();
+  }
+
   function addColRight() {
     const g = geomRef.current;
     if (!g || g.cols.length === 0) return;
     const last = g.cols[g.cols.length - 1];
     editor.chain().focus().setTextSelection(last.cellPos + 2).addColumnAfter().run();
+  }
+
+  function addColLeft() {
+    const g = geomRef.current;
+    if (!g || g.cols.length === 0) return;
+    const first = g.cols[0];
+    editor.chain().focus().setTextSelection(first.cellPos + 2).addColumnBefore().run();
   }
 
   if (!geom) return null;
@@ -274,7 +288,17 @@ export function TableControls({
       <button
         data-table-ctl
         type="button"
-        title="Add row"
+        title="Add row above"
+        onClick={addRowTop}
+        className="pointer-events-auto absolute z-20 flex items-center justify-center rounded-sm border bg-muted text-muted-foreground hover:bg-primary/40 hover:text-foreground"
+        style={{ top: geom.corner.top - BAR * 2 - 3, left: geom.corner.left, width: geom.width, height: BAR }}
+      >
+        <Plus className="size-3" />
+      </button>
+      <button
+        data-table-ctl
+        type="button"
+        title="Add row below"
         onClick={addRowBottom}
         className="pointer-events-auto absolute z-20 flex items-center justify-center rounded-sm border bg-muted text-muted-foreground hover:bg-primary/40 hover:text-foreground"
         style={{ top: geom.corner.top + geom.height + 3, left: geom.corner.left, width: geom.width, height: BAR }}
@@ -284,7 +308,17 @@ export function TableControls({
       <button
         data-table-ctl
         type="button"
-        title="Add column"
+        title="Add column left"
+        onClick={addColLeft}
+        className="pointer-events-auto absolute z-20 flex items-center justify-center rounded-sm border bg-muted text-muted-foreground hover:bg-primary/40 hover:text-foreground"
+        style={{ top: geom.corner.top, left: geom.corner.left - BAR * 2 - 3, width: BAR, height: geom.height }}
+      >
+        <Plus className="size-3" />
+      </button>
+      <button
+        data-table-ctl
+        type="button"
+        title="Add column right"
         onClick={addColRight}
         className="pointer-events-auto absolute z-20 flex items-center justify-center rounded-sm border bg-muted text-muted-foreground hover:bg-primary/40 hover:text-foreground"
         style={{ top: geom.corner.top, left: geom.corner.left + geom.width + 3, width: BAR, height: geom.height }}

@@ -76,6 +76,11 @@ export const api = {
       body: JSON.stringify({ email, password }),
     }),
   logout: () => request<{ ok: true }>('/api/auth/logout', { method: 'POST' }),
+  changePassword: (currentPassword: string, newPassword: string) =>
+    request<{ ok: true }>('/api/auth/change-password', {
+      method: 'POST',
+      body: JSON.stringify({ currentPassword, newPassword }),
+    }),
 
   pull: (since?: string) =>
     request<PullResponse>(`/api/sync/pull${since ? `?since=${encodeURIComponent(since)}` : ''}`),
