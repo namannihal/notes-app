@@ -103,7 +103,24 @@ function Shell() {
     toggleTree,
     listCollapsed,
     toggleList,
+    listWidth,
+    setListWidth,
   } = useAppStore();
+
+  function startListResize(e: React.PointerEvent) {
+    e.preventDefault();
+    const startX = e.clientX;
+    const startW = listWidth;
+    document.body.style.cursor = 'col-resize';
+    const onMove = (ev: PointerEvent) => setListWidth(startW + (ev.clientX - startX));
+    const onUp = () => {
+      window.removeEventListener('pointermove', onMove);
+      window.removeEventListener('pointerup', onUp);
+      document.body.style.cursor = '';
+    };
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('pointerup', onUp);
+  }
 
   useEffect(() => {
     // Best-effort: keep our IndexedDB data from being evicted.
@@ -132,14 +149,23 @@ function Shell() {
       </aside>
 
       <section
+        style={{ '--list-w': `${listWidth}px` } as React.CSSProperties}
         className={cn(
-          'h-full w-full shrink-0 flex-col border-r md:w-80',
+          'h-full w-full shrink-0 flex-col border-r md:w-[var(--list-w)]',
           mobilePane === 'list' ? 'flex' : 'hidden',
           listCollapsed ? 'md:hidden' : 'md:flex',
         )}
       >
         <NoteList />
       </section>
+
+      {!listCollapsed && (
+        <div
+          onPointerDown={startListResize}
+          title="Drag to resize the notes list"
+          className="hidden w-1 shrink-0 cursor-col-resize bg-border transition-colors hover:bg-primary/50 md:block"
+        />
+      )}
 
       <main
         className={cn(
