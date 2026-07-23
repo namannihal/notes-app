@@ -332,12 +332,7 @@ export function ImageEditorModal({ src: initialSrc, annotations, arrows, onSave,
 
       {/* Canvas */}
       <div className="flex flex-1 items-center justify-center overflow-auto p-6">
-        <div
-          ref={wrapRef}
-          onPointerDown={onSurfacePointerDown}
-          className={`relative ${tool === 'select' ? '' : 'cursor-crosshair'}`}
-          style={{ lineHeight: 0 }}
-        >
+        <div ref={wrapRef} className="relative" style={{ lineHeight: 0 }}>
           <img
             ref={imgRef}
             src={src}
@@ -349,6 +344,12 @@ export function ImageEditorModal({ src: initialSrc, annotations, arrows, onSave,
 
           <ArrowsSvg arrows={draft ? [...lines, draft] : lines} width={dims.w} height={dims.h} />
 
+          {/* Interaction surface (captures clicks for the active tool). */}
+          <div
+            onPointerDown={onSurfacePointerDown}
+            className={`absolute inset-0 z-10 ${tool === 'select' ? '' : 'cursor-crosshair'}`}
+          />
+
           {/* Arrow hit targets + endpoint handles */}
           {tool === 'select' &&
             lines.map((a) => (
@@ -358,7 +359,7 @@ export function ImageEditorModal({ src: initialSrc, annotations, arrows, onSave,
                     e.stopPropagation();
                     setSelected(a.id);
                   }}
-                  className="absolute"
+                  className="absolute z-20"
                   style={{
                     left: `${Math.min(a.x1, a.x2) * 100}%`,
                     top: `${Math.min(a.y1, a.y2) * 100}%`,
@@ -372,7 +373,7 @@ export function ImageEditorModal({ src: initialSrc, annotations, arrows, onSave,
                     <span
                       key={w}
                       onPointerDown={(e) => dragEndpoint(e, a.id, w)}
-                      className="absolute size-3 -translate-x-1/2 -translate-y-1/2 cursor-move rounded-full border-2 border-white bg-primary"
+                      className="absolute z-20 size-3 -translate-x-1/2 -translate-y-1/2 cursor-move rounded-full border-2 border-white bg-primary"
                       style={{
                         left: `${(w === 1 ? a.x1 : a.x2) * 100}%`,
                         top: `${(w === 1 ? a.y1 : a.y2) * 100}%`,
@@ -386,7 +387,7 @@ export function ImageEditorModal({ src: initialSrc, annotations, arrows, onSave,
           {labels.map((a) => (
             <span
               key={a.id}
-              className={`absolute -translate-y-1/2 ${selected === a.id ? 'outline outline-2 outline-primary' : ''}`}
+              className={`absolute z-20 -translate-y-1/2 ${selected === a.id ? 'outline outline-2 outline-primary' : ''}`}
               style={{ left: `${a.x * 100}%`, top: `${a.y * 100}%` }}
             >
               <span
@@ -412,7 +413,7 @@ export function ImageEditorModal({ src: initialSrc, annotations, arrows, onSave,
           {/* Crop rectangle */}
           {crop && (
             <span
-              className="pointer-events-none absolute border-2 border-primary shadow-[0_0_0_9999px_rgba(0,0,0,0.5)]"
+              className="pointer-events-none absolute z-30 border-2 border-primary shadow-[0_0_0_9999px_rgba(0,0,0,0.5)]"
               style={{ left: crop.x, top: crop.y, width: crop.w, height: crop.h }}
             />
           )}
