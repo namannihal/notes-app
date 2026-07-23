@@ -40,6 +40,22 @@ export const AttachmentImage = Image.extend({
             ? { 'data-annotations': JSON.stringify(attrs.annotations) }
             : {},
       },
+      arrows: {
+        default: [],
+        parseHTML: (el) => {
+          const raw = el.getAttribute('data-arrows');
+          if (!raw) return [];
+          try {
+            return JSON.parse(raw);
+          } catch {
+            return [];
+          }
+        },
+        renderHTML: (attrs) =>
+          Array.isArray(attrs.arrows) && attrs.arrows.length
+            ? { 'data-arrows': JSON.stringify(attrs.arrows) }
+            : {},
+      },
     };
   },
 

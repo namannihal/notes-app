@@ -1,30 +1,17 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { NodeViewWrapper } from '@tiptap/react';
 import type { NodeViewProps } from '@tiptap/react';
-import { Check, Crop, Move, Type, X } from 'lucide-react';
+import { Move, Pencil, X } from 'lucide-react';
 import { getAttachmentUrl, replaceAttachmentBlob } from '../../../db/attachments';
-
-interface Rect {
-  x: number;
-  y: number;
-  w: number;
-  h: number;
-}
-
-interface Annotation {
-  id: string;
-  /** Position as fractions (0–1) of the image so labels scale with it. */
-  x: number;
-  y: number;
-  text: string;
-}
+import { ArrowsSvg, ImageEditorModal, type Annotation, type Arrow } from './ImageEditorModal';
 
 /**
- * Renders an image by resolving its attachment id to a blob object URL, with a
- * move handle (drag to reposition, incl. out of tables), resize handle, crop,
- * delete, and re-editable text annotations overlaid on the image.
+ * Renders an image (resolved from its attachment blob) with a move handle,
+ * resize handle, delete, and an Edit button that opens a full-screen editor for
+ * cropping and adding re-editable arrows and text.
  */
 export function AttachmentImageView({
   node,
@@ -41,15 +28,11 @@ export function AttachmentImageView({
   const annotations: Annotation[] = Array.isArray(node.attrs.annotations)
     ? (node.attrs.annotations as Annotation[])
     : [];
+  const arrows: Arrow[] = Array.isArray(node.attrs.arrows) ? (node.attrs.arrows as Arrow[]) : [];
   const [src, setSrc] = useState<string | null>(rawSrc);
+  const [editing, setEditing] = useState(false);
+  const [dims, setDims] = useState({ w: 0, h: 0 });
   const imgRef = useRef<HTMLImageElement>(null);
-  const [cropping, setCropping] = useState(false);
-  const [rect, setRect] = useState<Rect | null>(null);
-  const [annotating, setAnnotating] = useState(false);
-
-  function setAnnotations(next: Annotation[]) {
-    updateAttributes({ annotations: next });
-  }
 
   // --- Move (pointer-based, works anywhere incl. out of tables) ------------
   function startMove(e: React.PointerEvent) {
@@ -120,133 +103,18 @@ export function AttachmentImageView({
     window.addEventListener('pointerup', onUp);
   }
 
-  // --- Crop -----------------------------------------------------------------
-  function beginCrop() {
-    setCropping(true);
-    setRect(null);
-  }
-
-  function onCropPointerDown(e: React.PointerEvent) {
-    if (!cropping) return;
-    e.preventDefault();
-    e.stopPropagation();
-    const box = (e.currentTarget as HTMLElement).getBoundingClientRect();
-    const x0 = e.clientX - box.left;
-    const y0 = e.clientY - box.top;
-
-    function onMove(ev: PointerEvent) {
-      const x1 = Math.max(0, Math.min(box.width, ev.clientX - box.left));
-      const y1 = Math.max(0, Math.min(box.height, ev.clientY - box.top));
-      setRect({
-        x: Math.min(x0, x1),
-        y: Math.min(y0, y1),
-        w: Math.abs(x1 - x0),
-        h: Math.abs(y1 - y0),
-      });
-    }
-    function onUp() {
-      window.removeEventListener('pointermove', onMove);
-      window.removeEventListener('pointerup', onUp);
-    }
-    window.addEventListener('pointermove', onMove);
-    window.addEventListener('pointerup', onUp);
-  }
-
-  async function applyCrop() {
-    const img = imgRef.current;
-    if (!img || !attachmentId || !rect || rect.w < 8 || rect.h < 8) {
-      setCropping(false);
-      setRect(null);
-      return;
-    }
-    const scaleX = img.naturalWidth / img.offsetWidth;
-    const scaleY = img.naturalHeight / img.offsetHeight;
-    const canvas = document.createElement('canvas');
-    canvas.width = Math.round(rect.w * scaleX);
-    canvas.height = Math.round(rect.h * scaleY);
-    const ctx = canvas.getContext('2d');
-    if (!ctx) {
-      setCropping(false);
-      return;
-    }
-    ctx.drawImage(
-      img,
-      rect.x * scaleX,
-      rect.y * scaleY,
-      rect.w * scaleX,
-      rect.h * scaleY,
-      0,
-      0,
-      canvas.width,
-      canvas.height,
-    );
-    const blob: Blob | null = await new Promise((resolve) =>
-      canvas.toBlob((b) => resolve(b), 'image/png'),
-    );
-    if (blob) {
-      await replaceAttachmentBlob(attachmentId, blob);
-      updateAttributes({ width: null });
-      const url = await getAttachmentUrl(attachmentId);
-      if (url) setSrc(url);
-    }
-    setCropping(false);
-    setRect(null);
-  }
-
-  function cancelCrop() {
-    setCropping(false);
-    setRect(null);
-  }
-
-  // --- Annotate (re-editable text overlays) --------------------------------
-  function beginAnnotate() {
-    setAnnotating(true);
-  }
-
-  function endAnnotate() {
-    setAnnotations(annotations.filter((a) => a.text.trim() !== ''));
-    setAnnotating(false);
-  }
-
-  function addAnnotationAt(e: React.PointerEvent) {
-    if (e.target !== e.currentTarget) return; // clicked a label, not empty space
-    e.preventDefault();
-    const box = (e.currentTarget as HTMLElement).getBoundingClientRect();
-    const x = (e.clientX - box.left) / box.width;
-    const y = (e.clientY - box.top) / box.height;
-    const id = Math.random().toString(36).slice(2);
-    setAnnotations([...annotations, { id, x, y, text: '' }]);
-  }
-
-  function updateAnnotationText(id: string, text: string) {
-    setAnnotations(annotations.map((a) => (a.id === id ? { ...a, text } : a)));
-  }
-
-  function removeAnnotation(id: string) {
-    setAnnotations(annotations.filter((a) => a.id !== id));
-  }
-
-  function startAnnotationDrag(e: React.PointerEvent, id: string) {
-    e.preventDefault();
-    e.stopPropagation();
+  // Track the displayed image size so the arrow overlay stays aligned.
+  useEffect(() => {
     const img = imgRef.current;
     if (!img) return;
-    const box = img.getBoundingClientRect();
-    const base = annotations;
-    function onMove(ev: PointerEvent) {
-      const x = Math.min(1, Math.max(0, (ev.clientX - box.left) / box.width));
-      const y = Math.min(1, Math.max(0, (ev.clientY - box.top) / box.height));
-      setAnnotations(base.map((a) => (a.id === id ? { ...a, x, y } : a)));
-    }
-    function onUp() {
-      window.removeEventListener('pointermove', onMove);
-      window.removeEventListener('pointerup', onUp);
-    }
-    window.addEventListener('pointermove', onMove);
-    window.addEventListener('pointerup', onUp);
-  }
+    const update = () => setDims({ w: img.clientWidth, h: img.clientHeight });
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(img);
+    return () => ro.disconnect();
+  }, [src]);
 
-  const controlsHidden = !selected || cropping || annotating;
+  const controlsHidden = !selected;
 
   return (
     <NodeViewWrapper as="span" className="relative inline-block leading-none">
@@ -261,107 +129,23 @@ export function AttachmentImageView({
         />
       ) : null}
 
-      {/* Static annotation labels (always visible, part of the content). */}
-      {!annotating &&
-        annotations.map((a) => (
-          <span
-            key={a.id}
-            style={{ left: `${a.x * 100}%`, top: `${a.y * 100}%` }}
-            className="pointer-events-none absolute z-10 -translate-y-1/2 whitespace-nowrap text-sm font-bold text-red-600 [text-shadow:0_0_2px_white,0_0_2px_white]"
-          >
-            {a.text}
-          </span>
-        ))}
-
-      {/* Crop overlay */}
-      {cropping && (
+      {/* Inline overlays (read-only): arrows + text labels */}
+      <ArrowsSvg arrows={arrows} width={dims.w} height={dims.h} className="z-10" />
+      {annotations.map((a) => (
         <span
-          contentEditable={false}
-          onPointerDown={onCropPointerDown}
-          className="absolute inset-0 z-30 cursor-crosshair select-none"
+          key={a.id}
+          style={{ left: `${a.x * 100}%`, top: `${a.y * 100}%`, color: a.color ?? '#dc2626' }}
+          className="pointer-events-none absolute z-10 -translate-y-1/2 whitespace-nowrap text-base font-bold [text-shadow:0_0_2px_white,0_0_2px_white]"
         >
-          {rect && (
-            <span
-              className="absolute border-2 border-primary shadow-[0_0_0_9999px_rgba(0,0,0,0.35)]"
-              style={{ left: rect.x, top: rect.y, width: rect.w, height: rect.h }}
-            />
-          )}
-          <span className="absolute right-1.5 top-1.5 z-40 flex gap-1">
-            <button
-              type="button"
-              title="Apply crop"
-              onClick={applyCrop}
-              className="pointer-events-auto flex size-7 items-center justify-center rounded-md bg-primary text-primary-foreground shadow"
-            >
-              <Check className="size-4" />
-            </button>
-            <button
-              type="button"
-              title="Cancel"
-              onClick={cancelCrop}
-              className="pointer-events-auto flex size-7 items-center justify-center rounded-md bg-background text-foreground shadow ring-1 ring-border"
-            >
-              <X className="size-4" />
-            </button>
-          </span>
+          {a.text}
         </span>
-      )}
-
-      {/* Annotate editing overlay */}
-      {annotating && (
-        <span
-          contentEditable={false}
-          onPointerDown={addAnnotationAt}
-          className="absolute inset-0 z-30 cursor-crosshair select-none"
-        >
-          {annotations.map((a) => (
-            <span
-              key={a.id}
-              style={{ left: `${a.x * 100}%`, top: `${a.y * 100}%` }}
-              className="absolute z-40 flex -translate-y-1/2 items-center gap-1"
-            >
-              <span
-                onPointerDown={(e) => startAnnotationDrag(e, a.id)}
-                className="pointer-events-auto flex size-5 cursor-move items-center justify-center rounded bg-primary text-primary-foreground"
-              >
-                <Move className="size-3" />
-              </span>
-              <input
-                value={a.text}
-                autoFocus={a.text === ''}
-                placeholder="label"
-                onPointerDown={(e) => e.stopPropagation()}
-                onChange={(e) => updateAnnotationText(a.id, e.target.value)}
-                className="pointer-events-auto w-28 rounded bg-white/85 px-1 text-sm font-bold text-red-600 outline outline-1 outline-primary"
-              />
-              <button
-                type="button"
-                title="Remove label"
-                onPointerDown={(e) => e.stopPropagation()}
-                onClick={() => removeAnnotation(a.id)}
-                className="pointer-events-auto flex size-5 items-center justify-center rounded bg-background text-destructive ring-1 ring-border"
-              >
-                <X className="size-3" />
-              </button>
-            </span>
-          ))}
-          <span className="absolute right-1.5 top-1.5 z-50">
-            <button
-              type="button"
-              onClick={endAnnotate}
-              className="pointer-events-auto flex items-center gap-1 rounded-md bg-primary px-2 py-1 text-xs font-medium text-primary-foreground shadow"
-            >
-              <Check className="size-3.5" /> Done
-            </button>
-          </span>
-        </span>
-      )}
+      ))}
 
       {/* Selection ring */}
       <span
         aria-hidden={!selected}
         className={`pointer-events-none absolute inset-0 rounded-md ring-2 ring-primary transition-opacity ${
-          selected && !cropping ? 'opacity-100' : 'opacity-0'
+          selected ? 'opacity-100' : 'opacity-0'
         }`}
       />
 
@@ -380,21 +164,12 @@ export function AttachmentImageView({
         </span>
         <button
           type="button"
-          title="Crop image"
+          title="Edit image (crop, arrows, text)"
           tabIndex={selected ? 0 : -1}
-          onClick={beginCrop}
-          className="flex size-7 items-center justify-center rounded-md bg-background/90 text-foreground shadow ring-1 ring-border hover:bg-background"
+          onClick={() => setEditing(true)}
+          className="flex h-7 items-center gap-1 rounded-md bg-background/90 px-2 text-xs font-medium text-foreground shadow ring-1 ring-border hover:bg-background"
         >
-          <Crop className="size-4" />
-        </button>
-        <button
-          type="button"
-          title="Annotate (type on image)"
-          tabIndex={selected ? 0 : -1}
-          onClick={beginAnnotate}
-          className="flex size-7 items-center justify-center rounded-md bg-background/90 text-foreground shadow ring-1 ring-border hover:bg-background"
-        >
-          <Type className="size-4" />
+          <Pencil className="size-3.5" /> Edit
         </button>
       </span>
 
@@ -416,6 +191,27 @@ export function AttachmentImageView({
           controlsHidden ? 'pointer-events-none opacity-0' : 'opacity-100'
         }`}
       />
+
+      {editing &&
+        src &&
+        createPortal(
+          <ImageEditorModal
+            src={src}
+            annotations={annotations}
+            arrows={arrows}
+            onSave={(a, ar) => updateAttributes({ annotations: a, arrows: ar })}
+            onCrop={async (blob) => {
+              if (!attachmentId) return null;
+              await replaceAttachmentBlob(attachmentId, blob);
+              updateAttributes({ width: null, annotations: [], arrows: [] });
+              const url = await getAttachmentUrl(attachmentId);
+              if (url) setSrc(url);
+              return url;
+            }}
+            onClose={() => setEditing(false)}
+          />,
+          document.body,
+        )}
     </NodeViewWrapper>
   );
 }
