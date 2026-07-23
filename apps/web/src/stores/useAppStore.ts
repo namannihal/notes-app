@@ -5,9 +5,14 @@ const LIST_KEY = 'sthir-list-collapsed';
 const SORT_KEY = 'sthir-note-sort';
 const LIST_WIDTH_KEY = 'sthir-list-width';
 const FOCUS_KEY = 'sthir-focus';
+const TBL_W_KEY = 'sthir-table-border-w';
+const TBL_SHADE_KEY = 'sthir-table-border-shade';
 
 const MIN_LIST_WIDTH = 220;
 const MAX_LIST_WIDTH = 640;
+
+const DEFAULT_TABLE_BORDER_W = 1.5;
+const DEFAULT_TABLE_BORDER_SHADE = 35;
 
 export type NoteSort = 'updated' | 'created' | 'title' | 'manual';
 
@@ -25,6 +30,10 @@ interface AppState {
   noteSort: NoteSort;
   /** Width (px) of the note-list pane on wide screens. */
   listWidth: number;
+  /** Table cell border thickness in px. */
+  tableBorderWidth: number;
+  /** Table cell border darkness (% of foreground colour mixed in). */
+  tableBorderShade: number;
   /** When set, the note list shows all notes carrying this tag. */
   tagFilter: string | null;
   /** Mobile/narrow navigation pane. */
@@ -39,6 +48,8 @@ interface AppState {
   setNoteSort: (sort: NoteSort) => void;
   setTagFilter: (tag: string | null) => void;
   setListWidth: (w: number) => void;
+  setTableBorderWidth: (w: number) => void;
+  setTableBorderShade: (s: number) => void;
 }
 
 function initialListWidth(): number {
@@ -51,6 +62,16 @@ function initialSort(): NoteSort {
   return s === 'created' || s === 'title' || s === 'manual' ? s : 'updated';
 }
 
+function initialTableBorderWidth(): number {
+  const s = typeof localStorage !== 'undefined' ? Number(localStorage.getItem(TBL_W_KEY)) : NaN;
+  return Number.isFinite(s) && s >= 0.5 && s <= 5 ? s : DEFAULT_TABLE_BORDER_W;
+}
+
+function initialTableBorderShade(): number {
+  const s = typeof localStorage !== 'undefined' ? Number(localStorage.getItem(TBL_SHADE_KEY)) : NaN;
+  return Number.isFinite(s) && s >= 5 && s <= 90 ? s : DEFAULT_TABLE_BORDER_SHADE;
+}
+
 export const useAppStore = create<AppState>((set) => ({
   selectedStackId: null,
   selectedNotebookId: null,
@@ -60,6 +81,8 @@ export const useAppStore = create<AppState>((set) => ({
   focusMode: typeof localStorage !== 'undefined' && localStorage.getItem(FOCUS_KEY) === 'true',
   noteSort: initialSort(),
   listWidth: initialListWidth(),
+  tableBorderWidth: initialTableBorderWidth(),
+  tableBorderShade: initialTableBorderShade(),
   tagFilter: null,
   mobilePane: 'tree',
   selectStack: (id) => set({ selectedStackId: id }),
@@ -94,5 +117,15 @@ export const useAppStore = create<AppState>((set) => ({
     const clamped = Math.min(MAX_LIST_WIDTH, Math.max(MIN_LIST_WIDTH, Math.round(w)));
     localStorage.setItem(LIST_WIDTH_KEY, String(clamped));
     set({ listWidth: clamped });
+  },
+  setTableBorderWidth: (w) => {
+    const clamped = Math.min(5, Math.max(0.5, w));
+    localStorage.setItem(TBL_W_KEY, String(clamped));
+    set({ tableBorderWidth: clamped });
+  },
+  setTableBorderShade: (s) => {
+    const clamped = Math.min(90, Math.max(5, Math.round(s)));
+    localStorage.setItem(TBL_SHADE_KEY, String(clamped));
+    set({ tableBorderShade: clamped });
   },
 }));

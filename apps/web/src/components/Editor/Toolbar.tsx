@@ -27,6 +27,7 @@ import {
   Search,
   Strikethrough,
   Table as TableIcon,
+  TableProperties,
   Underline as UnderlineIcon,
   Unlink,
 } from 'lucide-react';
@@ -40,6 +41,7 @@ import {
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
+import { useAppStore } from '@/stores/useAppStore';
 import { saveAttachment } from '../../db/attachments';
 import { useDialog } from '../dialog-provider';
 
@@ -91,6 +93,10 @@ export function Toolbar({ editor, noteId, onFind }: Props) {
   const dialog = useDialog();
   const imageInput = useRef<HTMLInputElement>(null);
   const pdfInput = useRef<HTMLInputElement>(null);
+  const tableBorderWidth = useAppStore((s) => s.tableBorderWidth);
+  const tableBorderShade = useAppStore((s) => s.tableBorderShade);
+  const setTableBorderWidth = useAppStore((s) => s.setTableBorderWidth);
+  const setTableBorderShade = useAppStore((s) => s.setTableBorderShade);
 
   async function onImage(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -327,6 +333,77 @@ export function Toolbar({ editor, noteId, onFind }: Props) {
         <TB label="Insert table" onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()}>
           <TableIcon />
         </TB>
+        <Popover>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <PopoverTrigger asChild>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon-sm"
+                  onMouseDown={(e) => e.preventDefault()}
+                >
+                  <TableProperties />
+                </Button>
+              </PopoverTrigger>
+            </TooltipTrigger>
+            <TooltipContent>Table border style</TooltipContent>
+          </Tooltip>
+          <PopoverContent className="w-64" onOpenAutoFocus={(e) => e.preventDefault()}>
+            <div className="space-y-3">
+              <div className="text-xs font-medium">Table border</div>
+              <label className="block space-y-1">
+                <span className="flex items-center justify-between text-xs">
+                  <span>Thickness</span>
+                  <span className="text-muted-foreground">{tableBorderWidth}px</span>
+                </span>
+                <input
+                  type="range"
+                  min={0.5}
+                  max={5}
+                  step={0.5}
+                  value={tableBorderWidth}
+                  onChange={(e) => setTableBorderWidth(Number(e.target.value))}
+                  className="w-full accent-primary"
+                />
+              </label>
+              <label className="block space-y-1">
+                <span className="flex items-center justify-between text-xs">
+                  <span>Darkness</span>
+                  <span className="text-muted-foreground">{tableBorderShade}%</span>
+                </span>
+                <input
+                  type="range"
+                  min={5}
+                  max={90}
+                  step={5}
+                  value={tableBorderShade}
+                  onChange={(e) => setTableBorderShade(Number(e.target.value))}
+                  className="w-full accent-primary"
+                />
+              </label>
+              <div
+                className="rounded"
+                style={{
+                  height: 28,
+                  borderStyle: 'solid',
+                  borderWidth: `${tableBorderWidth}px`,
+                  borderColor: `color-mix(in oklch, var(--foreground) ${tableBorderShade}%, transparent)`,
+                }}
+              />
+              <button
+                type="button"
+                className="text-xs text-muted-foreground underline hover:text-foreground"
+                onClick={() => {
+                  setTableBorderWidth(1.5);
+                  setTableBorderShade(35);
+                }}
+              >
+                Reset to default
+              </button>
+            </div>
+          </PopoverContent>
+        </Popover>
         <TB label="Insert image" onClick={() => imageInput.current?.click()}>
           <ImageIcon />
         </TB>

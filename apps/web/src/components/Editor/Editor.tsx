@@ -75,6 +75,8 @@ function NoteEditor({ note }: { note: Note }) {
   const [findOpen, setFindOpen] = useState(false);
   const [tagInput, setTagInput] = useState('');
   const setTagFilter = useAppStore((s) => s.setTagFilter);
+  const tableBorderWidth = useAppStore((s) => s.tableBorderWidth);
+  const tableBorderShade = useAppStore((s) => s.tableBorderShade);
   const [saveState, setSaveState] = useState<'idle' | 'saving' | 'saved'>('idle');
   const [stats, setStats] = useState(() => {
     const t = note.contentText ?? '';
@@ -311,7 +313,15 @@ function NoteEditor({ note }: { note: Note }) {
           </DropdownMenu>
         </div>
         <TableControls editor={editor} containerRef={scrollRef} />
-        <div className="px-8 pb-24">
+        <div
+          className="px-8 pb-24"
+          style={
+            {
+              '--tbl-border-w': `${tableBorderWidth}px`,
+              '--tbl-border-c': `color-mix(in oklch, var(--foreground) ${tableBorderShade}%, transparent)`,
+            } as React.CSSProperties
+          }
+        >
           <EditorContent editor={editor} />
         </div>
       </div>
