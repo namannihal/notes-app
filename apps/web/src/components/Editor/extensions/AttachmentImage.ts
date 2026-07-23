@@ -24,6 +24,22 @@ export const AttachmentImage = Image.extend({
         },
         renderHTML: (attrs) => (attrs.width ? { style: `width: ${attrs.width}px` } : {}),
       },
+      annotations: {
+        default: [],
+        parseHTML: (el) => {
+          const raw = el.getAttribute('data-annotations');
+          if (!raw) return [];
+          try {
+            return JSON.parse(raw);
+          } catch {
+            return [];
+          }
+        },
+        renderHTML: (attrs) =>
+          Array.isArray(attrs.annotations) && attrs.annotations.length
+            ? { 'data-annotations': JSON.stringify(attrs.annotations) }
+            : {},
+      },
     };
   },
 
