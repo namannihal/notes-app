@@ -124,6 +124,27 @@ export async function deleteNote(id: string): Promise<void> {
   await db.notes.update(id, { deletedAt: ts, updatedAt: ts, _dirty: true });
 }
 
+/** Restore a soft-deleted note from the trash. */
+export async function restoreNote(id: string): Promise<void> {
+  await db.notes.update(id, { deletedAt: null, updatedAt: now(), _dirty: true });
+}
+
+/** Permanently remove a note locally (server keeps the soft-delete tombstone). */
+export async function purgeNote(id: string): Promise<void> {
+  await db.notes.delete(id);
+}
+
+/** Toggle a note's pinned state. */
+export async function setNotePinned(id: string, pinned: boolean): Promise<void> {
+  await db.notes.update(id, { pinned, updatedAt: now(), _dirty: true });
+}
+
+/** Replace a note's tags. */
+export async function setNoteTags(id: string, tags: string[]): Promise<void> {
+  const clean = Array.from(new Set(tags.map((t) => t.trim()).filter(Boolean)));
+  await db.notes.update(id, { tags: clean, updatedAt: now(), _dirty: true });
+}
+
 // --- Reordering (drag-and-drop) ------------------------------------------
 
 export async function reorderStacks(orderedIds: string[]): Promise<void> {

@@ -15,6 +15,7 @@ import {
   Sun,
 } from 'lucide-react';
 import { db } from '@/db/db';
+import { gcOrphanAttachments } from '@/db/attachments';
 import { useAppStore } from '@/stores/useAppStore';
 import { useAuthStore } from '@/stores/useAuthStore';
 import { useTheme } from '@/hooks/useTheme';
@@ -97,6 +98,9 @@ function Shell() {
   useEffect(() => {
     // Best-effort: keep our IndexedDB data from being evicted.
     void navigator.storage?.persist?.();
+    // One-time cleanup of orphaned attachments/blobs left by deleted notes.
+    const t = setTimeout(() => void gcOrphanAttachments(), 8000);
+    return () => clearTimeout(t);
   }, []);
 
   const note = useLiveQuery(

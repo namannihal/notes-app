@@ -125,8 +125,11 @@ function collectAttachmentIds(node: unknown, out: Set<string>): void {
 }
 
 /**
- * Remove attachment rows for a note that are no longer referenced in its
- * content, and garbage-collect any blob no other attachment still points to.
+ * Reconcile a note's attachments after a save. Referenced attachments that
+ * belong to a different note are re-homed to this one (so an image dragged or
+ * pasted into another note keeps working). Unreferenced rows are NOT deleted
+ * here — a moved image now lives elsewhere — orphans are swept by
+ * gcOrphanAttachments().
  */
 export async function reconcileNoteAttachments(
   noteId: string,
@@ -135,12 +138,67 @@ export async function reconcileNoteAttachments(
   const used = new Set<string>();
   collectAttachmentIds(contentJson, used);
 
-  const rows = await db.attachments.where('noteId').equals(noteId).toArray();
-  for (const att of rows) {
-    if (used.has(att.id)) continue;
+  for (const id of used) {
+    const att = await db.attachments.get(id);
+    if (att && att.noteId !== noteId) {
+      // Re-home to this note and re-sync so the server row's note matches.
+      await db.attachments.update(id, { noteId, updatedAt: Date.now(), _uploaded: false });
+      urlCache.delete(id);
+    }
+  }
+}
+
+/**
+ * Global sweep: delete attachment rows not referenced by any live note, and any
+ * blob no remaining attachment points to. Recently-created rows are spared in
+ * case their note hasn't autosaved yet.
+ */
+export async function gcOrphanAttachments(): Promise<void> {
+  const GRACE_MS = 60_000;
+  const notes = await db.notes.toArray();
+  const referenced = new Set<string>();
+  for (const n of notes) {
+    if (n.deletedAt) continue;
+    collectAttachmentIds(n.contentJson, referenced);
+  }
+
+  const all = await db.attachments.toArray();
+  for (const att of all) {
+    if (referenced.has(att.id)) continue;
+    if (Date.now() - att.createdAt < GRACE_MS) continue;
     await db.attachments.delete(att.id);
     urlCache.delete(att.id);
-    const others = await db.attachments.where('checksum').equals(att.checksum).count();
-    if (others === 0) await db.blobs.delete(att.checksum);
   }
+
+  const usedChecksums = new Set((await db.attachments.toArray()).map((a) => a.checksum));
+  const blobs = await db.blobs.toArray();
+  for (const b of blobs) {
+    if (!usedChecksums.has(b.checksum)) await db.blobs.delete(b.checksum);
+  }
+}
+
+/**
+ * Overwrite an attachment's bytes in place (used by image crop). Stores the new
+ * blob, updates checksum/size/dimensions, and marks it for re-upload.
+ */
+export async function replaceAttachmentBlob(attachmentId: string, blob: Blob): Promise<void> {
+  const att = await db.attachments.get(attachmentId);
+  if (!att) return;
+
+  const buffer = await blob.arrayBuffer();
+  const checksum = await sha256(buffer);
+  const existing = await db.blobs.get(checksum);
+  if (!existing) {
+    await db.blobs.add({ checksum, blob, pinned: true, lastAccessed: Date.now() });
+  }
+  const dims = att.kind === 'image' ? await imageDimensions(blob) : undefined;
+  await db.attachments.update(attachmentId, {
+    checksum,
+    byteSize: blob.size,
+    width: dims?.width,
+    height: dims?.height,
+    updatedAt: Date.now(),
+    _uploaded: false,
+  });
+  urlCache.delete(attachmentId);
 }

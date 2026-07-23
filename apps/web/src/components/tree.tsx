@@ -5,10 +5,12 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import {
   ChevronDown,
   ChevronRight,
+  FileUp,
   Library,
   Notebook as NotebookIcon,
   PanelLeftClose,
   Plus,
+  Trash,
   Trash2,
 } from 'lucide-react';
 import { db } from '@/db/db';
@@ -28,6 +30,9 @@ import { useAppStore } from '@/stores/useAppStore';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useDialog } from '@/components/dialog-provider';
+import { api } from '@/lib/api';
+import { runSync } from '@/sync/engine';
+import { TrashDialog } from '@/components/trash-dialog';
 
 const COLLAPSED_KEY = 'sthir-collapsed-stacks';
 
@@ -36,6 +41,38 @@ export function Tree() {
   const dialog = useDialog();
   const dragStack = useRef<string | null>(null);
   const dragNotebook = useRef<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const importStackId = useRef<string | null>(null);
+  const [trashOpen, setTrashOpen] = useState(false);
+
+  function pickEnex(stackId: string) {
+    importStackId.current = stackId;
+    fileInputRef.current?.click();
+  }
+
+  async function onEnexFile(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    const stackId = importStackId.current;
+    if (!file || !stackId) return;
+    try {
+      const xml = await file.text();
+      const title = file.name.replace(/\.enex$/i, '') || 'Imported from Evernote';
+      const res = await api.importEnex(stackId, title, xml);
+      await runSync();
+      await dialog.confirm({
+        title: 'Import complete',
+        message: `Imported ${res.notesImported} note${res.notesImported === 1 ? '' : 's'} into "${title}".`,
+        confirmText: 'OK',
+      });
+    } catch {
+      await dialog.confirm({
+        title: 'Import failed',
+        message: 'Could not import that .enex file. Make sure you are online and signed in.',
+        confirmText: 'OK',
+      });
+    }
+  }
 
   const [collapsed, setCollapsed] = useState<Set<string>>(
     () => new Set<string>(JSON.parse(localStorage.getItem(COLLAPSED_KEY) ?? '[]')),
@@ -153,11 +190,22 @@ export function Tree() {
 
   return (
     <>
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept=".enex,application/xml,text/xml"
+        className="hidden"
+        onChange={onEnexFile}
+      />
+      <TrashDialog open={trashOpen} onOpenChange={setTrashOpen} />
       <header className="flex h-12 items-center justify-between border-b px-3">
         <h2 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
           Stacks
         </h2>
         <div className="flex items-center gap-0.5">
+          <Button variant="ghost" size="icon-sm" title="Trash" onClick={() => setTrashOpen(true)}>
+            <Trash />
+          </Button>
           <Button variant="ghost" size="icon-sm" title="New stack" onClick={addStack}>
             <Plus />
           </Button>
@@ -202,6 +250,15 @@ export function Tree() {
                   <Library className="size-4 shrink-0 text-muted-foreground" />
                   <span className="truncate">{stack.title}</span>
                 </button>
+                <Button
+                  variant="ghost"
+                  size="icon-sm"
+                  className="size-7 opacity-0 group-hover:opacity-100"
+                  title="Import Evernote .enex"
+                  onClick={() => pickEnex(stack.id)}
+                >
+                  <FileUp />
+                </Button>
                 <Button
                   variant="ghost"
                   size="icon-sm"

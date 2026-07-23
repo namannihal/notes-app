@@ -64,6 +64,8 @@ model Note {
   contentText String?   @map("content_text")
   version     Int       @default(1)
   position    Int       @default(0)
+  pinned      Boolean   @default(false)
+  tags        String[]  @default([])
   createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamptz
   updatedAt   DateTime  @default(now()) @map("updated_at") @db.Timestamptz
   deletedAt   DateTime? @map("deleted_at") @db.Timestamptz

@@ -2,9 +2,9 @@
 
 import { useRef, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { ArrowDownUp, GripVertical, PanelLeftClose, Plus, Search, Trash2, X } from 'lucide-react';
+import { ArrowDownUp, GripVertical, PanelLeftClose, Pin, PinOff, Plus, Search, Trash2, X } from 'lucide-react';
 import { db } from '@/db/db';
-import { createNote, deleteNote, reorderNotes } from '@/db/queries';
+import { createNote, deleteNote, reorderNotes, setNotePinned } from '@/db/queries';
 import { useAppStore, type NoteSort } from '@/stores/useAppStore';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -31,14 +31,20 @@ function sortNotes(notes: Note[], sort: NoteSort): Note[] {
   const copy = [...notes];
   switch (sort) {
     case 'created':
-      return copy.sort((a, b) => b.createdAt - a.createdAt);
+      copy.sort((a, b) => b.createdAt - a.createdAt);
+      break;
     case 'title':
-      return copy.sort((a, b) => a.title.localeCompare(b.title));
+      copy.sort((a, b) => a.title.localeCompare(b.title));
+      break;
     case 'manual':
-      return copy.sort((a, b) => a.position - b.position);
+      copy.sort((a, b) => a.position - b.position);
+      break;
     default:
-      return copy.sort((a, b) => b.updatedAt - a.updatedAt);
+      copy.sort((a, b) => b.updatedAt - a.updatedAt);
   }
+  // Pinned notes float to the top (stable within each group).
+  copy.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
+  return copy;
 }
 
 export function NoteList() {
@@ -230,13 +236,32 @@ export function NoteList() {
               >
                 <GripVertical className="mt-0.5 size-4 shrink-0 cursor-grab text-muted-foreground opacity-0 group-hover:opacity-100" />
                 <div className="min-w-0 flex-1">
-                  <div className="truncate pr-6 text-sm font-semibold">
+                  <div className="truncate pr-16 text-sm font-semibold">
                     {note.title || 'Untitled'}
                   </div>
-                  <div className="truncate pr-6 text-xs text-muted-foreground">
+                  <div className="truncate pr-16 text-xs text-muted-foreground">
                     {note.contentText.slice(0, 90) || 'Empty note'}
                   </div>
                 </div>
+                <Button
+                  variant="ghost"
+                  size="icon-sm"
+                  className={cn(
+                    'absolute right-9 top-2 size-7',
+                    note.pinned ? 'opacity-100' : 'opacity-0 group-hover:opacity-100',
+                  )}
+                  title={note.pinned ? 'Unpin' : 'Pin'}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    void setNotePinned(note.id, !note.pinned);
+                  }}
+                >
+                  {note.pinned ? (
+                    <PinOff className="text-primary" />
+                  ) : (
+                    <Pin />
+                  )}
+                </Button>
                 <Button
                   variant="ghost"
                   size="icon-sm"

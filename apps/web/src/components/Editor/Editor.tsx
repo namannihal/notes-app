@@ -18,8 +18,9 @@ import TableRow from '@tiptap/extension-table-row';
 import TableHeader from '@tiptap/extension-table-header';
 import TableCell from '@tiptap/extension-table-cell';
 import { useLiveQuery } from 'dexie-react-hooks';
+import { Pin, X as XIcon } from 'lucide-react';
 import { db } from '../../db/db';
-import { saveNote } from '../../db/queries';
+import { saveNote, setNotePinned, setNoteTags } from '../../db/queries';
 import { reconcileNoteAttachments, saveAttachment } from '../../db/attachments';
 import type { Note } from '../../db/types';
 import { AttachmentImage } from './extensions/AttachmentImage';
@@ -28,6 +29,7 @@ import { FontSize } from './extensions/FontSize';
 import { Indent } from './extensions/Indent';
 import { SlashCommand } from './extensions/SlashCommand';
 import { SearchReplace } from './extensions/SearchReplace';
+import { TableKeymap } from './extensions/TableKeymap';
 import { Toolbar } from './Toolbar';
 import { TableMenu } from './TableMenu';
 import { TableControls } from './TableControls';
@@ -62,6 +64,7 @@ function NoteEditor({ note }: { note: Note }) {
   const [initialContent] = useState(() => note.contentJson);
   const [initialTitle] = useState(() => note.title);
   const [findOpen, setFindOpen] = useState(false);
+  const [tagInput, setTagInput] = useState('');
   const editorRef = useRef<TiptapEditor | null>(null);
 
   const flush = useCallback(
@@ -116,7 +119,8 @@ function NoteEditor({ note }: { note: Note }) {
       TableRow,
       TableHeader,
       TableCell,
-      AttachmentImage,
+      TableKeymap,
+      AttachmentImage.configure({ inline: true }),
       PdfBlock,
     ],
     content: initialContent,
@@ -198,6 +202,49 @@ function NoteEditor({ note }: { note: Note }) {
           placeholder="Untitled"
           onChange={onTitle}
         />
+        <div className="flex flex-wrap items-center gap-1.5 px-8 pb-3">
+          <button
+            type="button"
+            title={note.pinned ? 'Unpin note' : 'Pin note'}
+            onClick={() => void setNotePinned(noteId, !note.pinned)}
+            className={`flex items-center gap-1 rounded-md border px-2 py-1 text-xs ${
+              note.pinned ? 'border-primary text-primary' : 'text-muted-foreground hover:bg-accent'
+            }`}
+          >
+            <Pin className="size-3.5" />
+            {note.pinned ? 'Pinned' : 'Pin'}
+          </button>
+          {(note.tags ?? []).map((tag) => (
+            <span
+              key={tag}
+              className="flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-xs"
+            >
+              #{tag}
+              <button
+                type="button"
+                title="Remove tag"
+                onClick={() =>
+                  void setNoteTags(noteId, (note.tags ?? []).filter((t) => t !== tag))
+                }
+              >
+                <XIcon className="size-3" />
+              </button>
+            </span>
+          ))}
+          <input
+            value={tagInput}
+            onChange={(e) => setTagInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && tagInput.trim()) {
+                e.preventDefault();
+                void setNoteTags(noteId, [...(note.tags ?? []), tagInput.trim()]);
+                setTagInput('');
+              }
+            }}
+            placeholder="Add tag…"
+            className="w-24 bg-transparent text-xs outline-none placeholder:text-muted-foreground/60"
+          />
+        </div>
         <TableControls editor={editor} containerRef={scrollRef} />
         <div className="px-8 pb-24">
           <EditorContent editor={editor} />

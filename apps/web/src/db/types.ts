@@ -36,6 +36,10 @@ export interface Note {
   /** Optimistic-concurrency version, bumped on every save. */
   version: number;
   position: number;
+  /** Pinned notes sort to the top of their notebook. */
+  pinned?: boolean;
+  /** Free-form tags for retrieval. */
+  tags?: string[];
   createdAt: number;
   updatedAt: number;
   deletedAt: number | null;

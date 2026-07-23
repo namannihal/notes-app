@@ -51,6 +51,8 @@ async function pushChanges(): Promise<void> {
         contentJson: n.contentJson,
         contentText: n.contentText,
         position: n.position,
+        pinned: Boolean(n.pinned),
+        tags: n.tags ?? [],
       },
     });
   }
@@ -142,6 +144,8 @@ function noteFromServer(r: ServerRecord): Note {
     contentText: (r.contentText as string) ?? '',
     version: (r.version as number) ?? 1,
     position: (r.position as number) ?? 0,
+    pinned: Boolean(r.pinned),
+    tags: (r.tags as string[]) ?? [],
     createdAt: toMs(r.createdAt),
     updatedAt: toMs(r.updatedAt),
     deletedAt: toMsOrNull(r.deletedAt),

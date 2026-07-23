@@ -22,6 +22,9 @@ export class SthirDB extends Dexie {
       attachments: 'id, noteId, checksum',
       blobs: 'checksum, pinned, lastAccessed',
     });
+    this.version(2).stores({
+      notes: 'id, notebookId, position, updatedAt, pinned',
+    });
   }
 }
 

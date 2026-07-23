@@ -109,6 +109,12 @@ export const api = {
     request<{ ok: true }>(`/api/attachments/${id}/commit`, { method: 'POST' }),
   downloadUrl: (id: string) =>
     request<{ url: string; filename: string }>(`/api/attachments/${id}/download-url`),
+
+  importEnex: (stackId: string, notebookTitle: string, xml: string) =>
+    request<{ notebookId: string; notesImported: number; attachmentsImported: number }>(
+      `/api/import/enex?stackId=${encodeURIComponent(stackId)}&notebookTitle=${encodeURIComponent(notebookTitle)}`,
+      { method: 'POST', headers: { 'Content-Type': 'application/xml' }, body: xml },
+    ),
 };
 
 export { ApiError, BASE as API_BASE };
