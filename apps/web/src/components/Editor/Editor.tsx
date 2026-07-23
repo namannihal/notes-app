@@ -18,9 +18,18 @@ import TableRow from '@tiptap/extension-table-row';
 import TableHeader from '@tiptap/extension-table-header';
 import TableCell from '@tiptap/extension-table-cell';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { Pin, X as XIcon } from 'lucide-react';
+import { Download, FileText, Pin, Printer, X as XIcon } from 'lucide-react';
 import { db } from '../../db/db';
 import { saveNote, setNotePinned, setNoteTags } from '../../db/queries';
+import { useAppStore } from '../../stores/useAppStore';
+import { toast } from '../../stores/useToast';
+import { tiptapToMarkdown } from '../../lib/markdown';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '../ui/dropdown-menu';
 import { reconcileNoteAttachments, saveAttachment } from '../../db/attachments';
 import type { Note } from '../../db/types';
 import { AttachmentImage } from './extensions/AttachmentImage';
@@ -65,14 +74,21 @@ function NoteEditor({ note }: { note: Note }) {
   const [initialTitle] = useState(() => note.title);
   const [findOpen, setFindOpen] = useState(false);
   const [tagInput, setTagInput] = useState('');
+  const setTagFilter = useAppStore((s) => s.setTagFilter);
+  const [saveState, setSaveState] = useState<'idle' | 'saving' | 'saved'>('idle');
+  const [stats, setStats] = useState(() => {
+    const t = note.contentText ?? '';
+    return { words: (t.trim().match(/\S+/g) || []).length, chars: t.length };
+  });
   const editorRef = useRef<TiptapEditor | null>(null);
 
   const flush = useCallback(
     (ed: TiptapEditor) => {
       const json = ed.getJSON();
-      void saveNote(noteId, { contentJson: json, contentText: ed.getText() }).then(() =>
-        reconcileNoteAttachments(noteId, json),
-      );
+      void saveNote(noteId, { contentJson: json, contentText: ed.getText() }).then(() => {
+        void reconcileNoteAttachments(noteId, json);
+        setSaveState('saved');
+      });
     },
     [noteId],
   );
@@ -88,8 +104,8 @@ function NoteEditor({ note }: { note: Note }) {
         } else {
           ed.chain().focus().setImage({ src: '', alt: att.filename, attachmentId: att.id } as never).run();
         }
-      } catch {
-        /* unsupported file type or too large */
+      } catch (err) {
+        toast(err instanceof Error ? err.message : 'Could not add that file.', 'error');
       }
     },
     [noteId],
@@ -149,6 +165,9 @@ function NoteEditor({ note }: { note: Note }) {
       },
     },
     onUpdate: ({ editor }) => {
+      setSaveState('saving');
+      const text = editor.getText();
+      setStats({ words: (text.trim().match(/\S+/g) || []).length, chars: text.length });
       if (saveTimer.current) clearTimeout(saveTimer.current);
       saveTimer.current = setTimeout(() => flush(editor), AUTOSAVE_MS);
     },
@@ -188,13 +207,34 @@ function NoteEditor({ note }: { note: Note }) {
     }, AUTOSAVE_MS);
   }
 
+  // Fade the "Saved" indicator back to idle.
+  useEffect(() => {
+    if (saveState !== 'saved') return;
+    const t = setTimeout(() => setSaveState('idle'), 1500);
+    return () => clearTimeout(t);
+  }, [saveState]);
+
+  function exportMarkdown() {
+    if (!editorRef.current) return;
+    const md = tiptapToMarkdown(editorRef.current.getJSON(), note.title || 'Untitled');
+    const blob = new Blob([md], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${(note.title || 'note').replace(/[^\w-]+/g, '_')}.md`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+
   if (!editor) return null;
 
   return (
     <>
       <Toolbar editor={editor} noteId={noteId} onFind={() => setFindOpen(true)} />
       <TableMenu editor={editor} />
-      <div ref={scrollRef} className="relative flex-1 overflow-y-auto">
+      <div ref={scrollRef} data-print-root className="relative flex-1 overflow-y-auto">
         <FindReplace editor={editor} open={findOpen} onClose={() => setFindOpen(false)} />
         <input
           className="w-full bg-transparent px-8 pb-2 pt-6 text-3xl font-bold outline-none placeholder:text-muted-foreground/50"
@@ -202,7 +242,7 @@ function NoteEditor({ note }: { note: Note }) {
           placeholder="Untitled"
           onChange={onTitle}
         />
-        <div className="flex flex-wrap items-center gap-1.5 px-8 pb-3">
+        <div className="no-print flex flex-wrap items-center gap-1.5 px-8 pb-3">
           <button
             type="button"
             title={note.pinned ? 'Unpin note' : 'Pin note'}
@@ -219,7 +259,14 @@ function NoteEditor({ note }: { note: Note }) {
               key={tag}
               className="flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-xs"
             >
-              #{tag}
+              <button
+                type="button"
+                className="hover:underline"
+                title={`Show notes tagged #${tag}`}
+                onClick={() => setTagFilter(tag)}
+              >
+                #{tag}
+              </button>
               <button
                 type="button"
                 title="Remove tag"
@@ -244,11 +291,35 @@ function NoteEditor({ note }: { note: Note }) {
             placeholder="Add tag…"
             className="w-24 bg-transparent text-xs outline-none placeholder:text-muted-foreground/60"
           />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button
+                type="button"
+                className="ml-auto flex items-center gap-1 rounded-md border px-2 py-1 text-xs text-muted-foreground hover:bg-accent"
+              >
+                <Download className="size-3.5" /> Export
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={() => window.print()}>
+                <Printer className="mr-2 size-4" /> Print / Save as PDF
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={exportMarkdown}>
+                <FileText className="mr-2 size-4" /> Download Markdown
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
         <TableControls editor={editor} containerRef={scrollRef} />
         <div className="px-8 pb-24">
           <EditorContent editor={editor} />
         </div>
+      </div>
+      <div className="no-print flex items-center justify-between border-t px-4 py-1 text-xs text-muted-foreground">
+        <span>
+          {stats.words} words · {stats.chars} characters
+        </span>
+        <span>{saveState === 'saving' ? 'Saving…' : saveState === 'saved' ? 'Saved ✓' : ''}</span>
       </div>
     </>
   );

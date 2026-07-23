@@ -215,6 +215,27 @@ body {
   max-width: 100%;
 }
 
+/* Print / Save-as-PDF: show only the current note's content. */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  [data-print-root],
+  [data-print-root] * {
+    visibility: visible !important;
+  }
+  [data-print-root] {
+    position: absolute !important;
+    inset: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .no-print,
+  .no-print * {
+    visibility: hidden !important;
+  }
+}
+
 .tiptap :where(table) {
   border-collapse: collapse;
   width: 100%;

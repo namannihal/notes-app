@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { RotateCcw, Trash2 } from 'lucide-react';
 import { db } from '@/db/db';
@@ -26,6 +27,18 @@ export function TrashDialog({
     return all.filter((n) => n.deletedAt).sort((a, b) => (b.deletedAt ?? 0) - (a.deletedAt ?? 0));
   }, []);
 
+  const [confirming, setConfirming] = useState(false);
+
+  async function emptyAll() {
+    if (!confirming) {
+      setConfirming(true);
+      setTimeout(() => setConfirming(false), 3000);
+      return;
+    }
+    for (const n of deleted ?? []) await purgeNote(n.id);
+    setConfirming(false);
+  }
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-lg">
@@ -33,6 +46,17 @@ export function TrashDialog({
           <DialogTitle>Trash</DialogTitle>
           <DialogDescription>Restore notes or delete them permanently.</DialogDescription>
         </DialogHeader>
+        {deleted && deleted.length > 0 && (
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={emptyAll}
+              className="text-xs font-medium text-destructive hover:underline"
+            >
+              {confirming ? 'Click again to delete all permanently' : 'Empty trash'}
+            </button>
+          </div>
+        )}
         <div className="max-h-[50vh] overflow-y-auto">
           {(!deleted || deleted.length === 0) && (
             <p className="py-8 text-center text-sm text-muted-foreground">Trash is empty.</p>

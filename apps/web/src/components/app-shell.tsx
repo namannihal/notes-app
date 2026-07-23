@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import {
   Cloud,
@@ -26,6 +26,8 @@ import { Button } from '@/components/ui/button';
 import { DialogProvider } from '@/components/dialog-provider';
 import { LoginScreen } from '@/components/login-screen';
 import { ChangePasswordDialog } from '@/components/change-password-dialog';
+import { Toaster } from '@/components/toaster';
+import { toast } from '@/stores/useToast';
 import { Tree } from '@/components/tree';
 import { NoteList } from '@/components/note-list';
 import { Editor } from '@/components/Editor/Editor';
@@ -37,6 +39,14 @@ function SyncStatus() {
   const authed = status === 'authed';
   const { state } = useSync(authed);
   const [pwOpen, setPwOpen] = useState(false);
+  const prevState = useRef(state);
+
+  useEffect(() => {
+    if (state === 'error' && prevState.current !== 'error') {
+      toast('Sync failed — retrying. Your notes are saved locally.', 'error');
+    }
+    prevState.current = state;
+  }, [state]);
 
   if (!authed) {
     return (
@@ -193,6 +203,9 @@ export function AppShell() {
   // Offline-first: show the app immediately (local data). Only swap to the
   // login screen if the server is reachable and explicitly rejects the session.
   return (
-    <DialogProvider>{status === 'anon' ? <LoginScreen /> : <Shell />}</DialogProvider>
+    <DialogProvider>
+      {status === 'anon' ? <LoginScreen /> : <Shell />}
+      <Toaster />
+    </DialogProvider>
   );
 }

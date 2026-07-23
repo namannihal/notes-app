@@ -56,6 +56,8 @@ export function NoteList() {
     noteSort,
     setNoteSort,
     toggleList,
+    tagFilter,
+    setTagFilter,
   } = useAppStore();
   const dialog = useDialog();
   const dragId = useRef<string | null>(null);
@@ -82,6 +84,14 @@ export function NoteList() {
     const rows = await db.notes.where('notebookId').equals(selectedNotebookId).toArray();
     return rows.filter((n) => !n.deletedAt);
   }, [selectedNotebookId]);
+
+  const tagged = useLiveQuery(async () => {
+    if (!tagFilter) return [];
+    const all = await db.notes.toArray();
+    return all
+      .filter((n) => !n.deletedAt && (n.tags ?? []).includes(tagFilter))
+      .sort((a, b) => b.updatedAt - a.updatedAt);
+  }, [tagFilter]);
 
   const sorted = notes ? sortNotes(notes, noteSort) : [];
 
@@ -183,7 +193,43 @@ export function NoteList() {
       </div>
 
       <div className="flex-1 overflow-y-auto">
-        {trimmed ? (
+        {tagFilter ? (
+          <>
+            <div className="flex items-center justify-between border-b px-3 py-2 text-xs">
+              <span className="font-medium">Tagged #{tagFilter}</span>
+              <button
+                type="button"
+                onClick={() => setTagFilter(null)}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                Clear
+              </button>
+            </div>
+            {tagged?.length === 0 && (
+              <p className="p-6 text-center text-sm text-muted-foreground">No notes with this tag.</p>
+            )}
+            {tagged?.map((note) => (
+              <button
+                key={note.id}
+                className={cn(
+                  'flex w-full flex-col items-start border-b px-3 py-3 text-left hover:bg-accent',
+                  selectedNoteId === note.id && 'bg-accent',
+                )}
+                onClick={() => {
+                  selectNotebook(note.notebookId);
+                  selectNote(note.id);
+                }}
+              >
+                <span className="w-full truncate text-sm font-semibold">
+                  {note.title || 'Untitled'}
+                </span>
+                <span className="w-full truncate text-xs text-muted-foreground">
+                  {note.contentText.slice(0, 90) || 'Empty note'}
+                </span>
+              </button>
+            ))}
+          </>
+        ) : trimmed ? (
           <>
             {results?.length === 0 && (
               <p className="p-6 text-center text-sm text-muted-foreground">No matches.</p>

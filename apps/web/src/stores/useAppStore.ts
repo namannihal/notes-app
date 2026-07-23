@@ -16,6 +16,8 @@ interface AppState {
   listCollapsed: boolean;
   /** Note-list sort mode. */
   noteSort: NoteSort;
+  /** When set, the note list shows all notes carrying this tag. */
+  tagFilter: string | null;
   /** Mobile/narrow navigation pane. */
   mobilePane: 'tree' | 'list' | 'editor';
   selectStack: (id: string | null) => void;
@@ -25,6 +27,7 @@ interface AppState {
   toggleTree: () => void;
   toggleList: () => void;
   setNoteSort: (sort: NoteSort) => void;
+  setTagFilter: (tag: string | null) => void;
 }
 
 function initialSort(): NoteSort {
@@ -39,10 +42,11 @@ export const useAppStore = create<AppState>((set) => ({
   treeCollapsed: typeof localStorage !== 'undefined' && localStorage.getItem(TREE_KEY) === 'true',
   listCollapsed: typeof localStorage !== 'undefined' && localStorage.getItem(LIST_KEY) === 'true',
   noteSort: initialSort(),
+  tagFilter: null,
   mobilePane: 'tree',
   selectStack: (id) => set({ selectedStackId: id }),
   selectNotebook: (id) =>
-    set({ selectedNotebookId: id, selectedNoteId: null, mobilePane: 'list' }),
+    set({ selectedNotebookId: id, selectedNoteId: null, mobilePane: 'list', tagFilter: null }),
   selectNote: (id) => set({ selectedNoteId: id, mobilePane: 'editor' }),
   setMobilePane: (mobilePane) => set({ mobilePane }),
   toggleTree: () =>
@@ -61,4 +65,5 @@ export const useAppStore = create<AppState>((set) => ({
     localStorage.setItem(SORT_KEY, noteSort);
     set({ noteSort });
   },
+  setTagFilter: (tagFilter) => set({ tagFilter, mobilePane: 'list' }),
 }));

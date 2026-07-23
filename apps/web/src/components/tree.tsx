@@ -32,6 +32,7 @@ import { Button } from '@/components/ui/button';
 import { useDialog } from '@/components/dialog-provider';
 import { api } from '@/lib/api';
 import { runSync } from '@/sync/engine';
+import { toast } from '@/stores/useToast';
 import { TrashDialog } from '@/components/trash-dialog';
 
 const COLLAPSED_KEY = 'sthir-collapsed-stacks';
@@ -60,17 +61,12 @@ export function Tree() {
       const title = file.name.replace(/\.enex$/i, '') || 'Imported from Evernote';
       const res = await api.importEnex(stackId, title, xml);
       await runSync();
-      await dialog.confirm({
-        title: 'Import complete',
-        message: `Imported ${res.notesImported} note${res.notesImported === 1 ? '' : 's'} into "${title}".`,
-        confirmText: 'OK',
-      });
+      toast(
+        `Imported ${res.notesImported} note${res.notesImported === 1 ? '' : 's'} into "${title}".`,
+        'success',
+      );
     } catch {
-      await dialog.confirm({
-        title: 'Import failed',
-        message: 'Could not import that .enex file. Make sure you are online and signed in.',
-        confirmText: 'OK',
-      });
+      toast('Could not import that .enex file. Make sure you are online and signed in.', 'error');
     }
   }
 
