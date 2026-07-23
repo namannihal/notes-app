@@ -4,6 +4,7 @@ const TREE_KEY = 'sthir-tree-collapsed';
 const LIST_KEY = 'sthir-list-collapsed';
 const SORT_KEY = 'sthir-note-sort';
 const LIST_WIDTH_KEY = 'sthir-list-width';
+const FOCUS_KEY = 'sthir-focus';
 
 const MIN_LIST_WIDTH = 220;
 const MAX_LIST_WIDTH = 640;
@@ -18,6 +19,8 @@ interface AppState {
   treeCollapsed: boolean;
   /** Note-list pane collapsed on wide screens. */
   listCollapsed: boolean;
+  /** Focus mode: hide both side panels for a full-width note. */
+  focusMode: boolean;
   /** Note-list sort mode. */
   noteSort: NoteSort;
   /** Width (px) of the note-list pane on wide screens. */
@@ -32,6 +35,7 @@ interface AppState {
   setMobilePane: (pane: 'tree' | 'list' | 'editor') => void;
   toggleTree: () => void;
   toggleList: () => void;
+  toggleFocus: () => void;
   setNoteSort: (sort: NoteSort) => void;
   setTagFilter: (tag: string | null) => void;
   setListWidth: (w: number) => void;
@@ -53,6 +57,7 @@ export const useAppStore = create<AppState>((set) => ({
   selectedNoteId: null,
   treeCollapsed: typeof localStorage !== 'undefined' && localStorage.getItem(TREE_KEY) === 'true',
   listCollapsed: typeof localStorage !== 'undefined' && localStorage.getItem(LIST_KEY) === 'true',
+  focusMode: typeof localStorage !== 'undefined' && localStorage.getItem(FOCUS_KEY) === 'true',
   noteSort: initialSort(),
   listWidth: initialListWidth(),
   tagFilter: null,
@@ -73,6 +78,12 @@ export const useAppStore = create<AppState>((set) => ({
       const listCollapsed = !s.listCollapsed;
       localStorage.setItem(LIST_KEY, String(listCollapsed));
       return { listCollapsed };
+    }),
+  toggleFocus: () =>
+    set((s) => {
+      const focusMode = !s.focusMode;
+      localStorage.setItem(FOCUS_KEY, String(focusMode));
+      return { focusMode };
     }),
   setNoteSort: (noteSort) => {
     localStorage.setItem(SORT_KEY, noteSort);

@@ -7,6 +7,8 @@ import {
   CloudOff,
   KeyRound,
   LogOut,
+  Maximize2,
+  Minimize2,
   Moon,
   PanelLeft,
   PanelLeftOpen,
@@ -103,6 +105,8 @@ function Shell() {
     toggleTree,
     listCollapsed,
     toggleList,
+    focusMode,
+    toggleFocus,
     listWidth,
     setListWidth,
   } = useAppStore();
@@ -142,7 +146,7 @@ function Shell() {
         className={cn(
           'dark h-full w-64 shrink-0 flex-col border-r bg-sidebar text-foreground',
           mobilePane === 'tree' ? 'flex' : 'hidden',
-          treeCollapsed ? 'md:hidden' : 'md:flex',
+          treeCollapsed || focusMode ? 'md:hidden' : 'md:flex',
         )}
       >
         <Tree />
@@ -153,13 +157,13 @@ function Shell() {
         className={cn(
           'h-full w-full shrink-0 flex-col border-r md:w-[var(--list-w)]',
           mobilePane === 'list' ? 'flex' : 'hidden',
-          listCollapsed ? 'md:hidden' : 'md:flex',
+          listCollapsed || focusMode ? 'md:hidden' : 'md:flex',
         )}
       >
         <NoteList />
       </section>
 
-      {!listCollapsed && (
+      {!listCollapsed && !focusMode && (
         <div
           onPointerDown={startListResize}
           title="Drag to resize the notes list"
@@ -176,12 +180,21 @@ function Shell() {
       >
         <header className="flex h-12 items-center justify-between border-b px-3">
           <div className="flex items-center gap-1">
-            {treeCollapsed && (
+            <Button
+              variant="ghost"
+              size="icon-sm"
+              className="hidden md:inline-flex"
+              title={focusMode ? 'Exit full width (show panels)' : 'Expand note (hide panels)'}
+              onClick={toggleFocus}
+            >
+              {focusMode ? <Minimize2 /> : <Maximize2 />}
+            </Button>
+            {treeCollapsed && !focusMode && (
               <Button variant="ghost" size="icon-sm" title="Show sidebar" onClick={toggleTree}>
                 <PanelLeftOpen />
               </Button>
             )}
-            {listCollapsed && (
+            {listCollapsed && !focusMode && (
               <Button variant="ghost" size="icon-sm" title="Show notes" onClick={toggleList}>
                 <PanelRightOpen />
               </Button>
