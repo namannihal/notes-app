@@ -203,7 +203,7 @@ export function AttachmentImageView({
             onCrop={async (blob) => {
               if (!attachmentId) return null;
               await replaceAttachmentBlob(attachmentId, blob);
-              updateAttributes({ width: null, annotations: [], arrows: [] });
+              updateAttributes({ width: null });
               const url = await getAttachmentUrl(attachmentId);
               if (url) setSrc(url);
               return url;

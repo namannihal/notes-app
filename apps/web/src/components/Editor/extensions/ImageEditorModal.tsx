@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, Check, Crop, MousePointer2, Trash2, Type, X } from 'lucide-react';
+import { ArrowUpRight, Crop, MousePointer2, Trash2, Type, X } from 'lucide-react';
 
 export interface Annotation {
   id: string;
@@ -80,7 +80,7 @@ const uid = () => Math.random().toString(36).slice(2);
 
 /** Full-screen image editor: crop, draw arrows, and add text labels. */
 export function ImageEditorModal({ src: initialSrc, annotations, arrows, onSave, onCrop, onClose }: Props) {
-  const [src, setSrc] = useState(initialSrc);
+  const [src] = useState(initialSrc);
   const [tool, setTool] = useState<Tool>('select');
   const [color, setColor] = useState(COLORS[0]);
   const [labels, setLabels] = useState<Annotation[]>(annotations);
@@ -217,34 +217,55 @@ export function ImageEditorModal({ src: initialSrc, annotations, arrows, onSave,
     window.addEventListener('pointerup', up);
   }
 
-  async function applyCrop() {
-    const img = imgRef.current;
-    if (!img || !crop || crop.w < 8 || crop.h < 8) {
-      setCrop(null);
-      return;
-    }
-    const scaleX = img.naturalWidth / img.clientWidth;
-    const scaleY = img.naturalHeight / img.clientHeight;
-    const canvas = document.createElement('canvas');
-    canvas.width = Math.round(crop.w * scaleX);
-    canvas.height = Math.round(crop.h * scaleY);
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    ctx.drawImage(img, crop.x * scaleX, crop.y * scaleY, crop.w * scaleX, crop.h * scaleY, 0, 0, canvas.width, canvas.height);
-    const blob: Blob | null = await new Promise((r) => canvas.toBlob((b) => r(b), 'image/png'));
-    if (blob) {
-      const newUrl = await onCrop(blob);
-      if (newUrl) setSrc(newUrl);
-      // Cropping changes the frame; existing annotations no longer align — clear.
-      setLabels([]);
-      setLines([]);
-    }
-    setCrop(null);
-    setTool('select');
-  }
+  async function save() {
+    let outLabels = labels.filter((l) => l.text.trim() !== '');
+    let outLines = lines;
 
-  function save() {
-    onSave(labels.filter((l) => l.text.trim() !== ''), lines);
+    // Apply the crop (if one is drawn) only now, on Save — not before.
+    const img = imgRef.current;
+    if (img && crop && crop.w >= 8 && crop.h >= 8 && dims.w && dims.h) {
+      const cx = crop.x / dims.w;
+      const cy = crop.y / dims.h;
+      const cw = crop.w / dims.w;
+      const ch = crop.h / dims.h;
+      // Re-map annotations/arrows into the cropped frame; drop those outside it.
+      outLabels = outLabels
+        .map((l) => ({ ...l, x: (l.x - cx) / cw, y: (l.y - cy) / ch }))
+        .filter((l) => l.x >= 0 && l.x <= 1 && l.y >= 0 && l.y <= 1);
+      outLines = outLines
+        .map((a) => ({
+          ...a,
+          x1: (a.x1 - cx) / cw,
+          y1: (a.y1 - cy) / ch,
+          x2: (a.x2 - cx) / cw,
+          y2: (a.y2 - cy) / ch,
+        }))
+        .filter((a) => [a.x1, a.y1, a.x2, a.y2].every((v) => v >= -0.15 && v <= 1.15));
+
+      const scaleX = img.naturalWidth / img.clientWidth;
+      const scaleY = img.naturalHeight / img.clientHeight;
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(crop.w * scaleX);
+      canvas.height = Math.round(crop.h * scaleY);
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.drawImage(
+          img,
+          crop.x * scaleX,
+          crop.y * scaleY,
+          crop.w * scaleX,
+          crop.h * scaleY,
+          0,
+          0,
+          canvas.width,
+          canvas.height,
+        );
+        const blob: Blob | null = await new Promise((r) => canvas.toBlob((b) => r(b), 'image/png'));
+        if (blob) await onCrop(blob);
+      }
+    }
+
+    onSave(outLabels, outLines);
     onClose();
   }
 
@@ -252,10 +273,7 @@ export function ImageEditorModal({ src: initialSrc, annotations, arrows, onSave,
     <button
       type="button"
       title={title}
-      onClick={() => {
-        setTool(t);
-        setCrop(null);
-      }}
+      onClick={() => setTool(t)}
       className={`flex size-9 items-center justify-center rounded-md ${
         tool === t ? 'bg-primary text-primary-foreground' : 'text-foreground hover:bg-accent'
       }`}
@@ -312,14 +330,17 @@ export function ImageEditorModal({ src: initialSrc, annotations, arrows, onSave,
           <Trash2 className="size-5" />
         </button>
         <div className="ml-auto flex items-center gap-2">
-          {tool === 'crop' && crop && (
-            <button
-              type="button"
-              onClick={applyCrop}
-              className="flex items-center gap-1 rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground"
-            >
-              <Check className="size-4" /> Apply crop
-            </button>
+          {crop && crop.w >= 8 && crop.h >= 8 && (
+            <span className="flex items-center gap-1 text-xs text-muted-foreground">
+              Crop set — Save to apply
+              <button
+                type="button"
+                onClick={() => setCrop(null)}
+                className="rounded px-1 underline hover:text-foreground"
+              >
+                clear
+              </button>
+            </span>
           )}
           <button type="button" onClick={save} className="rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground">
             Save
