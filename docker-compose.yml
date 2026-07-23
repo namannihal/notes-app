@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: sthir-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sthir
+      POSTGRES_PASSWORD: sthir
+      POSTGRES_DB: sthir
+    ports:
+      - '5432:5432'
+    volumes:
+      - sthir-pgdata:/var/lib/postgresql/data
+
+volumes:
+  sthir-pgdata:

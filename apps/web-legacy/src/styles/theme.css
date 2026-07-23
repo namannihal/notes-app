@@ -1,0 +1,29 @@
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --radius: 8px;
+  --pane-tree: 240px;
+  --pane-list: 300px;
+}
+
+:root[data-theme='light'] {
+  --bg: #ffffff;
+  --bg-secondary: #f7f7f5;
+  --bg-hover: #ececea;
+  --text: #1a1a1a;
+  --text-secondary: #6b6b6b;
+  --border: #e5e5e3;
+  --accent: #2563eb;
+  --accent-contrast: #ffffff;
+}
+
+:root[data-theme='dark'] {
+  --bg: #1a1a1a;
+  --bg-secondary: #242424;
+  --bg-hover: #2e2e2e;
+  --text: #e8e8e6;
+  --text-secondary: #a0a0a0;
+  --border: #333333;
+  --accent: #5b8def;
+  --accent-contrast: #0d0d0d;
+}

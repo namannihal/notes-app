@@ -1,0 +1,115 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String       @id @default(uuid()) @db.Uuid
+  email        String       @unique
+  passwordHash String       @map("password_hash")
+  createdAt    DateTime     @default(now()) @map("created_at") @db.Timestamptz
+  stacks       Stack[]
+  notebooks    Notebook[]
+  notes        Note[]
+  attachments  Attachment[]
+
+  @@map("users")
+}
+
+model Stack {
+  id        String    @id @default(uuid()) @db.Uuid
+  userId    String    @map("user_id") @db.Uuid
+  title     String
+  position  Int       @default(0)
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime  @default(now()) @map("updated_at") @db.Timestamptz
+  deletedAt DateTime? @map("deleted_at") @db.Timestamptz
+
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  notebooks Notebook[]
+
+  @@index([userId, updatedAt])
+  @@map("stacks")
+}
+
+model Notebook {
+  id        String    @id @default(uuid()) @db.Uuid
+  stackId   String    @map("stack_id") @db.Uuid
+  userId    String    @map("user_id") @db.Uuid
+  title     String
+  position  Int       @default(0)
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime  @default(now()) @map("updated_at") @db.Timestamptz
+  deletedAt DateTime? @map("deleted_at") @db.Timestamptz
+
+  stack Stack @relation(fields: [stackId], references: [id], onDelete: Cascade)
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  notes Note[]
+
+  @@index([userId, updatedAt])
+  @@index([stackId])
+  @@map("notebooks")
+}
+
+model Note {
+  id          String    @id @default(uuid()) @db.Uuid
+  notebookId  String    @map("notebook_id") @db.Uuid
+  userId      String    @map("user_id") @db.Uuid
+  title       String
+  contentJson Json      @map("content_json")
+  contentText String?   @map("content_text")
+  version     Int       @default(1)
+  position    Int       @default(0)
+  createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt   DateTime  @default(now()) @map("updated_at") @db.Timestamptz
+  deletedAt   DateTime? @map("deleted_at") @db.Timestamptz
+
+  notebook    Notebook     @relation(fields: [notebookId], references: [id], onDelete: Cascade)
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  attachments Attachment[]
+
+  @@index([userId, updatedAt])
+  @@index([notebookId])
+  @@map("notes")
+}
+
+enum AttachmentKind {
+  image
+  pdf
+}
+
+enum AttachmentStatus {
+  pending
+  ready
+}
+
+model Attachment {
+  id         String           @id @default(uuid()) @db.Uuid
+  noteId     String           @map("note_id") @db.Uuid
+  userId     String           @map("user_id") @db.Uuid
+  kind       AttachmentKind
+  filename   String
+  mimeType   String           @map("mime_type")
+  byteSize   Int              @map("byte_size")
+  checksum   String
+  storageKey String           @map("storage_key")
+  width      Int?
+  height     Int?
+  pageCount  Int?             @map("page_count")
+  status     AttachmentStatus @default(pending)
+  createdAt  DateTime         @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt  DateTime         @default(now()) @map("updated_at") @db.Timestamptz
+  deletedAt  DateTime?        @map("deleted_at") @db.Timestamptz
+
+  note Note @relation(fields: [noteId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, updatedAt])
+  @@index([noteId])
+  @@index([checksum])
+  @@map("attachments")
+}
