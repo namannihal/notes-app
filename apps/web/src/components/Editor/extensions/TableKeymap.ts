@@ -61,6 +61,22 @@ export const TableKeymap = Extension.create({
 
   addKeyboardShortcuts() {
     return {
+      // Nesting a list item takes precedence over table cell navigation, so
+      // Tab / Shift-Tab indent/outdent bullet & to-do items even inside a table
+      // cell. When there's no list item to sink/lift we return false so the
+      // table's own Tab (move to next/previous cell) still works.
+      Tab: () => {
+        const e = this.editor;
+        if (e.can().sinkListItem('listItem')) return e.chain().focus().sinkListItem('listItem').run();
+        if (e.can().sinkListItem('taskItem')) return e.chain().focus().sinkListItem('taskItem').run();
+        return false;
+      },
+      'Shift-Tab': () => {
+        const e = this.editor;
+        if (e.can().liftListItem('listItem')) return e.chain().focus().liftListItem('listItem').run();
+        if (e.can().liftListItem('taskItem')) return e.chain().focus().liftListItem('taskItem').run();
+        return false;
+      },
       Backspace: () => {
         const { state, view } = this.editor;
         const whole = wholeTable(state.selection);
