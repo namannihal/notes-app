@@ -97,6 +97,8 @@ export function Toolbar({ editor, noteId, onFind }: Props) {
   const tableBorderShade = useAppStore((s) => s.tableBorderShade);
   const setTableBorderWidth = useAppStore((s) => s.setTableBorderWidth);
   const setTableBorderShade = useAppStore((s) => s.setTableBorderShade);
+  const editorFont = useAppStore((s) => s.editorFont);
+  const setEditorFont = useAppStore((s) => s.setEditorFont);
 
   async function onImage(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -259,6 +261,28 @@ export function Toolbar({ editor, noteId, onFind }: Props) {
                 {s.replace('px', '')}
               </DropdownMenuItem>
             ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+        {/* Default font */}
+        <DropdownMenu>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <DropdownMenuTrigger asChild>
+                <Button type="button" variant="ghost" size="sm" onMouseDown={(e) => e.preventDefault()}>
+                  {editorFont === 'serif' ? 'Serif' : 'Sans'}
+                </Button>
+              </DropdownMenuTrigger>
+            </TooltipTrigger>
+            <TooltipContent>Default font</TooltipContent>
+          </Tooltip>
+          <DropdownMenuContent>
+            <DropdownMenuItem onClick={() => setEditorFont('serif')}>
+              <span style={{ fontFamily: 'var(--font-serif)' }}>Serif</span>
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setEditorFont('sans')}>
+              <span style={{ fontFamily: 'var(--font-sans)' }}>Sans-serif</span>
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
 

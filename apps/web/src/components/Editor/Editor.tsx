@@ -77,6 +77,7 @@ function NoteEditor({ note }: { note: Note }) {
   const setTagFilter = useAppStore((s) => s.setTagFilter);
   const tableBorderWidth = useAppStore((s) => s.tableBorderWidth);
   const tableBorderShade = useAppStore((s) => s.tableBorderShade);
+  const editorFont = useAppStore((s) => s.editorFont);
   const [saveState, setSaveState] = useState<'idle' | 'saving' | 'saved'>('idle');
   const [stats, setStats] = useState(() => {
     const t = note.contentText ?? '';
@@ -236,7 +237,12 @@ function NoteEditor({ note }: { note: Note }) {
     <>
       <Toolbar editor={editor} noteId={noteId} onFind={() => setFindOpen(true)} />
       <TableMenu editor={editor} />
-      <div ref={scrollRef} data-print-root className="relative flex-1 overflow-y-auto">
+      <div
+        ref={scrollRef}
+        data-print-root
+        className="relative flex-1 overflow-y-auto"
+        style={{ fontFamily: editorFont === 'serif' ? 'var(--font-serif)' : 'var(--font-sans)' }}
+      >
         <FindReplace editor={editor} open={findOpen} onClose={() => setFindOpen(false)} />
         <input
           className="w-full bg-transparent px-8 pb-2 pt-6 text-3xl font-bold outline-none placeholder:text-muted-foreground/50"

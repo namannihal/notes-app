@@ -44,9 +44,8 @@ export const Indent = Extension.create({
 
   addCommands() {
     const types = this.options.types;
-    const setIndent =
+    const blockIndent =
       (delta: number) =>
-      () =>
       ({ state, chain }: CommandProps) => {
         const { $from } = state.selection;
         const node = $from.node($from.depth) ?? $from.parent;
@@ -58,31 +57,31 @@ export const Indent = Extension.create({
       };
 
     return {
-      indent: setIndent(1),
-      outdent: setIndent(-1),
+      // Inside a list, indent/outdent nests or un-nests the item (a sub-point);
+      // otherwise it shifts the block's left margin.
+      indent:
+        () =>
+        (props: CommandProps) => {
+          const { can, chain } = props;
+          if (can().sinkListItem('listItem')) return chain().focus().sinkListItem('listItem').run();
+          if (can().sinkListItem('taskItem')) return chain().focus().sinkListItem('taskItem').run();
+          return blockIndent(1)(props);
+        },
+      outdent:
+        () =>
+        (props: CommandProps) => {
+          const { can, chain } = props;
+          if (can().liftListItem('listItem')) return chain().focus().liftListItem('listItem').run();
+          if (can().liftListItem('taskItem')) return chain().focus().liftListItem('taskItem').run();
+          return blockIndent(-1)(props);
+        },
     };
   },
 
   addKeyboardShortcuts() {
     return {
-      Tab: () => {
-        if (this.editor.can().sinkListItem('listItem')) {
-          return this.editor.chain().focus().sinkListItem('listItem').run();
-        }
-        if (this.editor.can().sinkListItem('taskItem')) {
-          return this.editor.chain().focus().sinkListItem('taskItem').run();
-        }
-        return this.editor.chain().focus().indent().run();
-      },
-      'Shift-Tab': () => {
-        if (this.editor.can().liftListItem('listItem')) {
-          return this.editor.chain().focus().liftListItem('listItem').run();
-        }
-        if (this.editor.can().liftListItem('taskItem')) {
-          return this.editor.chain().focus().liftListItem('taskItem').run();
-        }
-        return this.editor.chain().focus().outdent().run();
-      },
+      Tab: () => this.editor.commands.indent(),
+      'Shift-Tab': () => this.editor.commands.outdent(),
     };
   },
 });

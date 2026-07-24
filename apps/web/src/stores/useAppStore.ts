@@ -7,6 +7,7 @@ const LIST_WIDTH_KEY = 'sthir-list-width';
 const FOCUS_KEY = 'sthir-focus';
 const TBL_W_KEY = 'sthir-table-border-w';
 const TBL_SHADE_KEY = 'sthir-table-border-shade';
+const EDITOR_FONT_KEY = 'sthir-editor-font';
 
 const MIN_LIST_WIDTH = 220;
 const MAX_LIST_WIDTH = 640;
@@ -15,6 +16,7 @@ const DEFAULT_TABLE_BORDER_W = 1.5;
 const DEFAULT_TABLE_BORDER_SHADE = 35;
 
 export type NoteSort = 'updated' | 'created' | 'title' | 'manual';
+export type EditorFont = 'serif' | 'sans';
 
 interface AppState {
   selectedStackId: string | null;
@@ -34,6 +36,8 @@ interface AppState {
   tableBorderWidth: number;
   /** Table cell border darkness (% of foreground colour mixed in). */
   tableBorderShade: number;
+  /** Default typing font for the editor body. */
+  editorFont: EditorFont;
   /** When set, the note list shows all notes carrying this tag. */
   tagFilter: string | null;
   /** Mobile/narrow navigation pane. */
@@ -50,6 +54,7 @@ interface AppState {
   setListWidth: (w: number) => void;
   setTableBorderWidth: (w: number) => void;
   setTableBorderShade: (s: number) => void;
+  setEditorFont: (f: EditorFont) => void;
 }
 
 function initialListWidth(): number {
@@ -72,6 +77,11 @@ function initialTableBorderShade(): number {
   return Number.isFinite(s) && s >= 5 && s <= 90 ? s : DEFAULT_TABLE_BORDER_SHADE;
 }
 
+function initialEditorFont(): EditorFont {
+  const s = typeof localStorage !== 'undefined' ? localStorage.getItem(EDITOR_FONT_KEY) : null;
+  return s === 'sans' ? 'sans' : 'serif';
+}
+
 export const useAppStore = create<AppState>((set) => ({
   selectedStackId: null,
   selectedNotebookId: null,
@@ -83,6 +93,7 @@ export const useAppStore = create<AppState>((set) => ({
   listWidth: initialListWidth(),
   tableBorderWidth: initialTableBorderWidth(),
   tableBorderShade: initialTableBorderShade(),
+  editorFont: initialEditorFont(),
   tagFilter: null,
   mobilePane: 'tree',
   selectStack: (id) => set({ selectedStackId: id }),
@@ -127,5 +138,9 @@ export const useAppStore = create<AppState>((set) => ({
     const clamped = Math.min(90, Math.max(5, Math.round(s)));
     localStorage.setItem(TBL_SHADE_KEY, String(clamped));
     set({ tableBorderShade: clamped });
+  },
+  setEditorFont: (f) => {
+    localStorage.setItem(EDITOR_FONT_KEY, f);
+    set({ editorFont: f });
   },
 }));
