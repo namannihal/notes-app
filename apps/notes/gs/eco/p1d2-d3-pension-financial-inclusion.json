@@ -1,0 +1,3258 @@
+{
+  "id": "1d23a000-0000-4000-8000-000000000001",
+  "title": "P1D2/D3 - Pension & Financial Inclusion",
+  "notebookId": "f0bc431c-555d-4c21-9cb6-ae703ded2dd2",
+  "contentJson": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Syllabus (GS3): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "Pension (EPFO, NPS, UPS) and financial inclusion (Jan Dhan, MUDRA, MSME credit, gig workers).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Insurance vs Pension: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "insurance pays on death/damage; pension pays monthly income after retirement (and to spouse after).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "1. EPFO",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "EPFO (1951-52, Labour Ministry): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "run by a tripartite Central Board of Trustees (Govt 15 + employers 10 + employees 10). Doesn't distinguish casual/temporary vs permanent workers; subscriber has a UAN (portable across jobs).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "EPFO scheme",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "What it gives",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "EPF (1952)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Provident fund: principal + interest (~8.25%) on retirement/death; partial early withdrawal allowed.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "EDLI (1976)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Insurance: boss pays premium; family gets cover on worker's death.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "EPS (1995)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Pension after age 58 (min Rs.1,000/month to spouse); NOT linked to share market.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Reforms: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "auto-settlement of advance claims raised to Rs.5 lakh (2025); withdrawal categories cut 13 -> 3; CPPS (centralized pension payment - any bank); EPFO 3.0 (CBS-like app, UPI withdrawal); RBI oversight added to improve returns (2025).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Govt contribution schemes: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Atmanirbhar Bharat Rozgar Yojana (Govt paid EPF share, 2020); ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "text": "ELI Scheme",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " (Budget-2024): Part A - first-time worker gets up to Rs.15k (PM Viksit Bharat Rozgar Yojana); Part B/C - support to employers per new job.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "2. NPS, UPS & OPS",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "NPS: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "New Pension Scheme (2003, by Vajpayee) -> National Pension System (2009). Mandatory for govt employees joining on/after 1-Jan-2004; opened to all citizens (2009). Subscriber has a PRAN; money invested in G-Sec/bonds/shares (market-linked).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - UPS - Unified Pension Scheme (2024)?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Feature",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Detail",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Start",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "1-Apr-2025 (central govt; employee can choose NPS or UPS)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Contribution",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Employee 10%, Govt 18.5% (vs 14% in NPS)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Assured pension",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Rs.10,000/month (10 yr service); 50% of last 12-month avg salary (25 yr service)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "On death",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "60% family pension to spouse; rises with CPI-IW inflation",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "OPS (Old Pension Scheme): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "defined-benefit, fully govt-funded; some non-BJP states (Rajasthan) reverted (deemed unsustainable). ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Somanathan Committee",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " reviewed NPS -> led to UPS.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Other NPS: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "NPS-Lite/Swavlamban (poor, Govt co-contributes); NPS-Vatsalya (minors, Budget-2024); MARS (minimum assured return); penny-drop verification mandatory (2023).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Jeevan Pramaan (2014): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Aadhaar-based Digital Life Certificate for pensioners (also EPFO; facial recognition added 2022).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "3. Pension for the Poor",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - Atal Pension Yojana vs PM Shram Yogi Maan-dhan?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Atal Pension Yojana (2015, DFS)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "PM Shram Yogi Maan-dhan (2019, Labour Min)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Age 18-40; no income limit (but pension max Rs.5,000)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Unorganized workers with income up to Rs.15k/month",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Pension Rs.1,000-5,000/month after 60",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Assured Rs.3,000/month after 60; Govt co-contributes",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Spouse gets same pension after subscriber's death",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Spouse gets Rs.1,500 family pension",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "3 Maan-Dhan Yojanas: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Shram Yogi (workers), Laghu Vyapari (small traders, turnover <= Rs.1.5 cr), Kisan (small/marginal farmers). One person = one scheme.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "APY + PMJJBY + PMSBY ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "= Pradhan Mantri Jan Suraksha Schemes.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "NSoAP (1995, no premium, 100% Union core-of-core): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Indira Gandhi old-age/widow/disability pensions + National Family Benefit; for BPL people without capacity to invest.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Defined Contribution ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "(pension depends on market - NPS) vs ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          },
+          {
+            "text": "Defined Benefit",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": " (fixed pension - EPS, OPS, UPS, APY, NSoAP).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "PFRDA (2003, statutory 2013, HQ Delhi): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "regulates NPS & all pension funds EXCEPT EPFO/coal/seamen (separate laws). ES25: India's pension assets (EPFO 17% + NPS 4.5% of GDP) far below OECD's ~80%; 80% of pensioners are on tiny Atal Pension.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Overseas: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "Pravasi Bharatiya Bima Yojana (mandatory for workers to ECR countries; MEA); India-US Totalisation pact under negotiation.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "4. Financial Inclusion - Bank for Everyone",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Financial Inclusion ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "(banking/loans/investment/pension/insurance for all) + Social Security (aid to ill/aged/poor - DPSP Art 41/42) + Social Justice = human development.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Timeline: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Lead Bank Scheme (1969, Service Area Approach); RRBs (1976); no-frills account (2005); Business Correspondent agents (2006); e-KYC (2013); Jan Dhan (2014); Small Finance & Payment Banks (2015).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Rule: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "banks must open 25% of branches in unbanked rural areas.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - PM Jan Dhan Yojana (2014)?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Account: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Basic Savings Bank Deposit Account, zero-balance, RuPay debit card.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Overdraft: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "up to Rs.10,000 (one per household, preferably woman).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Insurance: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "free Rs.2 lakh accident cover (premium by NPCI).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "JAM trinity: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Jan Dhan + Aadhaar + Mobile -> direct benefit transfer of subsidies.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "5. Small Savings & Deposit Protection",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Schemes: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "NSC, Kisan Vikas Patra, PPF, Senior Citizen Savings Scheme (limit raised to Rs.30 lakh), Sukanya Samriddhi (girl child 0-10, prevents child marriage), Mahila Samman Bachat Patra (2023, Rs.2 lakh, 7.5%).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Interest ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "set quarterly by FinMin's Dept of Economic Affairs; money goes to National Small Savings Fund (NSSF).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Chit funds ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "= collective investment (Concurrent List). ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Banning of Unregulated Deposit Schemes Act 2019",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " bans schemes not registered with any regulator (penalty up to Rs.50 cr / 10 yr jail).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "6. Credit & MSME Finance",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Credit guarantee: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "if borrower defaults, guarantor covers the bank's loss (collateral-free lending). Key funds: CGTMSE (SIDBI+Govt, micro/small), NCGTC (MUDRA, education, ECLGS, Stand-Up). Budget-2025 raised MSME cover to Rs.10 cr, startups Rs.20 cr.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "MSME definition ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "(MSMED Act 2006, revised 2020/2025) by investment + turnover; all bank loans to MSMEs qualify as Priority Sector.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "ECLGS (Covid): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "collateral-free extra loans (20% of outstanding) to non-NPA MSMEs; guarantee by NCGTC. Subordinate Debt for NPA MSMEs (CGTMSE). Fund of Funds (Rs.10k cr) for MSME equity.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Budget-2024: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "MSME loans via digital footprint (UPI data) instead of balance sheet; interest equalization for MSME exporters.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Scheme",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Detail",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "MUDRA (2015, 100% SIDBI subsidiary)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Indirect refinance to banks/NBFCs for micro units. Shishu (<=Rs.50k), Kishor (<=Rs.5L), Tarun (<=Rs.20L); collateral-free (CGFMU guarantee).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Stand-Up India (2016)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Each bank branch lends Rs.10 lakh-Rs.1 cr to >=1 SC/ST and >=1 woman entrepreneur.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Self-Help Group (SHG)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "NABARD's SHG-Bank Linkage (1992); joint liability; supported by RRBs & SCBs; formed under NRLM.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "PM-SVANidhi (2020, MoHUA)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Street-vendor loans Rs.10k -> 20k -> 50k; interest subsidy; Budget-2025 Rs.30k credit card.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "PM Vishwakarma (2023, MSME Min)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Loan + skill training for 18 traditional trades (carpenter, blacksmith, potter, cobbler...).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Kisan Credit Card (1998)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Short-term crop credit; MISS interest subvention.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Gig workers: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "defined under the Code on Social Security 2020; a Social Security Fund proposed. ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          },
+          {
+            "text": "Micro-insurance",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": " for the poor. RBI has 3 Ombudsman schemes for customer grievances. Portals: Jan Samarth, psbloansin59minutes, PM-SURAJ.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "Key Facts (Quick Revision)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Fact",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Detail",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "EPFO (1952)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "EPF + EDLI (1976) + EPS (1995); Labour Ministry; UAN.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "NPS",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "2004 (govt) / 2009 (all); started by Vajpayee; market-linked; PRAN.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "UPS (2024)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Govt 18.5%; 50% salary pension (25 yr); starts 1-Apr-2025.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Atal Pension",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "18-40 age; Rs.1,000-5,000/month; DFS 2015.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "PFRDA (2013)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Regulates NPS & pension funds except EPFO.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "PMJDY (2014)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Zero-balance account, Rs.10k OD, Rs.2 lakh accident cover; JAM trinity.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "MUDRA (2015)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "SIDBI subsidiary; Shishu/Kishor/Tarun (Rs.50k/Rs.5L/Rs.20L).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Stand-Up India (2016)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Rs.10 lakh-Rs.1 cr to SC/ST & women entrepreneurs.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "NSoAP (1995)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Indira Gandhi pensions; 100% Union; no premium.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "Practice PYQs (attached PDF)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "UPSC/CAPF PYQs - full question, options and answer with reasoning - are in the attached PDF below.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pdfBlock",
+        "attrs": {
+          "filename": "P1D23_PYQs.pdf",
+          "pageCount": null,
+          "attachmentId": "1d23a000-0000-4000-8000-0000000000a1"
+        }
+      }
+    ]
+  },
+  "contentText": "Syllabus (GS3):  Pension (EPFO, NPS, UPS) and financial inclusion (Jan Dhan, MUDRA, MSME credit, gig workers). Insurance vs Pension:  insurance pays on death/damage; pension pays monthly income after retirement (and to spouse after). 1. EPFO EPFO (1951-52, Labour Ministry):  run by a tripartite Central Board of Trustees (Govt 15 + employers 10 + employees 10). Doesn't distinguish casual/temporary vs permanent workers; subscriber has a UAN (portable across jobs). EPFO scheme What it gives EPF (1952) Provident fund: principal + interest (~8.25%) on retirement/death; partial early withdrawal allowed. EDLI (1976) Insurance: boss pays premium; family gets cover on worker's death. EPS (1995) Pension after age 58 (min Rs.1,000/month to spouse); NOT linked to share market. Reforms:  auto-settlement of advance claims raised to Rs.5 lakh (2025); withdrawal categories cut 13 -> 3; CPPS (centralized pension payment - any bank); EPFO 3.0 (CBS-like app, UPI withdrawal); RBI oversight added to improve returns (2025). Govt contribution schemes:  Atmanirbhar Bharat Rozgar Yojana (Govt paid EPF share, 2020);  ELI Scheme  (Budget-2024): Part A - first-time worker gets up to Rs.15k (PM Viksit Bharat Rozgar Yojana); Part B/C - support to employers per new job. 2. NPS, UPS & OPS NPS:  New Pension Scheme (2003, by Vajpayee) -> National Pension System (2009). Mandatory for govt employees joining on/after 1-Jan-2004; opened to all citizens (2009). Subscriber has a PRAN; money invested in G-Sec/bonds/shares (market-linked). Q - UPS - Unified Pension Scheme (2024)? Feature Detail Start 1-Apr-2025 (central govt; employee can choose NPS or UPS) Contribution Employee 10%, Govt 18.5% (vs 14% in NPS) Assured pension Rs.10,000/month (10 yr service); 50% of last 12-month avg salary (25 yr service) On death 60% family pension to spouse; rises with CPI-IW inflation OPS (Old Pension Scheme):  defined-benefit, fully govt-funded; some non-BJP states (Rajasthan) reverted (deemed unsustainable).  Somanathan Committee  reviewed NPS -> led to UPS. Other NPS:  NPS-Lite/Swavlamban (poor, Govt co-contributes); NPS-Vatsalya (minors, Budget-2024); MARS (minimum assured return); penny-drop verification mandatory (2023). Jeevan Pramaan (2014):  Aadhaar-based Digital Life Certificate for pensioners (also EPFO; facial recognition added 2022). 3. Pension for the Poor Q - Atal Pension Yojana vs PM Shram Yogi Maan-dhan? Atal Pension Yojana (2015, DFS) PM Shram Yogi Maan-dhan (2019, Labour Min) Age 18-40; no income limit (but pension max Rs.5,000) Unorganized workers with income up to Rs.15k/month Pension Rs.1,000-5,000/month after 60 Assured Rs.3,000/month after 60; Govt co-contributes Spouse gets same pension after subscriber's death Spouse gets Rs.1,500 family pension 3 Maan-Dhan Yojanas:  Shram Yogi (workers), Laghu Vyapari (small traders, turnover <= Rs.1.5 cr), Kisan (small/marginal farmers). One person = one scheme. APY + PMJJBY + PMSBY  = Pradhan Mantri Jan Suraksha Schemes. NSoAP (1995, no premium, 100% Union core-of-core):  Indira Gandhi old-age/widow/disability pensions + National Family Benefit; for BPL people without capacity to invest. Defined Contribution  (pension depends on market - NPS) vs  Defined Benefit  (fixed pension - EPS, OPS, UPS, APY, NSoAP). PFRDA (2003, statutory 2013, HQ Delhi):  regulates NPS & all pension funds EXCEPT EPFO/coal/seamen (separate laws). ES25: India's pension assets (EPFO 17% + NPS 4.5% of GDP) far below OECD's ~80%; 80% of pensioners are on tiny Atal Pension. Overseas:  Pravasi Bharatiya Bima Yojana (mandatory for workers to ECR countries; MEA); India-US Totalisation pact under negotiation. 4. Financial Inclusion - Bank for Everyone Financial Inclusion  (banking/loans/investment/pension/insurance for all) + Social Security (aid to ill/aged/poor - DPSP Art 41/42) + Social Justice = human development. Timeline:  Lead Bank Scheme (1969, Service Area Approach); RRBs (1976); no-frills account (2005); Business Correspondent agents (2006); e-KYC (2013); Jan Dhan (2014); Small Finance & Payment Banks (2015). Rule:  banks must open 25% of branches in unbanked rural areas. Q - PM Jan Dhan Yojana (2014)? Account:  Basic Savings Bank Deposit Account, zero-balance, RuPay debit card. Overdraft:  up to Rs.10,000 (one per household, preferably woman). Insurance:  free Rs.2 lakh accident cover (premium by NPCI). JAM trinity:  Jan Dhan + Aadhaar + Mobile -> direct benefit transfer of subsidies. 5. Small Savings & Deposit Protection Schemes:  NSC, Kisan Vikas Patra, PPF, Senior Citizen Savings Scheme (limit raised to Rs.30 lakh), Sukanya Samriddhi (girl child 0-10, prevents child marriage), Mahila Samman Bachat Patra (2023, Rs.2 lakh, 7.5%). Interest  set quarterly by FinMin's Dept of Economic Affairs; money goes to National Small Savings Fund (NSSF). Chit funds  = collective investment (Concurrent List).  Banning of Unregulated Deposit Schemes Act 2019  bans schemes not registered with any regulator (penalty up to Rs.50 cr / 10 yr jail). 6. Credit & MSME Finance Credit guarantee:  if borrower defaults, guarantor covers the bank's loss (collateral-free lending). Key funds: CGTMSE (SIDBI+Govt, micro/small), NCGTC (MUDRA, education, ECLGS, Stand-Up). Budget-2025 raised MSME cover to Rs.10 cr, startups Rs.20 cr. MSME definition  (MSMED Act 2006, revised 2020/2025) by investment + turnover; all bank loans to MSMEs qualify as Priority Sector. ECLGS (Covid):  collateral-free extra loans (20% of outstanding) to non-NPA MSMEs; guarantee by NCGTC. Subordinate Debt for NPA MSMEs (CGTMSE). Fund of Funds (Rs.10k cr) for MSME equity. Budget-2024:  MSME loans via digital footprint (UPI data) instead of balance sheet; interest equalization for MSME exporters. Scheme Detail MUDRA (2015, 100% SIDBI subsidiary) Indirect refinance to banks/NBFCs for micro units. Shishu (<=Rs.50k), Kishor (<=Rs.5L), Tarun (<=Rs.20L); collateral-free (CGFMU guarantee). Stand-Up India (2016) Each bank branch lends Rs.10 lakh-Rs.1 cr to >=1 SC/ST and >=1 woman entrepreneur. Self-Help Group (SHG) NABARD's SHG-Bank Linkage (1992); joint liability; supported by RRBs & SCBs; formed under NRLM. PM-SVANidhi (2020, MoHUA) Street-vendor loans Rs.10k -> 20k -> 50k; interest subsidy; Budget-2025 Rs.30k credit card. PM Vishwakarma (2023, MSME Min) Loan + skill training for 18 traditional trades (carpenter, blacksmith, potter, cobbler...). Kisan Credit Card (1998) Short-term crop credit; MISS interest subvention. Gig workers:  defined under the Code on Social Security 2020; a Social Security Fund proposed.  Micro-insurance  for the poor. RBI has 3 Ombudsman schemes for customer grievances. Portals: Jan Samarth, psbloansin59minutes, PM-SURAJ. Key Facts (Quick Revision) Fact Detail EPFO (1952) EPF + EDLI (1976) + EPS (1995); Labour Ministry; UAN. NPS 2004 (govt) / 2009 (all); started by Vajpayee; market-linked; PRAN. UPS (2024) Govt 18.5%; 50% salary pension (25 yr); starts 1-Apr-2025. Atal Pension 18-40 age; Rs.1,000-5,000/month; DFS 2015. PFRDA (2013) Regulates NPS & pension funds except EPFO. PMJDY (2014) Zero-balance account, Rs.10k OD, Rs.2 lakh accident cover; JAM trinity. MUDRA (2015) SIDBI subsidiary; Shishu/Kishor/Tarun (Rs.50k/Rs.5L/Rs.20L). Stand-Up India (2016) Rs.10 lakh-Rs.1 cr to SC/ST & women entrepreneurs. NSoAP (1995) Indira Gandhi pensions; 100% Union; no premium. Practice PYQs (attached PDF) UPSC/CAPF PYQs - full question, options and answer with reasoning - are in the attached PDF below. ",
+  "tags": [],
+  "pinned": false,
+  "position": 102
+}

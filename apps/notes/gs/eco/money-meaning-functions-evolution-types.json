@@ -1,0 +1,2125 @@
+{
+  "id": "dfc7dc08-4be4-4ccc-b275-c8e72d862d48",
+  "title": "Money — Meaning, Functions, Evolution & Types",
+  "notebookId": "f0bc431c-555d-4c21-9cb6-ae703ded2dd2",
+  "contentJson": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Syllabus (GS3): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "Indian Economy — Money & Banking basics (barter → coins → digital money).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Q — What was the Barter system and why did it fail?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Concept: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "Barter = direct exchange of goods for goods (introduced by Mesopotamian tribes). It broke down because of:",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Double coincidence of wants",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " — both sides must want exactly what the other offers.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "High search & transaction cost",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " — finding the right counterparty is costly.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Poor store of value",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " — perishable goods lose value; hard to store.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "No specialization",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " — discourages division of labour.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Layman: if you grow tomatoes and want shoes, you must find a shoemaker who also wants tomatoes — clumsy. So a common 'middle good' (money) was invented.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "italic"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Q — What are the functions of money?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    149
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Category",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    796
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Functions",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    149
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Primary",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    796
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Measure of value; Medium of exchange",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    149
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Secondary",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    796
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Store of value; Transfer of value; Standard of deferred payments (EMI)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    149
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Contingent",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    796
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Basis of financial market; Mobilises factors of production; Helps redistribution of national income",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Layman: money is a ruler (measures worth), a token (buy/sell now), a piggy-bank (save), and a promise (pay later via EMI).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "italic"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Q — How did money evolve, and what are its types?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Evolution: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "Commodity Money → Metallic Money → Paper / Token / Fiat Money → Bank (Deposit) Money → Cryptocurrency.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    238
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Type",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    190
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Intrinsic value?",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    685
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Key points & examples",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    238
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Commodity money",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    190
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Yes",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    685
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Iron nails, bear pelts, cocoa beans, whale teeth, gold nuggets. Problems: perishable, not uniform, not pure, foreigners may reject.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    238
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Metallic money",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    190
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Yes",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    685
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Kings stamped gold for trust. Indo-Greek & Kushana gold coins; Gupta coins most spectacular. Delhi Sultanate: Silver Tanka; Sher Shah Suri: Rupiya; Akbar: Muhr.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    238
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Paper / Fiat money",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    190
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "No",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    685
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Value comes from govt command ('fiat'); it is legal tender.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    238
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Bank / Deposit money",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    190
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "No",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    685
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Cheque, Demand Draft, digital transfers.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    238
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Cryptocurrency",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    190
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "No",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    685
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Decentralised, blockchain-based.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Q — Full-bodied vs Token coins?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    249
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Basis",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Full-bodied coins",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Token coins",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    249
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Example",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Gupta coin (~8 gm gold)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "50 paisa modern coin (~4 gm steel)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    249
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Intrinsic vs face value",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Intrinsic value ≥ face value",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Intrinsic value < face value",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": [
+                    249
+                  ]
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Key point",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Prone to Debasement (↓ metal content when a ruler is weak/poor — e.g., Aurangzeb, Roman kings)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Modern Indian coins are token coins; cupronickel discourages melting; Coinage Act 2011 bans melting coins",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Key facts / GK",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "1330s: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Tughlaq's token-coin experiment failed (#EpicFail).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Coinage Act, 2011",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " — melting/destroying coins is an offence.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "USA (2025): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "stopped minting the penny — a 1-cent penny cost ~4 cents to make.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "PYQs",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "(PYQs for this sub-topic will be pulled from the handout's dedicated PYQ pages during the full pass and added here as a Year · Question · Key table.)",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "italic"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "contentText": "Syllabus (GS3): Indian Economy — Money & Banking basics (barter → coins → digital money).\n\nQ — What was the Barter system and why did it fail?\n\nConcept: Barter = direct exchange of goods for goods (introduced by Mesopotamian tribes). It broke down because of:\n\n\n\n\n\nDouble coincidence of wants — both sides must want exactly what the other offers.\n\n\n\nHigh search & transaction cost — finding the right counterparty is costly.\n\n\n\nPoor store of value — perishable goods lose value; hard to store.\n\n\n\nNo specialization — discourages division of labour.\n\nLayman: if you grow tomatoes and want shoes, you must find a shoemaker who also wants tomatoes — clumsy. So a common 'middle good' (money) was invented.\n\nQ — What are the functions of money?\n\n\n\n\n\n\n\nCategory\n\n\n\nFunctions\n\n\n\n\n\nPrimary\n\n\n\nMeasure of value; Medium of exchange\n\n\n\n\n\nSecondary\n\n\n\nStore of value; Transfer of value; Standard of deferred payments (EMI)\n\n\n\n\n\nContingent\n\n\n\nBasis of financial market; Mobilises factors of production; Helps redistribution of national income\n\nLayman: money is a ruler (measures worth), a token (buy/sell now), a piggy-bank (save), and a promise (pay later via EMI).\n\nQ — How did money evolve, and what are its types?\n\nEvolution: Commodity Money → Metallic Money → Paper / Token / Fiat Money → Bank (Deposit) Money → Cryptocurrency.\n\n\n\n\n\n\n\nType\n\n\n\nIntrinsic value?\n\n\n\nKey points & examples\n\n\n\n\n\nCommodity money\n\n\n\nYes\n\n\n\nIron nails, bear pelts, cocoa beans, whale teeth, gold nuggets. Problems: perishable, not uniform, not pure, foreigners may reject.\n\n\n\n\n\nMetallic money\n\n\n\nYes\n\n\n\nKings stamped gold for trust. Indo-Greek & Kushana gold coins; Gupta coins most spectacular. Delhi Sultanate: Silver Tanka; Sher Shah Suri: Rupiya; Akbar: Muhr.\n\n\n\n\n\nPaper / Fiat money\n\n\n\nNo\n\n\n\nValue comes from govt command ('fiat'); it is legal tender.\n\n\n\n\n\nBank / Deposit money\n\n\n\nNo\n\n\n\nCheque, Demand Draft, digital transfers.\n\n\n\n\n\nCryptocurrency\n\n\n\nNo\n\n\n\nDecentralised, blockchain-based.\n\nQ — Full-bodied vs Token coins?\n\n\n\n\n\n\n\nBasis\n\n\n\nFull-bodied coins\n\n\n\nToken coins\n\n\n\n\n\nExample\n\n\n\nGupta coin (~8 gm gold)\n\n\n\n50 paisa modern coin (~4 gm steel)\n\n\n\n\n\nIntrinsic vs face value\n\n\n\nIntrinsic value ≥ face value\n\n\n\nIntrinsic value < face value\n\n\n\n\n\nKey point\n\n\n\nProne to Debasement (↓ metal content when a ruler is weak/poor — e.g., Aurangzeb, Roman kings)\n\n\n\nModern Indian coins are token coins; cupronickel discourages melting; Coinage Act 2011 bans melting coins\n\nKey facts / GK\n\n\n\n\n\n1330s: Tughlaq's token-coin experiment failed (#EpicFail).\n\n\n\nCoinage Act, 2011 — melting/destroying coins is an offence.\n\n\n\nUSA (2025): stopped minting the penny — a 1-cent penny cost ~4 cents to make.\n\nPYQs\n\n(PYQs for this sub-topic will be pulled from the handout's dedicated PYQ pages during the full pass and added here as a Year · Question · Key table.)",
+  "tags": [],
+  "pinned": false,
+  "position": 0
+}

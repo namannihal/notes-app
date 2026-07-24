@@ -1,0 +1,4853 @@
+{
+  "id": "1c1a0000-0000-4000-8000-000000000001",
+  "title": "P1C1 - Share Market, Bonds & Debt",
+  "notebookId": "f0bc431c-555d-4c21-9cb6-ae703ded2dd2",
+  "contentJson": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Syllabus (GS3): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "Capital markets - securities, debt/bond instruments (short & long term), special-purpose bonds, electoral bonds.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "1. Capital & Securities",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Capital: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "Fixed capital = land/plant/machinery/furniture; Working capital = raw materials, salaries, rent, day-to-day operations. ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          },
+          {
+            "text": "Retained earnings",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": " = profit re-invested in the business (rest paid as dividend; board decides the split).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Q - Equity (share) vs Debt (bond)?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Equity / Share",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Debt / Bond (Debenture)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Holder gets dividend only if there is profit",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Holder gets fixed interest + principal regardless of profit",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Owner of the company",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Creditor (lender) to the company",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Last (residual) claim on liquidation",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "First claim on liquidation",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Attractive in a boom (higher dividend potential)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Attractive in a slowdown (fixed, lower risk)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "2. Financial / Securities Market - Types",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "By tenure: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Money market (< 1 yr maturity) vs Capital market (>= 1 yr).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "By freshness: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Primary market (new securities issued first time; no physical location) vs Secondary market (resale of old securities, e.g. BSE Dalal Street) - resale liquidity encourages primary buying.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "By settlement: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Future market (contract now, deliver on a future date) vs Spot market (immediate delivery).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "By asset: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "bond, share, G-Sec, forex, commodity markets. A single 'Universal Exchange' (all assets) was permitted for BSE & NSE (2018).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "3. Short-Term Debt Instruments (< 1 year)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Traded in the money market; usually unsecured; sold at a discount and repurchased at face value (the gap = interest). Highly liquid = called ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          },
+          {
+            "text": "'Near Money'",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "; negotiable & transferable.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Instrument",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Issuer / meaning",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Treasury Bills (14/91/182/364 days)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Union Govt only (States stopped since 2001); issued at a discount.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Cash Management Bill (91 days)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Union Govt, for temporary cash mismatch.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "WMA / Overdraft / SDF",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "RBI's short-term (3-month) loans to Govts. WMA = at Repo%; Overdraft = Repo + 2-5%; not counted in fiscal deficit.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Certificate of Deposit (CD)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Unsecured negotiable debt issued by commercial banks.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Commercial Paper / Bill of Exchange / Hundi / Promissory Note",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Issued by companies.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Call / Notice Money",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Interbank borrowing for 1 day / 2-14 days.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "CBLO",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Collateralized Borrowing & Lending Obligation via Clearing Corp of India (money-market instrument).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Inter Corporate Deposit (ICD)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Unsecured short loan from one company to another.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Tri-Party Repo: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "adds a Tri-Party Agent (NSE/BSE) between borrower & lender for collateral custody; NOT a monetary-policy tool.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Q - Factoring & TReDS?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Factoring: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "an MSME pledges an unpaid invoice to a factor (bank/NBFC) for a short loan. Factoring Regulation (Amendment) Act 2021 opened it to all NBFCs (9000+) and requires invoice registration on the SARFAESI central registry (stops 'dual financing' fraud).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Bill discounting vs factoring: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "in bill discounting the MSME collects from the buyer and pays the factor; in factoring the factor collects directly from the buyer.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "TReDS: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "online platform (M1xchange, RXIL, A.TReDS) linking factors with MSME borrowers; RXIL is owned by SIDBI + NSE.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Interest-rate benchmarks: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "LIBOR (London interbank rate), MIBOR (Mumbai). Post-LIBOR, RBI's Ramanathan Subramanian Committee proposed ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          },
+          {
+            "text": "SORR (Secured Overnight Rupee Rate)",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": " (2024), computed by FBIL, may replace MIBOR.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "4. Long-Term Debt Instruments (>= 1 year)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Colonial-era types: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Coupon bonds (detachable coupons -> 'coupon rate'); Zero-coupon bonds (sold at discount, no coupon); Bearer bonds (not linked to ID; anyone holding gets paid; issued in war).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Modern Govt borrowing: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "G-Sec, dated securities, sovereign bonds - also called ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Gilt-edged securities",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " (repayment assured -> lower interest).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Credit rating: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "AAA best (US Treasury); India ~BAA (moderate). Big-3 = Fitch, Moody's, S&P (critics: pro-US/EU bias).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Global bond indices: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Indian G-Sec added to JPMorgan GBI-EM (2024) and Bloomberg EM Index (2025) -> more foreign inflows & liquidity.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Q - Special govt/RBI bonds?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Bond",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Detail",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Inflation Indexed Bond (IIB)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Gives positive real interest; RBI issued 1997/2004/2013/2018.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Capital Indexed Bond (CIB) vs IIB",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "CIB-1997 protected only principal (WPI); IIB-2013/IINSS-C protect principal + interest (IINSS-C uses CPI).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Sovereign Gold Bond (SGB, 2015)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "RBI issues on Govt's behalf; denominated in gold grams but pays rupee value of gold at maturity (8 yr) + 2.5% interest; reduces physical gold import. 2025: Govt may stop (gold price ~doubled 2019->2024).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "5. Company Long-Term Debt & Hybrids",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Bond (British) = Debenture (American). ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Junk bonds = high default risk (BB-D, e.g. IL&FS) -> must offer high interest.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Redeemable ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "(interest + principal returned) vs ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Irredeemable",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": " (only interest, no principal - e.g. PSB AT1 bonds).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Secured vs Unsecured; Convertible vs Non-convertible (NCD). ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Hybrid = issued as bond, convertible to share.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Mezzanine/Hybrid financing: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "debt + equity mix via OFCD (Optionally Fully Convertible Debentures); used by venture capitalists in start-ups; pays less interest than plain bonds.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "FCCB: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Foreign Currency Convertible Bond - foreign-currency bond convertible to shares at a pre-set rate; lower interest (conversion is the sweetener).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "CoCo / Enhanced Capital Note: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "hybrid of AT1 bond + OFCD - converts to shares (or writes off) on a trigger condition.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Sahara OFCD: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "issued without SEBI nod -> SEBI penalty; CRCS-Sahara Refund Portal (2023) refunds investors.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "6. Bonds by Issuer",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Municipal (ULB) bonds: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Ahmedabad = 1st municipal bond (1996); Lucknow = 1st from North India (2020); Ghaziabad = 1st green municipal bond (2021, private placement); Indore = 1st green muni bond for retail investors (2023).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Global: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "BRICS/New Development Bank bonds (USD); World Bank 'Bond-i' (2018, 1st blockchain bond, Australia); Evergrande (Chinese realty) bond crisis.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Q - Currency-named bonds?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Bond name",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Borrowed in that country/currency",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Masala Bond",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Rupee-denominated bond issued OUTSIDE India (for Indian entities); IFC launched it; Kerala's KIIFB = 1st Indian state (2019).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Maharaja Bond",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Rupee bond issued by a non-Indian INSIDE India.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Panda / Dim sum Bond",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Yuan (Renminbi) bond in China / Hong Kong.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Kangaroo Bond",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Australian-dollar bond in Australia (e.g. World Bank Bond-i).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Formosa Bond",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Non-Taiwan-dollar bond issued in Taiwan.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Surety Bonds: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "allowed from Budget-2022, regulated by IRDAI (replace bank guarantees for contractors).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "7. Special-Purpose Bonds",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Green Bonds: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "for renewable energy/pollution control. World's 1st = World Bank (2007); India's 1st = Yes Bank (2015); IREDA's Masala green bond (2018); Sovereign Green Bonds (Budget-2022, via RBI E-Kuber). Fund NOT for nuclear/large hydro (>25MW)/tobacco etc.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Greenium: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "lower interest investors accept for green impact. ES24: Indian sovereign green bonds got little greenium; Jan-2025 issue ~70% unsold (trust/transparency, low liquidity, no big backer).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Blue Bond: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "green sub-type for marine/fisheries (Seychelles, 2018, 1st). ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "text": "ESG Bonds: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "issued by firms strong on Environment/Social/Governance.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Consol / Perpetual bonds: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "no maturity, pay interest forever (irredeemable); some propose Consol bonds for post-Covid revival.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Elephant Bonds (proposed): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "25-yr bonds where black-money declarers invest, funds for infrastructure. ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Sukuk: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "sharia-compliant (Islamic) bond.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Social/Skill Impact Bonds: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "SIDBI Women's Livelihood Bonds (2019, 3% for 5 yr, for women entrepreneurs); NSDC Skill Impact Bond (2021).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "CAT (Catastrophe) Bonds: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "for disaster risk. ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Bhutan 'Nation Building Bond' ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "($100M) for Gelephu Mindfulness City.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Zero Coupon Zero Principal (ZCZP): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "by NPO/NGO; repays NEITHER interest NOR principal; like a donation but with SEBI disclosure; traded on the Social Stock Exchange (e.g. Unnati, 2023).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "8. Electoral Bonds",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Electoral Bonds (Budget-2017): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "issued only by SBI (in Rs.1k to Rs.1cr denominations); bought by Indian citizens/companies (with KYC, not cash/anonymous); donated to parties (registered under RPA 1951 with >=1% votes); 15-day validity; paper bearer promissory note, interest-free, non-transferable.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "SC ban (Feb-2024): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "electoral bonds violate voters' right to know (Art 19(1)(a)), RPA, Companies Act & IT Act; donor privacy < voters' right to know. SBI must disclose all donors & recipient parties (2019-24) to ECI.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Companies Act (2017 amendment struck down): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "had removed the 7.5%-of-3-yr-avg-profit donation cap and the need to name the recipient party - SC ruled it unconstitutional (2024).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Electoral Trusts (2013): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "a company creates a trust that pools donations and distributes to parties (donor anonymity); NOT banned.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "9. Misc Bonds & Repayment Buffers",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Market-Linked Debentures: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "interest linked to an index (Sensex, G-Sec yield, gold).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Debenture Redemption Reserve (DRR): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "buffer fund a company keeps (Companies Act) to repay bondholders; some firms exempted (2019).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "indent": 0,
+                  "textAlign": null
+                },
+                "content": [
+                  {
+                    "text": "Consolidated Sinking Fund (CSF): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "buffer fund for State Govts' loan repayment.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "color": null,
+                          "fontSize": "14px",
+                          "fontFamily": null
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Key Facts (Quick Revision)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Fact",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Detail",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Equity vs Debt",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Shareholder = owner, last claim; Bondholder = lender, first claim.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Money vs Capital market",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "< 1 yr vs >= 1 yr maturity.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Near Money",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Highly liquid: T-Bill, savings a/c, money-market instruments.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Gilt-edged",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Govt securities (assured repayment).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "SGB (2015)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Gold-gram denominated; pays rupee value of gold at maturity + 2.5%.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Masala Bond",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Rupee bond issued outside India; IFC; Kerala KIIFB (1st state).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Sovereign Green Bond",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Budget-2022; via RBI E-Kuber; not for nuclear/large-hydro.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Electoral Bonds",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Budget-2017; only SBI; banned by SC (Feb-2024).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Municipal bonds",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "indent": 0,
+                      "textAlign": null
+                    },
+                    "content": [
+                      {
+                        "text": "Ahmedabad 1st (1996); Indore 1st green-retail (2023).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "color": null,
+                              "fontSize": "14px",
+                              "fontFamily": null
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2,
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "Practice PYQs (attached PDF)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "indent": 0,
+          "textAlign": null
+        },
+        "content": [
+          {
+            "text": "UPSC/CDS/CAPF PYQs - full question, options and answer with reasoning - are in the attached PDF below.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": null,
+                  "fontSize": "14px",
+                  "fontFamily": null
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pdfBlock",
+        "attrs": {
+          "filename": "P1C1_PYQs.pdf",
+          "pageCount": null,
+          "attachmentId": "1c1a0000-0000-4000-8000-0000000000a1"
+        }
+      }
+    ]
+  },
+  "contentText": "Syllabus (GS3): Capital markets - securities, debt/bond instruments (short & long term), special-purpose bonds, electoral bonds.\n\n1. Capital & Securities\n\nCapital: Fixed capital = land/plant/machinery/furniture; Working capital = raw materials, salaries, rent, day-to-day operations. Retained earnings = profit re-invested in the business (rest paid as dividend; board decides the split).\n\nQ - Equity (share) vs Debt (bond)?\n\n\n\n\n\n\n\nEquity / Share\n\n\n\nDebt / Bond (Debenture)\n\n\n\n\n\nHolder gets dividend only if there is profit\n\n\n\nHolder gets fixed interest + principal regardless of profit\n\n\n\n\n\nOwner of the company\n\n\n\nCreditor (lender) to the company\n\n\n\n\n\nLast (residual) claim on liquidation\n\n\n\nFirst claim on liquidation\n\n\n\n\n\nAttractive in a boom (higher dividend potential)\n\n\n\nAttractive in a slowdown (fixed, lower risk)\n\n2. Financial / Securities Market - Types\n\n\n\n\n\nBy tenure: Money market (< 1 yr maturity) vs Capital market (>= 1 yr).\n\n\n\nBy freshness: Primary market (new securities issued first time; no physical location) vs Secondary market (resale of old securities, e.g. BSE Dalal Street) - resale liquidity encourages primary buying.\n\n\n\nBy settlement: Future market (contract now, deliver on a future date) vs Spot market (immediate delivery).\n\n\n\nBy asset: bond, share, G-Sec, forex, commodity markets. A single 'Universal Exchange' (all assets) was permitted for BSE & NSE (2018).\n\n3. Short-Term Debt Instruments (< 1 year)\n\nTraded in the money market; usually unsecured; sold at a discount and repurchased at face value (the gap = interest). Highly liquid = called 'Near Money'; negotiable & transferable.\n\n\n\n\n\n\n\nInstrument\n\n\n\nIssuer / meaning\n\n\n\n\n\nTreasury Bills (14/91/182/364 days)\n\n\n\nUnion Govt only (States stopped since 2001); issued at a discount.\n\n\n\n\n\nCash Management Bill (91 days)\n\n\n\nUnion Govt, for temporary cash mismatch.\n\n\n\n\n\nWMA / Overdraft / SDF\n\n\n\nRBI's short-term (3-month) loans to Govts. WMA = at Repo%; Overdraft = Repo + 2-5%; not counted in fiscal deficit.\n\n\n\n\n\nCertificate of Deposit (CD)\n\n\n\nUnsecured negotiable debt issued by commercial banks.\n\n\n\n\n\nCommercial Paper / Bill of Exchange / Hundi / Promissory Note\n\n\n\nIssued by companies.\n\n\n\n\n\nCall / Notice Money\n\n\n\nInterbank borrowing for 1 day / 2-14 days.\n\n\n\n\n\nCBLO\n\n\n\nCollateralized Borrowing & Lending Obligation via Clearing Corp of India (money-market instrument).\n\n\n\n\n\nInter Corporate Deposit (ICD)\n\n\n\nUnsecured short loan from one company to another.\n\nTri-Party Repo: adds a Tri-Party Agent (NSE/BSE) between borrower & lender for collateral custody; NOT a monetary-policy tool.\n\nQ - Factoring & TReDS?\n\n\n\n\n\nFactoring: an MSME pledges an unpaid invoice to a factor (bank/NBFC) for a short loan. Factoring Regulation (Amendment) Act 2021 opened it to all NBFCs (9000+) and requires invoice registration on the SARFAESI central registry (stops 'dual financing' fraud).\n\n\n\nBill discounting vs factoring: in bill discounting the MSME collects from the buyer and pays the factor; in factoring the factor collects directly from the buyer.\n\n\n\nTReDS: online platform (M1xchange, RXIL, A.TReDS) linking factors with MSME borrowers; RXIL is owned by SIDBI + NSE.\n\nInterest-rate benchmarks: LIBOR (London interbank rate), MIBOR (Mumbai). Post-LIBOR, RBI's Ramanathan Subramanian Committee proposed SORR (Secured Overnight Rupee Rate) (2024), computed by FBIL, may replace MIBOR.\n\n4. Long-Term Debt Instruments (>= 1 year)\n\n\n\n\n\nColonial-era types: Coupon bonds (detachable coupons -> 'coupon rate'); Zero-coupon bonds (sold at discount, no coupon); Bearer bonds (not linked to ID; anyone holding gets paid; issued in war).\n\n\n\nModern Govt borrowing: G-Sec, dated securities, sovereign bonds - also called Gilt-edged securities (repayment assured -> lower interest).\n\n\n\nCredit rating: AAA best (US Treasury); India ~BAA (moderate). Big-3 = Fitch, Moody's, S&P (critics: pro-US/EU bias).\n\n\n\nGlobal bond indices: Indian G-Sec added to JPMorgan GBI-EM (2024) and Bloomberg EM Index (2025) -> more foreign inflows & liquidity.\n\nQ - Special govt/RBI bonds?\n\n\n\n\n\n\n\nBond\n\n\n\nDetail\n\n\n\n\n\nInflation Indexed Bond (IIB)\n\n\n\nGives positive real interest; RBI issued 1997/2004/2013/2018.\n\n\n\n\n\nCapital Indexed Bond (CIB) vs IIB\n\n\n\nCIB-1997 protected only principal (WPI); IIB-2013/IINSS-C protect principal + interest (IINSS-C uses CPI).\n\n\n\n\n\nSovereign Gold Bond (SGB, 2015)\n\n\n\nRBI issues on Govt's behalf; denominated in gold grams but pays rupee value of gold at maturity (8 yr) + 2.5% interest; reduces physical gold import. 2025: Govt may stop (gold price ~doubled 2019->2024).\n\n5. Company Long-Term Debt & Hybrids\n\n\n\n\n\nBond (British) = Debenture (American). Junk bonds = high default risk (BB-D, e.g. IL&FS) -> must offer high interest.\n\n\n\nRedeemable (interest + principal returned) vs Irredeemable (only interest, no principal - e.g. PSB AT1 bonds).\n\n\n\nSecured vs Unsecured; Convertible vs Non-convertible (NCD). Hybrid = issued as bond, convertible to share.\n\n\n\nMezzanine/Hybrid financing: debt + equity mix via OFCD (Optionally Fully Convertible Debentures); used by venture capitalists in start-ups; pays less interest than plain bonds.\n\n\n\nFCCB: Foreign Currency Convertible Bond - foreign-currency bond convertible to shares at a pre-set rate; lower interest (conversion is the sweetener).\n\n\n\nCoCo / Enhanced Capital Note: hybrid of AT1 bond + OFCD - converts to shares (or writes off) on a trigger condition.\n\n\n\nSahara OFCD: issued without SEBI nod -> SEBI penalty; CRCS-Sahara Refund Portal (2023) refunds investors.\n\n6. Bonds by Issuer\n\n\n\n\n\nMunicipal (ULB) bonds: Ahmedabad = 1st municipal bond (1996); Lucknow = 1st from North India (2020); Ghaziabad = 1st green municipal bond (2021, private placement); Indore = 1st green muni bond for retail investors (2023).\n\n\n\nGlobal: BRICS/New Development Bank bonds (USD); World Bank 'Bond-i' (2018, 1st blockchain bond, Australia); Evergrande (Chinese realty) bond crisis.\n\nQ - Currency-named bonds?\n\n\n\n\n\n\n\nBond name\n\n\n\nBorrowed in that country/currency\n\n\n\n\n\nMasala Bond\n\n\n\nRupee-denominated bond issued OUTSIDE India (for Indian entities); IFC launched it; Kerala's KIIFB = 1st Indian state (2019).\n\n\n\n\n\nMaharaja Bond\n\n\n\nRupee bond issued by a non-Indian INSIDE India.\n\n\n\n\n\nPanda / Dim sum Bond\n\n\n\nYuan (Renminbi) bond in China / Hong Kong.\n\n\n\n\n\nKangaroo Bond\n\n\n\nAustralian-dollar bond in Australia (e.g. World Bank Bond-i).\n\n\n\n\n\nFormosa Bond\n\n\n\nNon-Taiwan-dollar bond issued in Taiwan.\n\nSurety Bonds: allowed from Budget-2022, regulated by IRDAI (replace bank guarantees for contractors).\n\n7. Special-Purpose Bonds\n\n\n\n\n\nGreen Bonds: for renewable energy/pollution control. World's 1st = World Bank (2007); India's 1st = Yes Bank (2015); IREDA's Masala green bond (2018); Sovereign Green Bonds (Budget-2022, via RBI E-Kuber). Fund NOT for nuclear/large hydro (>25MW)/tobacco etc.\n\n\n\nGreenium: lower interest investors accept for green impact. ES24: Indian sovereign green bonds got little greenium; Jan-2025 issue ~70% unsold (trust/transparency, low liquidity, no big backer).\n\n\n\nBlue Bond: green sub-type for marine/fisheries (Seychelles, 2018, 1st). ESG Bonds: issued by firms strong on Environment/Social/Governance.\n\n\n\nConsol / Perpetual bonds: no maturity, pay interest forever (irredeemable); some propose Consol bonds for post-Covid revival.\n\n\n\nElephant Bonds (proposed): 25-yr bonds where black-money declarers invest, funds for infrastructure. Sukuk: sharia-compliant (Islamic) bond.\n\n\n\nSocial/Skill Impact Bonds: SIDBI Women's Livelihood Bonds (2019, 3% for 5 yr, for women entrepreneurs); NSDC Skill Impact Bond (2021).\n\n\n\nCAT (Catastrophe) Bonds: for disaster risk. Bhutan 'Nation Building Bond' ($100M) for Gelephu Mindfulness City.\n\n\n\nZero Coupon Zero Principal (ZCZP): by NPO/NGO; repays NEITHER interest NOR principal; like a donation but with SEBI disclosure; traded on the Social Stock Exchange (e.g. Unnati, 2023).\n\n8. Electoral Bonds\n\nElectoral Bonds (Budget-2017): issued only by SBI (in Rs.1k to Rs.1cr denominations); bought by Indian citizens/companies (with KYC, not cash/anonymous); donated to parties (registered under RPA 1951 with >=1% votes); 15-day validity; paper bearer promissory note, interest-free, non-transferable.\n\n\n\n\n\nSC ban (Feb-2024): electoral bonds violate voters' right to know (Art 19(1)(a)), RPA, Companies Act & IT Act; donor privacy < voters' right to know. SBI must disclose all donors & recipient parties (2019-24) to ECI.\n\n\n\nCompanies Act (2017 amendment struck down): had removed the 7.5%-of-3-yr-avg-profit donation cap and the need to name the recipient party - SC ruled it unconstitutional (2024).\n\n\n\nElectoral Trusts (2013): a company creates a trust that pools donations and distributes to parties (donor anonymity); NOT banned.\n\n9. Misc Bonds & Repayment Buffers\n\n\n\n\n\nMarket-Linked Debentures: interest linked to an index (Sensex, G-Sec yield, gold).\n\n\n\nDebenture Redemption Reserve (DRR): buffer fund a company keeps (Companies Act) to repay bondholders; some firms exempted (2019).\n\n\n\nConsolidated Sinking Fund (CSF): buffer fund for State Govts' loan repayment.\n\nKey Facts (Quick Revision)\n\n\n\n\n\n\n\nFact\n\n\n\nDetail\n\n\n\n\n\nEquity vs Debt\n\n\n\nShareholder = owner, last claim; Bondholder = lender, first claim.\n\n\n\n\n\nMoney vs Capital market\n\n\n\n< 1 yr vs >= 1 yr maturity.\n\n\n\n\n\nNear Money\n\n\n\nHighly liquid: T-Bill, savings a/c, money-market instruments.\n\n\n\n\n\nGilt-edged\n\n\n\nGovt securities (assured repayment).\n\n\n\n\n\nSGB (2015)\n\n\n\nGold-gram denominated; pays rupee value of gold at maturity + 2.5%.\n\n\n\n\n\nMasala Bond\n\n\n\nRupee bond issued outside India; IFC; Kerala KIIFB (1st state).\n\n\n\n\n\nSovereign Green Bond\n\n\n\nBudget-2022; via RBI E-Kuber; not for nuclear/large-hydro.\n\n\n\n\n\nElectoral Bonds\n\n\n\nBudget-2017; only SBI; banned by SC (Feb-2024).\n\n\n\n\n\nMunicipal bonds\n\n\n\nAhmedabad 1st (1996); Indore 1st green-retail (2023).\n\nPractice PYQs (attached PDF)\n\nUPSC/CDS/CAPF PYQs - full question, options and answer with reasoning - are in the attached PDF below.\n\n",
+  "tags": [],
+  "pinned": false,
+  "position": 100
+}
