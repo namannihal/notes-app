@@ -8,7 +8,7 @@ const AppShell = dynamic(() => import('@/components/app-shell').then((m) => m.Ap
   ssr: false,
   loading: () => (
     <div className="flex h-dvh items-center justify-center text-sm text-muted-foreground">
-      Loading Sthir…
+      Loading Slate…
     </div>
   ),
 });

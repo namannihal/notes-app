@@ -6,7 +6,7 @@ export interface AuthUser {
 }
 
 export interface SyncChange {
-  entityType: 'stack' | 'notebook' | 'note';
+  entityType: 'bucket' | 'stack' | 'notebook' | 'note';
   entityId: string;
   operation: 'create' | 'update' | 'delete';
   version?: number;
@@ -14,6 +14,7 @@ export interface SyncChange {
 }
 
 export interface PullResponse {
+  buckets: ServerRecord[];
   stacks: ServerRecord[];
   notebooks: ServerRecord[];
   notes: ServerRecord[];

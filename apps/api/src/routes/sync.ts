@@ -13,18 +13,19 @@ syncRouter.get('/pull', async (req, res) => {
   const since = sinceRaw ? new Date(sinceRaw) : new Date(0);
   const where = { userId: req.userId!, updatedAt: { gt: since } };
 
-  const [stacks, notebooks, notes, attachments] = await Promise.all([
+  const [buckets, stacks, notebooks, notes, attachments] = await Promise.all([
+    prisma.bucket.findMany({ where }),
     prisma.stack.findMany({ where }),
     prisma.notebook.findMany({ where }),
     prisma.note.findMany({ where }),
     prisma.attachment.findMany({ where }),
   ]);
 
-  res.json({ stacks, notebooks, notes, attachments, serverTime: new Date().toISOString() });
+  res.json({ buckets, stacks, notebooks, notes, attachments, serverTime: new Date().toISOString() });
 });
 
 const changeSchema = z.object({
-  entityType: z.enum(['stack', 'notebook', 'note']),
+  entityType: z.enum(['bucket', 'stack', 'notebook', 'note']),
   entityId: z.string().uuid(),
   operation: z.enum(['create', 'update', 'delete']),
   version: z.number().int().optional(),
@@ -79,8 +80,13 @@ syncRouter.post('/push', async (req, res) => {
       continue;
     }
 
-    // Stacks and notebooks: no version tracking, last-write-wins by design.
-    const model = entityType === 'stack' ? prisma.stack : prisma.notebook;
+    // Buckets, stacks and notebooks: no version tracking, last-write-wins by design.
+    const model =
+      entityType === 'bucket'
+        ? prisma.bucket
+        : entityType === 'stack'
+          ? prisma.stack
+          : prisma.notebook;
     if (operation === 'delete') {
       // @ts-expect-error union of two delegates with identical shape
       await model.updateMany({

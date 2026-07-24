@@ -2,7 +2,7 @@
 
 import { api, type ServerRecord, type SyncChange } from '@/lib/api';
 import { db } from '@/db/db';
-import type { Attachment, Note, Notebook, Stack } from '@/db/types';
+import type { Attachment, Bucket, Note, Notebook, Stack } from '@/db/types';
 
 const LAST_SYNC_KEY = 'sthir-last-sync';
 
@@ -15,7 +15,8 @@ let running = false;
 // --- PUSH: send local dirty changes --------------------------------------
 
 async function pushChanges(): Promise<void> {
-  const [stacks, notebooks, notes] = await Promise.all([
+  const [buckets, stacks, notebooks, notes] = await Promise.all([
+    db.buckets.filter((b) => Boolean(b._dirty)).toArray(),
     db.stacks.filter((s) => Boolean(s._dirty)).toArray(),
     db.notebooks.filter((n) => Boolean(n._dirty)).toArray(),
     db.notes.filter((n) => Boolean(n._dirty)).toArray(),
@@ -23,12 +24,20 @@ async function pushChanges(): Promise<void> {
 
   const changes: SyncChange[] = [];
 
+  for (const b of buckets) {
+    changes.push({
+      entityType: 'bucket',
+      entityId: b.id,
+      operation: b.deletedAt ? 'delete' : 'update',
+      payload: { title: b.title, position: b.position },
+    });
+  }
   for (const s of stacks) {
     changes.push({
       entityType: 'stack',
       entityId: s.id,
       operation: s.deletedAt ? 'delete' : 'update',
-      payload: { title: s.title, position: s.position },
+      payload: { title: s.title, position: s.position, bucketId: s.bucketId ?? null },
     });
   }
   for (const n of notebooks) {
@@ -63,6 +72,7 @@ async function pushChanges(): Promise<void> {
   const accepted = new Set(res.accepted);
 
   await Promise.all([
+    ...buckets.filter((b) => accepted.has(b.id)).map((b) => db.buckets.update(b.id, { _dirty: false })),
     ...stacks.filter((s) => accepted.has(s.id)).map((s) => db.stacks.update(s.id, { _dirty: false })),
     ...notebooks
       .filter((n) => accepted.has(n.id))
@@ -111,6 +121,19 @@ async function uploadAttachments(): Promise<void> {
 // --- PULL: merge server changes into IndexedDB ----------------------------
 
 function stackFromServer(r: ServerRecord): Stack {
+  return {
+    id: r.id as string,
+    bucketId: (r.bucketId as string | null) ?? null,
+    title: r.title as string,
+    position: (r.position as number) ?? 0,
+    createdAt: toMs(r.createdAt),
+    updatedAt: toMs(r.updatedAt),
+    deletedAt: toMsOrNull(r.deletedAt),
+    _dirty: false,
+  };
+}
+
+function bucketFromServer(r: ServerRecord): Bucket {
   return {
     id: r.id as string,
     title: r.title as string,
@@ -189,6 +212,7 @@ async function pullChanges(): Promise<void> {
   const since = localStorage.getItem(LAST_SYNC_KEY) ?? undefined;
   const res = await api.pull(since);
 
+  await mergeInto(db.buckets, (res.buckets ?? []).map(bucketFromServer));
   await mergeInto(db.stacks, res.stacks.map(stackFromServer));
   await mergeInto(db.notebooks, res.notebooks.map(notebookFromServer));
   await mergeInto(db.notes, res.notes.map(noteFromServer));

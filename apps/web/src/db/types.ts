@@ -1,9 +1,22 @@
 import type { JSONContent } from '@tiptap/react';
 
-export type EntityType = 'stack' | 'notebook' | 'note';
+export type EntityType = 'bucket' | 'stack' | 'notebook' | 'note';
+
+export interface Bucket {
+  id: string;
+  title: string;
+  position: number;
+  createdAt: number;
+  updatedAt: number;
+  deletedAt: number | null;
+  /** Local-only: has unsynced changes. */
+  _dirty?: boolean;
+}
 
 export interface Stack {
   id: string;
+  /** Parent bucket, or null when the stack is ungrouped (top level). */
+  bucketId?: string | null;
   title: string;
   position: number;
   createdAt: number;

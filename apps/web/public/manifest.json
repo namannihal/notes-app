@@ -1,7 +1,7 @@
 {
-  "name": "Sthir Notes",
-  "short_name": "Sthir",
-  "description": "Offline-first hierarchical notes for UPSC prep",
+  "name": "Slate",
+  "short_name": "Slate",
+  "description": "Offline-first hierarchical notes",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#111111",

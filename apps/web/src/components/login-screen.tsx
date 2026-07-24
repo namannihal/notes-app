@@ -25,7 +25,7 @@ export function LoginScreen() {
         className="w-full max-w-sm space-y-4 rounded-xl border bg-card p-6 shadow-sm"
       >
         <div className="space-y-1 text-center">
-          <h1 className="text-xl font-bold">Sthir Notes</h1>
+          <h1 className="text-xl font-bold">Slate</h1>
           <p className="text-sm text-muted-foreground">Sign in to sync your notes</p>
         </div>
         <div className="space-y-2">

@@ -1,7 +1,7 @@
 import { v4 as uuid } from 'uuid';
 import type { JSONContent } from '@tiptap/react';
 import { db } from './db';
-import type { Note, Notebook, Stack } from './types';
+import type { Bucket, Note, Notebook, Stack } from './types';
 
 const now = () => Date.now();
 
@@ -10,12 +10,55 @@ const emptyDoc: JSONContent = {
   content: [{ type: 'paragraph' }],
 };
 
+// --- Buckets --------------------------------------------------------------
+
+export async function createBucket(title: string): Promise<Bucket> {
+  const count = await db.buckets.count();
+  const bucket: Bucket = {
+    id: uuid(),
+    title: title.trim() || 'New Bucket',
+    position: count,
+    createdAt: now(),
+    updatedAt: now(),
+    deletedAt: null,
+    _dirty: true,
+  };
+  await db.buckets.add(bucket);
+  return bucket;
+}
+
+export async function renameBucket(id: string, title: string): Promise<void> {
+  await db.buckets.update(id, { title: title.trim() || 'Untitled', updatedAt: now(), _dirty: true });
+}
+
+/** Soft-delete a bucket and ungroup (keep) its stacks. */
+export async function deleteBucket(id: string): Promise<void> {
+  const ts = now();
+  await db.transaction('rw', db.buckets, db.stacks, async () => {
+    await db.buckets.update(id, { deletedAt: ts, updatedAt: ts, _dirty: true });
+    const stacks = await db.stacks.where('bucketId').equals(id).toArray();
+    await Promise.all(
+      stacks.map((s) => db.stacks.update(s.id, { bucketId: null, updatedAt: ts, _dirty: true })),
+    );
+  });
+}
+
+export async function reorderBuckets(orderedIds: string[]): Promise<void> {
+  const ts = now();
+  await db.transaction('rw', db.buckets, async () => {
+    await Promise.all(
+      orderedIds.map((id, i) => db.buckets.update(id, { position: i, updatedAt: ts, _dirty: true })),
+    );
+  });
+}
+
 // --- Stacks ---------------------------------------------------------------
 
-export async function createStack(title: string): Promise<Stack> {
+export async function createStack(title: string, bucketId: string | null = null): Promise<Stack> {
   const count = await db.stacks.count();
   const stack: Stack = {
     id: uuid(),
+    bucketId,
     title: title.trim() || 'New Stack',
     position: count,
     createdAt: now(),
@@ -25,6 +68,13 @@ export async function createStack(title: string): Promise<Stack> {
   };
   await db.stacks.add(stack);
   return stack;
+}
+
+/** Move a stack into a bucket (or out to the top level when bucketId is null). */
+export async function moveStackToBucket(id: string, bucketId: string | null): Promise<void> {
+  const all = await db.stacks.toArray();
+  const count = all.filter((s) => !s.deletedAt && (s.bucketId ?? null) === bucketId).length;
+  await db.stacks.update(id, { bucketId, position: count, updatedAt: now(), _dirty: true });
 }
 
 export async function renameStack(id: string, title: string): Promise<void> {
