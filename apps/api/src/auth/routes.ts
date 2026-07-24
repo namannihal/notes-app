@@ -32,8 +32,8 @@ authRouter.post('/login', async (req, res) => {
     return;
   }
 
-  issueToken(res, { sub: user.id, email: user.email });
-  res.json({ id: user.id, email: user.email });
+  const token = issueToken(res, { sub: user.id, email: user.email });
+  res.json({ id: user.id, email: user.email, token });
 });
 
 authRouter.post('/logout', (_req, res) => {

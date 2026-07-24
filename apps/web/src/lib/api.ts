@@ -1,5 +1,18 @@
 const BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
 
+const TOKEN_KEY = 'sthir_token';
+
+/** Bearer token kept in localStorage so auth works even when mobile browsers
+ *  block the cross-site cookie. */
+export function getAuthToken(): string | null {
+  return typeof localStorage !== 'undefined' ? localStorage.getItem(TOKEN_KEY) : null;
+}
+function setAuthToken(token: string | null): void {
+  if (typeof localStorage === 'undefined') return;
+  if (token) localStorage.setItem(TOKEN_KEY, token);
+  else localStorage.removeItem(TOKEN_KEY);
+}
+
 export interface AuthUser {
   id: string;
   email: string;
@@ -48,9 +61,14 @@ class ApiError extends Error {
 }
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
+  const token = getAuthToken();
   const res = await fetch(`${BASE}${path}`, {
     credentials: 'include',
-    headers: { 'Content-Type': 'application/json', ...(init?.headers ?? {}) },
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...(init?.headers ?? {}),
+    },
     ...init,
   });
   if (!res.ok) {
@@ -71,12 +89,21 @@ export const api = {
   isUnauthorized: (e: unknown) => e instanceof ApiError && e.status === 401,
 
   me: () => request<AuthUser>('/api/auth/me'),
-  login: (email: string, password: string) =>
-    request<AuthUser>('/api/auth/login', {
+  login: async (email: string, password: string) => {
+    const res = await request<AuthUser & { token?: string }>('/api/auth/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
-    }),
-  logout: () => request<{ ok: true }>('/api/auth/logout', { method: 'POST' }),
+    });
+    if (res.token) setAuthToken(res.token);
+    return { id: res.id, email: res.email } as AuthUser;
+  },
+  logout: async () => {
+    try {
+      return await request<{ ok: true }>('/api/auth/logout', { method: 'POST' });
+    } finally {
+      setAuthToken(null);
+    }
+  },
   changePassword: (currentPassword: string, newPassword: string) =>
     request<{ ok: true }>('/api/auth/change-password', {
       method: 'POST',

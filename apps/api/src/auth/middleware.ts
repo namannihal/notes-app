@@ -10,7 +10,7 @@ interface TokenPayload {
   email: string;
 }
 
-export function issueToken(res: Response, payload: TokenPayload): void {
+export function issueToken(res: Response, payload: TokenPayload): string {
   const token = jwt.sign(payload, env.JWT_SECRET, { expiresIn: '30d' });
   res.cookie(COOKIE_NAME, token, {
     httpOnly: true,
@@ -21,6 +21,7 @@ export function issueToken(res: Response, payload: TokenPayload): void {
     maxAge: MAX_AGE_MS,
     path: '/',
   });
+  return token;
 }
 
 export function clearToken(res: Response): void {
@@ -29,7 +30,11 @@ export function clearToken(res: Response): void {
 
 /** Attaches req.userId; rejects with 401 when no valid token is present. */
 export function requireAuth(req: Request, res: Response, next: NextFunction): void {
-  const token = req.cookies?.[COOKIE_NAME];
+  // Prefer the Authorization: Bearer header (works on mobile browsers that
+  // block cross-site cookies); fall back to the httpOnly cookie.
+  const header = req.headers.authorization;
+  const bearer = header?.startsWith('Bearer ') ? header.slice(7) : undefined;
+  const token = bearer ?? req.cookies?.[COOKIE_NAME];
   if (!token) {
     res.status(401).json({ error: 'Unauthorized' });
     return;
