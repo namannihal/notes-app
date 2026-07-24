@@ -1,0 +1,5272 @@
+{
+  "id": "1b1a0000-0000-4000-8000-000000000001",
+  "title": "P1B1 - Bank Classification (Types of Banks & NBFCs)",
+  "notebookId": "f0bc431c-555d-4c21-9cb6-ae703ded2dd2",
+  "contentJson": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Syllabus (GS3): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "Banking - classification of banks: scheduled vs non-scheduled; commercial (public/private/foreign/RRB); cooperative; differentiated banks (SFB, Payments Bank); DFIs & AIFIs; NBFCs vs banks; NBFC types; fintech, CIC vs CRA, shadow banking.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "1. Financial Intermediaries & RBI Basics",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Financial Intermediary (FI) ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "= a middleman between two parties (lenders<->borrowers). Formal FIs = Banks + Non-Banks (DFI/AIFI) + NBFCs; informal FIs = moneylenders, indigenous bankers (Hundi).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - RBI milestones (how banking got regulated)?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Year",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Event",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "1926",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Hilton Young Commission (Royal Commission on Indian Currency) recommends a central bank.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "1934 / 1935",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "RBI Act 1934; RBI operational 1 April 1935; 1st Governor Sir Osborne Smith.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "1935 (July)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Banks meeting 2nd Schedule conditions = 'Scheduled Banks' (must keep CRR with RBI).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "1943-49",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "C.D. Deshmukh = 1st Indian Governor (attended Bretton Woods 1944).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "1948",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "RBI (Transfer of Ownership) Act - RBI fully Govt-owned, answerable to Parliament.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "1949",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Banking Regulation Act - RBI can license banks, permit branches, set SLR, force mergers, protect depositors.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Regulator note: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "RBI regulates commercial banks (BR Act 1949) + payment systems (2007) + NBFC-D + AIFIs. State Bank of Sikkim (Art. 371-F) is outside RBI. Banks must open 25% of branches in rural (unbanked) areas.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "2. Scheduled vs Non-Scheduled Banks",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Scheduled status (2nd Schedule, RBI Act 1934): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "two conditions - (1) Paid-up Capital + Reserves >= Rs.5 lakh; (2) not conducting business harmful to depositors.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - Scheduled vs Non-Scheduled?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Scheduled Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Non-Scheduled Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Listed in 2nd Schedule of RBI Act (e.g. SBI, Axis; scheduled coop banks)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Not listed; many cooperative banks are non-scheduled",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Must deposit CRR to RBI; eligible for RBI window (LAF-Repo, MSF)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "May keep CRR in own vault; RBI window at its discretion",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Eligible for Govt schemes (e.g. PM Jan Dhan); big accounts prefer it",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Usually not eligible for Govt financial-inclusion schemes",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Airtel & Paytm Payments Banks became scheduled banks (2021-22) - but still cannot lend / issue credit cards / take FDs.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "3. Commercial Banks - Public Sector & Nationalisation",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Pre-independence: Bank of Hindustan (1770); 3 Presidency banks -> Imperial Bank (1921) -> ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          },
+          {
+            "text": "SBI (1955)",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": ". PNB (1894, Lala Lajpat Rai); Bank of Baroda (1908, Maharaja Sayajirao Gaekwad III).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - Why nationalise banks, and when?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Why: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "bank-industrialist nexus (188 elites controlled 20 banks/1452 firms) -> reckless lending, failures; private banks ignored rural areas.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "1969: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Banking Companies (Acquisition & Transfer) Ordinance -> 14 banks with deposits >= Rs.50 cr nationalised (BoB, PNB, Canara...). Small unnationalised ones = 'Old Private Banks'.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "1980: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "6 more banks with deposits >= Rs.200 cr nationalised (Corporation, Vijaya, OBC...).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Committees: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Narasimham-I (1991) & II (1997), Raghuram Rajan (2007), P.J. Nayak (2014). M. Narasimham = 'father of Indian banking reforms'.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - PSB consolidation - the 2019 mega-merger (10 -> 4 anchors)?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Amalgamated banks",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Anchor bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Oriental Bank of Commerce + United Bank of India",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "PNB (2nd largest after SBI)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Syndicate Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Canara Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Andhra Bank + Corporation Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Union Bank of India",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Allahabad Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Indian Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Earlier: 5 Associate Banks + Bharatiya Mahila Bank (2013) merged into SBI (2017); Vijaya + Dena into BoB (2019). Result: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          },
+          {
+            "text": "12 PSBs remain",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": " (+ India Post Payments Bank). Alternative Mechanism Panel (under FM) clears merger proposals.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "4. Private & Foreign Banks; Licensing",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - Three rounds of private bank licensing?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "attrs": {
+          "start": 1
+        },
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Round-1 (1993-95): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "ICICI, HDFC, IndusInd, DCB, UTI->Axis, IDBI; Global Trust Bank (merged into OBC).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Round-2 (2001-04): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Kotak Mahindra, Yes Bank (Rana Kapoor).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Round-3 (2013-16): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Bimal Jalan Committee selected Bandhan (microfinance, WB) & IDFC (infra NBFC) -> IDFC-First.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "On-Tap license (2016): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "apply to RBI anytime if eligible - min 10 yrs' experience + min Rs.500 cr capital (= commercial-bank entry capital).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Who is barred: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "large NBFCs (IL&FS) and large corporates (Tata/Adani/Reliance) can't open commercial banks - except payment banks (can't lend -> lower risk).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Count (2025): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "12 PSBs, 21 private, 11 SFBs, 44 foreign, 5-6 payment banks. Only SBI & HDFC in global top-100 by assets.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - Foreign investment limits in Indian banks?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Bank type",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Foreign holding limit",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Public Sector Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Max 20% (e.g. SBI ~14%, PNB ~13%)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Private Sector Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Up to 49% automatic; up to 74% with Govt approval (Govt mulling 100% for BASEL-III capital)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Foreign banks: ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "incorporated abroad, open Indian subsidiary (Citi, HSBC); CRR/SLR apply; PSL varies by branch count; on-tap license on reciprocal basis.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "5. Differentiated Banks (RRB, LAB, SFB, Payments Bank)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Chronology: RRB (1976) -> Local Area Bank (1996) -> Small Finance Bank & Payments Bank (2015, on ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          },
+          {
+            "text": "Nachiket Mor Committee 2013-14",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": ", approved by Governor Raghuram Rajan).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - RRB vs Local Area Bank?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Regional Rural Bank (RRB)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Local Area Bank (LAB)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Set up under RRB Act 1976 (Narasimham FI committee)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Announced in Budget-1996 (FM Manmohan Singh); private, under BR Act",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "PSL 75%; ultimate regulator RBI, immediate regulator NABARD",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Max 3 contiguous districts; non-scheduled; rates <= local coop banks",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Shareholding (2015): Union+State+Sponsor 51% + private 49%; 43 RRBs in 2023 (ES25)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "e.g. Subhadra LAB, Kolhapur",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - Small Finance Bank vs Payments Bank?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Small Finance Bank (SFB)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Payments Bank (PB)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Min Rs.100 cr capital; e.g. Ujjivan, Utkarsh, AU (upgraded to universal bank 2025)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Min Rs.100 cr capital; Airtel, India Post, FINO, Paytm, Jio, NSDL",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Accepts deposits (no cap); lends; 75% to PSL; 50% of loans <= Rs.25 lakh",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Deposits max Rs.1 lakh -> Rs.2 lakh (2021); no FD, no NRI deposits",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Debit + credit cards; 25% branches in unbanked rural",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Debit card only; CANNOT lend / no credit card / no PSL; invests deposits in G-Sec/T-Bill/SCBs",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "After 5 yrs -> Universal Commercial Bank (if RBI satisfied)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "After 5 yrs -> Small Finance Bank (if RBI satisfied)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Paytm PB action (2024): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "RBI barred fresh deposits/wallet top-ups for KYC failures, same-PAN multi-accounts, no separation from parent One97.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "IPPB (2018): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "100% Dept of Posts; 1.55 lakh post offices; doorstep banking; POSB (Govt Savings Bank Act 1873) linked to CBS (Budget-2022).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Proposed/other: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Wholesale (WLTF) banks & full-stack Digital Banks (not made); 75 Digital Banking Units (Budget-2022, have physical kiosks); Neobanks NOT permitted by RBI.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "6. Cooperative Banks",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - Commercial vs Cooperative bank?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Commercial Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Cooperative Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "BR Act since 1949; regulator RBI; purely profit",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "BR Act since 1966; community help, lower rates",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Vote by shareholding",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "1 member = 1 vote (regardless of capital)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "All-India + overseas",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Mainly Gujarat, Maharashtra, Andhra, Tamil Nadu",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Urban (UCB): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "scheduled/non-scheduled or single/multi-state; since 2018 may voluntarily upgrade to SFB.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Rural short-term structure: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "State Coop Bank (StCB) -> District Central Coop Bank (DCCB) -> Primary Agricultural Credit Societies (PACS). PACS are NOT banks (no chequebooks; State-registrar-regulated).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "BR (Amendment) Act 2020: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Urban + Multi-State cooperative banks now under RBI ONLY (ended dual regulation); PACS still with State registrar.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "2025: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "State Coop Bank/DCCB customer grievances shifted NABARD Ombudsman -> RBI Ombudsman. NUCFDC (2024, Ministry of Cooperation) = umbrella SRO/NBFC for UCBs.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "7. DFIs & All-India Financial Institutions (AIFIs)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "DFIs ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "give medium/long-term industry loans; do NOT accept public deposits. IFCI (1948), ICICI (1955, later a bank), IDBI (1964, later PSB then LIC), IIFCL (2006). Narasimham-II (1998): only 2 categories (Bank / Non-Bank) - DFIs must join one.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - The 5 AIFIs (set up by Acts; regulated by RBI; not 'banks')?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "AIFI (year)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Role",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "EXIM Bank (1982)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Export-Import finance; 100% GoI",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "NABARD (1982)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Agri & rural dev; regulates Coop + RRB; runs RIDF; 100% Govt (2018)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "NHB (1988)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Housing finance; RESIDEX index; 100% Govt (2019)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "SIDBI (1990)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Small industries; runs udyamimitra.in (Mudra, Stand-up India)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "NaBFID (2022, 5th)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Infra finance; Rs.20,000 cr capital; Chairman K.V. Kamath; lend Rs.5 lakh cr/3 yrs",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Primary Dealers (PD): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "buy fresh G-Sec from RBI's E-Kuber, sell in secondary market; 20+ PDs (14 are banks). Retail use Retail Direct Gilt (RDG) account.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "8. NBFCs vs Banks; NBFC Types",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - Commercial Bank vs NBFC?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Commercial Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "NBFC",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Regulator RBI (BR Act); entry capital Rs.500 cr",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Total ~10,190; 108 deposit-taking (NBFC-D), rest non-deposit",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Accepts time + demand deposits; DICGC-insured",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Only NBFC-D accept deposits (TIME only, e.g. Bajaj Finance); NOT DICGC-insured",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Chequebook + debit card; CRR + SLR apply",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "No chequebook/debit card; CRR never applies; SLR only on NBFC-D",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "SARFAESI recovery powers",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Only Housing Finance Cos have SARFAESI; since 2022 NBFCs can issue credit cards directly",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "NBFC types (RBI-regulated): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "Investment & Credit Co; Consumer-durable/BNPL (Bajaj Finserv); Core Investment Co (Tata Capital); Infrastructure Finance Co (REC) & Infra Debt Fund; ARC (buy NPAs); Factoring (IFCI Factors); Gold Loan (Muthoot, Manappuram - RBI sets LTV); Housing Finance (RBI-regulated since 2019); MFI; MUDRA (2015, owned by SIDBI).",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Microfinance (MFI): ",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "text": "RBI's Y.H. Malegam Committee (2010) created the category; collateral-free small loans; borrower household income <= Rs.1.25 lakh (rural)/Rs.2 lakh (urban); max loan Rs.1.25 lakh; SROs = MFIN, Sa-Dhan.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "9. CIC vs CRA; FinTech, SRO & Shadow Banking",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "Q - Credit Information Co (CIC) vs Credit Rating Agency (CRA)?",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "color": "#dc2626",
+                  "fontSize": "14px"
+                }
+              },
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Credit Information Co (CIC)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Credit Rating Agency (CRA)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Regulator RBI; rates INDIVIDUALS (CIBIL score 300-900)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Regulator SEBI; rates companies/NBFCs/govts (AAA...D)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "CIBIL TransUnion, CRIF High Mark, Equifax, Experian",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "CRISIL, CARE, ICRA, S&P, Moody's, Fitch; Brickwork (SEBI shut for malpractice)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "FinTech (RBI): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "P2P lenders, Account Aggregators, Payment Aggregators (Razorpay), wallets (PhonePe, Paytm). Non-RBI: discount brokers (Zerodha)->SEBI, Policybazaar->IRDAI.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "SRO: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "self-regulatory body. RBI-recognised SROs (2024-25): FACE (fintech), SPRA (payment operators), FIDC (NBFCs), NUCFDC (UCBs).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Shadow banking (ES20): ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "NBFCs partly outside RBI regulation; raise funds via bank loans + Commercial Papers + bonds; 3 segments - HFCs (DHFL), Liquid Debt MFs, retail-NBFCs; IL&FS crisis (2019).",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "text": "Islamic banking: ",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      },
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "NOT allowed in India (RBI opposed 2017); interest (Riba) haram; works via Ijara/Murabaha/Musharaka.",
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "textStyle",
+                        "attrs": {
+                          "fontSize": "14px"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "Key Facts (Quick Revision)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Fact",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Detail",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          },
+                          {
+                            "type": "bold"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "RBI laws",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "RBI Act 1934 (operational 1 Apr 1935); Banking Regulation Act 1949.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Scheduled Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "In 2nd Schedule of RBI Act; capital+reserves >= Rs.5 lakh.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Nationalisation",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "1969 -> 14 banks (>= Rs.50 cr); 1980 -> 6 banks (>= Rs.200 cr).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "2019 mega-merger",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "10 -> 4 anchors (PNB, Canara, Union, Indian Bank); 12 PSBs remain.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "On-tap license (2016)",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "10 yrs' exp + Rs.500 cr capital (= commercial-bank entry capital).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Payments Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "No lending/credit card/FD; deposit cap Rs.2 lakh (2021); -> SFB after 5 yrs.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Small Finance Bank",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "75% PSL; -> Universal Bank after 5 yrs (AU SFB, 2025). SFB/PB: Nachiket Mor (2013-14).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "RRB",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "RRB Act 1976; PSL 75%; ultimate regulator RBI, immediate NABARD; 43 RRBs (2023).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "BR (Amdt) Act 2020",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "Urban + Multi-State coop banks under RBI ONLY; PACS not banks.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "5 AIFIs",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "EXIM (1982), NABARD (1982), NHB (1988), SIDBI (1990), NaBFID (2022).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "NBFC",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "CRR never applies; SLR only on NBFC-D; not DICGC-insured; can issue credit cards (2022).",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "CIC vs CRA",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "attrs": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "colwidth": null
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "text": "CIC=RBI, individuals, CIBIL 300-900; CRA=SEBI, institutions, AAA-D.",
+                        "type": "text",
+                        "marks": [
+                          {
+                            "type": "textStyle",
+                            "attrs": {
+                              "fontSize": "14px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "text": "Practice PYQs (attached PDF)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "text": "UPSC/CDS/EPFO PYQs - full question, options and answer with reasoning - are in the attached PDF below.",
+            "type": "text",
+            "marks": [
+              {
+                "type": "textStyle",
+                "attrs": {
+                  "fontSize": "14px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pdfBlock",
+        "attrs": {
+          "filename": "P1B1_PYQs.pdf",
+          "pageCount": null,
+          "attachmentId": "1b1a0000-0000-4000-8000-0000000000a1"
+        }
+      }
+    ]
+  },
+  "contentText": "Syllabus (GS3):  Banking - classification of banks: scheduled vs non-scheduled; commercial (public/private/foreign/RRB); cooperative; differentiated banks (SFB, Payments Bank); DFIs & AIFIs; NBFCs vs banks; NBFC types; fintech, CIC vs CRA, shadow banking. 1. Financial Intermediaries & RBI Basics Financial Intermediary (FI)  = a middleman between two parties (lenders<->borrowers). Formal FIs = Banks + Non-Banks (DFI/AIFI) + NBFCs; informal FIs = moneylenders, indigenous bankers (Hundi). Q - RBI milestones (how banking got regulated)? Year Event 1926 Hilton Young Commission (Royal Commission on Indian Currency) recommends a central bank. 1934 / 1935 RBI Act 1934; RBI operational 1 April 1935; 1st Governor Sir Osborne Smith. 1935 (July) Banks meeting 2nd Schedule conditions = 'Scheduled Banks' (must keep CRR with RBI). 1943-49 C.D. Deshmukh = 1st Indian Governor (attended Bretton Woods 1944). 1948 RBI (Transfer of Ownership) Act - RBI fully Govt-owned, answerable to Parliament. 1949 Banking Regulation Act - RBI can license banks, permit branches, set SLR, force mergers, protect depositors. Regulator note:  RBI regulates commercial banks (BR Act 1949) + payment systems (2007) + NBFC-D + AIFIs. State Bank of Sikkim (Art. 371-F) is outside RBI. Banks must open 25% of branches in rural (unbanked) areas. 2. Scheduled vs Non-Scheduled Banks Scheduled status (2nd Schedule, RBI Act 1934):  two conditions - (1) Paid-up Capital + Reserves >= Rs.5 lakh; (2) not conducting business harmful to depositors. Q - Scheduled vs Non-Scheduled? Scheduled Bank Non-Scheduled Bank Listed in 2nd Schedule of RBI Act (e.g. SBI, Axis; scheduled coop banks) Not listed; many cooperative banks are non-scheduled Must deposit CRR to RBI; eligible for RBI window (LAF-Repo, MSF) May keep CRR in own vault; RBI window at its discretion Eligible for Govt schemes (e.g. PM Jan Dhan); big accounts prefer it Usually not eligible for Govt financial-inclusion schemes Airtel & Paytm Payments Banks became scheduled banks (2021-22) - but still cannot lend / issue credit cards / take FDs. 3. Commercial Banks - Public Sector & Nationalisation Pre-independence: Bank of Hindustan (1770); 3 Presidency banks -> Imperial Bank (1921) ->  SBI (1955) . PNB (1894, Lala Lajpat Rai); Bank of Baroda (1908, Maharaja Sayajirao Gaekwad III). Q - Why nationalise banks, and when? Why:  bank-industrialist nexus (188 elites controlled 20 banks/1452 firms) -> reckless lending, failures; private banks ignored rural areas. 1969:  Banking Companies (Acquisition & Transfer) Ordinance -> 14 banks with deposits >= Rs.50 cr nationalised (BoB, PNB, Canara...). Small unnationalised ones = 'Old Private Banks'. 1980:  6 more banks with deposits >= Rs.200 cr nationalised (Corporation, Vijaya, OBC...). Committees:  Narasimham-I (1991) & II (1997), Raghuram Rajan (2007), P.J. Nayak (2014). M. Narasimham = 'father of Indian banking reforms'. Q - PSB consolidation - the 2019 mega-merger (10 -> 4 anchors)? Amalgamated banks Anchor bank Oriental Bank of Commerce + United Bank of India PNB (2nd largest after SBI) Syndicate Bank Canara Bank Andhra Bank + Corporation Bank Union Bank of India Allahabad Bank Indian Bank Earlier: 5 Associate Banks + Bharatiya Mahila Bank (2013) merged into SBI (2017); Vijaya + Dena into BoB (2019). Result:  12 PSBs remain  (+ India Post Payments Bank). Alternative Mechanism Panel (under FM) clears merger proposals. 4. Private & Foreign Banks; Licensing Q - Three rounds of private bank licensing? Round-1 (1993-95):  ICICI, HDFC, IndusInd, DCB, UTI->Axis, IDBI; Global Trust Bank (merged into OBC). Round-2 (2001-04):  Kotak Mahindra, Yes Bank (Rana Kapoor). Round-3 (2013-16):  Bimal Jalan Committee selected Bandhan (microfinance, WB) & IDFC (infra NBFC) -> IDFC-First. On-Tap license (2016):  apply to RBI anytime if eligible - min 10 yrs' experience + min Rs.500 cr capital (= commercial-bank entry capital). Who is barred:  large NBFCs (IL&FS) and large corporates (Tata/Adani/Reliance) can't open commercial banks - except payment banks (can't lend -> lower risk). Count (2025):  12 PSBs, 21 private, 11 SFBs, 44 foreign, 5-6 payment banks. Only SBI & HDFC in global top-100 by assets. Q - Foreign investment limits in Indian banks? Bank type Foreign holding limit Public Sector Bank Max 20% (e.g. SBI ~14%, PNB ~13%) Private Sector Bank Up to 49% automatic; up to 74% with Govt approval (Govt mulling 100% for BASEL-III capital) Foreign banks:  incorporated abroad, open Indian subsidiary (Citi, HSBC); CRR/SLR apply; PSL varies by branch count; on-tap license on reciprocal basis. 5. Differentiated Banks (RRB, LAB, SFB, Payments Bank) Chronology: RRB (1976) -> Local Area Bank (1996) -> Small Finance Bank & Payments Bank (2015, on  Nachiket Mor Committee 2013-14 , approved by Governor Raghuram Rajan). Q - RRB vs Local Area Bank? Regional Rural Bank (RRB) Local Area Bank (LAB) Set up under RRB Act 1976 (Narasimham FI committee) Announced in Budget-1996 (FM Manmohan Singh); private, under BR Act PSL 75%; ultimate regulator RBI, immediate regulator NABARD Max 3 contiguous districts; non-scheduled; rates <= local coop banks Shareholding (2015): Union+State+Sponsor 51% + private 49%; 43 RRBs in 2023 (ES25) e.g. Subhadra LAB, Kolhapur Q - Small Finance Bank vs Payments Bank? Small Finance Bank (SFB) Payments Bank (PB) Min Rs.100 cr capital; e.g. Ujjivan, Utkarsh, AU (upgraded to universal bank 2025) Min Rs.100 cr capital; Airtel, India Post, FINO, Paytm, Jio, NSDL Accepts deposits (no cap); lends; 75% to PSL; 50% of loans <= Rs.25 lakh Deposits max Rs.1 lakh -> Rs.2 lakh (2021); no FD, no NRI deposits Debit + credit cards; 25% branches in unbanked rural Debit card only; CANNOT lend / no credit card / no PSL; invests deposits in G-Sec/T-Bill/SCBs After 5 yrs -> Universal Commercial Bank (if RBI satisfied) After 5 yrs -> Small Finance Bank (if RBI satisfied) Paytm PB action (2024):  RBI barred fresh deposits/wallet top-ups for KYC failures, same-PAN multi-accounts, no separation from parent One97. IPPB (2018):  100% Dept of Posts; 1.55 lakh post offices; doorstep banking; POSB (Govt Savings Bank Act 1873) linked to CBS (Budget-2022). Proposed/other:  Wholesale (WLTF) banks & full-stack Digital Banks (not made); 75 Digital Banking Units (Budget-2022, have physical kiosks); Neobanks NOT permitted by RBI. 6. Cooperative Banks Q - Commercial vs Cooperative bank? Commercial Bank Cooperative Bank BR Act since 1949; regulator RBI; purely profit BR Act since 1966; community help, lower rates Vote by shareholding 1 member = 1 vote (regardless of capital) All-India + overseas Mainly Gujarat, Maharashtra, Andhra, Tamil Nadu Urban (UCB):  scheduled/non-scheduled or single/multi-state; since 2018 may voluntarily upgrade to SFB. Rural short-term structure:  State Coop Bank (StCB) -> District Central Coop Bank (DCCB) -> Primary Agricultural Credit Societies (PACS). PACS are NOT banks (no chequebooks; State-registrar-regulated). BR (Amendment) Act 2020:  Urban + Multi-State cooperative banks now under RBI ONLY (ended dual regulation); PACS still with State registrar. 2025:  State Coop Bank/DCCB customer grievances shifted NABARD Ombudsman -> RBI Ombudsman. NUCFDC (2024, Ministry of Cooperation) = umbrella SRO/NBFC for UCBs. 7. DFIs & All-India Financial Institutions (AIFIs) DFIs  give medium/long-term industry loans; do NOT accept public deposits. IFCI (1948), ICICI (1955, later a bank), IDBI (1964, later PSB then LIC), IIFCL (2006). Narasimham-II (1998): only 2 categories (Bank / Non-Bank) - DFIs must join one. Q - The 5 AIFIs (set up by Acts; regulated by RBI; not 'banks')? AIFI (year) Role EXIM Bank (1982) Export-Import finance; 100% GoI NABARD (1982) Agri & rural dev; regulates Coop + RRB; runs RIDF; 100% Govt (2018) NHB (1988) Housing finance; RESIDEX index; 100% Govt (2019) SIDBI (1990) Small industries; runs udyamimitra.in (Mudra, Stand-up India) NaBFID (2022, 5th) Infra finance; Rs.20,000 cr capital; Chairman K.V. Kamath; lend Rs.5 lakh cr/3 yrs Primary Dealers (PD):  buy fresh G-Sec from RBI's E-Kuber, sell in secondary market; 20+ PDs (14 are banks). Retail use Retail Direct Gilt (RDG) account. 8. NBFCs vs Banks; NBFC Types Q - Commercial Bank vs NBFC? Commercial Bank NBFC Regulator RBI (BR Act); entry capital Rs.500 cr Total ~10,190; 108 deposit-taking (NBFC-D), rest non-deposit Accepts time + demand deposits; DICGC-insured Only NBFC-D accept deposits (TIME only, e.g. Bajaj Finance); NOT DICGC-insured Chequebook + debit card; CRR + SLR apply No chequebook/debit card; CRR never applies; SLR only on NBFC-D SARFAESI recovery powers Only Housing Finance Cos have SARFAESI; since 2022 NBFCs can issue credit cards directly NBFC types (RBI-regulated):  Investment & Credit Co; Consumer-durable/BNPL (Bajaj Finserv); Core Investment Co (Tata Capital); Infrastructure Finance Co (REC) & Infra Debt Fund; ARC (buy NPAs); Factoring (IFCI Factors); Gold Loan (Muthoot, Manappuram - RBI sets LTV); Housing Finance (RBI-regulated since 2019); MFI; MUDRA (2015, owned by SIDBI). Microfinance (MFI):  RBI's Y.H. Malegam Committee (2010) created the category; collateral-free small loans; borrower household income <= Rs.1.25 lakh (rural)/Rs.2 lakh (urban); max loan Rs.1.25 lakh; SROs = MFIN, Sa-Dhan. 9. CIC vs CRA; FinTech, SRO & Shadow Banking Q - Credit Information Co (CIC) vs Credit Rating Agency (CRA)? Credit Information Co (CIC) Credit Rating Agency (CRA) Regulator RBI; rates INDIVIDUALS (CIBIL score 300-900) Regulator SEBI; rates companies/NBFCs/govts (AAA...D) CIBIL TransUnion, CRIF High Mark, Equifax, Experian CRISIL, CARE, ICRA, S&P, Moody's, Fitch; Brickwork (SEBI shut for malpractice) FinTech (RBI):  P2P lenders, Account Aggregators, Payment Aggregators (Razorpay), wallets (PhonePe, Paytm). Non-RBI: discount brokers (Zerodha)->SEBI, Policybazaar->IRDAI. SRO:  self-regulatory body. RBI-recognised SROs (2024-25): FACE (fintech), SPRA (payment operators), FIDC (NBFCs), NUCFDC (UCBs). Shadow banking (ES20):  NBFCs partly outside RBI regulation; raise funds via bank loans + Commercial Papers + bonds; 3 segments - HFCs (DHFL), Liquid Debt MFs, retail-NBFCs; IL&FS crisis (2019). Islamic banking:  NOT allowed in India (RBI opposed 2017); interest (Riba) haram; works via Ijara/Murabaha/Musharaka. Key Facts (Quick Revision) Fact Detail RBI laws RBI Act 1934 (operational 1 Apr 1935); Banking Regulation Act 1949. Scheduled Bank In 2nd Schedule of RBI Act; capital+reserves >= Rs.5 lakh. Nationalisation 1969 -> 14 banks (>= Rs.50 cr); 1980 -> 6 banks (>= Rs.200 cr). 2019 mega-merger 10 -> 4 anchors (PNB, Canara, Union, Indian Bank); 12 PSBs remain. On-tap license (2016) 10 yrs' exp + Rs.500 cr capital (= commercial-bank entry capital). Payments Bank No lending/credit card/FD; deposit cap Rs.2 lakh (2021); -> SFB after 5 yrs. Small Finance Bank 75% PSL; -> Universal Bank after 5 yrs (AU SFB, 2025). SFB/PB: Nachiket Mor (2013-14). RRB RRB Act 1976; PSL 75%; ultimate regulator RBI, immediate NABARD; 43 RRBs (2023). BR (Amdt) Act 2020 Urban + Multi-State coop banks under RBI ONLY; PACS not banks. 5 AIFIs EXIM (1982), NABARD (1982), NHB (1988), SIDBI (1990), NaBFID (2022). NBFC CRR never applies; SLR only on NBFC-D; not DICGC-insured; can issue credit cards (2022). CIC vs CRA CIC=RBI, individuals, CIBIL 300-900; CRA=SEBI, institutions, AAA-D. Practice PYQs (attached PDF) UPSC/CDS/EPFO PYQs - full question, options and answer with reasoning - are in the attached PDF below. ",
+  "tags": [],
+  "pinned": false,
+  "position": 100
+}
