@@ -2,11 +2,13 @@
 
 import { useRef, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { ArrowDownUp, GripVertical, PanelLeftClose, Pin, PinOff, Plus, Search, Trash2, X } from 'lucide-react';
+import { ArrowDownUp, GripVertical, PanelLeftClose, Pin, PinOff, Plus, Search, Trash2, Upload, X } from 'lucide-react';
 import { db } from '@/db/db';
-import { createNote, deleteNote, reorderNotes, setNotePinned } from '@/db/queries';
+import { createNote, deleteNote, reorderNotes, saveNote, setNotePinned } from '@/db/queries';
 import { useAppStore, type NoteSort } from '@/stores/useAppStore';
 import { cn } from '@/lib/utils';
+import { runSync } from '@/sync/engine';
+import { toast } from '@/stores/useToast';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -26,6 +28,15 @@ const SORT_LABELS: Record<NoteSort, string> = {
   title: 'Title (A–Z)',
   manual: 'Manual',
 };
+
+/** Flatten a TipTap/ProseMirror doc to plain text (for search indexing). */
+function flattenText(node: unknown): string {
+  if (!node || typeof node !== 'object') return '';
+  const n = node as { text?: string; content?: unknown[] };
+  if (typeof n.text === 'string') return n.text;
+  if (Array.isArray(n.content)) return n.content.map(flattenText).join(' ');
+  return '';
+}
 
 function sortNotes(notes: Note[], sort: NoteSort): Note[] {
   const copy = [...notes];
@@ -61,6 +72,7 @@ export function NoteList() {
   } = useAppStore();
   const dialog = useDialog();
   const dragId = useRef<string | null>(null);
+  const importRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState('');
   const trimmed = query.trim().toLowerCase();
 
@@ -101,6 +113,34 @@ export function NoteList() {
     selectNote(note.id);
   }
 
+  async function onImportJson(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file || !selectedNotebookId) return;
+    try {
+      const parsed = JSON.parse(await file.text());
+      const list: Array<{ title?: string; content?: unknown; contentJson?: unknown }> =
+        Array.isArray(parsed) ? parsed : (parsed.notes ?? []);
+      let count = 0;
+      for (const item of list) {
+        const content = item.content ?? item.contentJson;
+        if (!content) continue;
+        const title = item.title?.trim() || 'Untitled';
+        const note = await createNote(selectedNotebookId, title);
+        await saveNote(note.id, {
+          title,
+          contentJson: content as never,
+          contentText: flattenText(content),
+        });
+        count += 1;
+      }
+      void runSync().catch(() => {});
+      toast(`Imported ${count} note${count === 1 ? '' : 's'}.`, count ? 'success' : 'error');
+    } catch (err) {
+      toast('Import failed: ' + (err instanceof Error ? err.message : 'invalid JSON'), 'error');
+    }
+  }
+
   async function removeNote(id: string, title: string) {
     const ok = await dialog.confirm({
       title: 'Delete note',
@@ -126,6 +166,13 @@ export function NoteList() {
 
   return (
     <>
+      <input
+        ref={importRef}
+        type="file"
+        accept="application/json,.json"
+        className="hidden"
+        onChange={onImportJson}
+      />
       <header className="flex h-12 items-center justify-between gap-1 border-b px-3">
         <h2 className="truncate text-sm font-semibold">
           {notebook && !notebook.deletedAt ? notebook.title : 'Notes'}
@@ -152,6 +199,11 @@ export function NoteList() {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+          )}
+          {selectedNotebookId && (
+            <Button variant="ghost" size="icon-sm" title="Import notes (JSON)" onClick={() => importRef.current?.click()}>
+              <Upload />
+            </Button>
           )}
           {selectedNotebookId && (
             <Button variant="ghost" size="icon-sm" title="New note" onClick={addNote}>
