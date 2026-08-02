@@ -5,9 +5,24 @@ import { BubbleMenu, type Editor } from '@tiptap/react';
 import { NodeSelection } from '@tiptap/pm/state';
 import type { Node as PMNode, ResolvedPos } from '@tiptap/pm/model';
 import { CellSelection } from '@tiptap/pm/tables';
-import { Heading, Trash2 } from 'lucide-react';
+import { Heading, PaintBucket, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
+/** Fill swatches offered for table cells. */
+const CELL_FILLS = [
+  '#fee2e2',
+  '#ffedd5',
+  '#fef9c3',
+  '#dcfce7',
+  '#dbeafe',
+  '#ede9fe',
+  '#fce7f3',
+  '#f1f5f9',
+  '#e2e8f0',
+  '#cbd5e1',
+];
 
 type Kind = 'row' | 'col' | 'table' | 'cells';
 
@@ -43,6 +58,62 @@ function Item({
       </TooltipTrigger>
       <TooltipContent>{label}</TooltipContent>
     </Tooltip>
+  );
+}
+
+/**
+ * Fill colour for the selected cell(s). `setCellAttribute` applies to every
+ * cell in a CellSelection, and to the caret's cell when there is no selection,
+ * so this works for a single cell, a row/column, or the whole table.
+ */
+function CellFill({ editor }: { editor: Editor }) {
+  const apply = (color: string | null) =>
+    editor.chain().focus().setCellAttribute('backgroundColor', color).run();
+
+  return (
+    <Popover>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <PopoverTrigger asChild>
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon-sm"
+              onMouseDown={(e) => e.preventDefault()}
+            >
+              <PaintBucket />
+            </Button>
+          </PopoverTrigger>
+        </TooltipTrigger>
+        <TooltipContent>Cell background</TooltipContent>
+      </Tooltip>
+      <PopoverContent className="w-auto" onOpenAutoFocus={(e) => e.preventDefault()}>
+        <div className="space-y-2">
+          <div className="grid grid-cols-5 gap-1">
+            {CELL_FILLS.map((c) => (
+              <button
+                key={c}
+                type="button"
+                title={c}
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => apply(c)}
+                className="size-6 rounded border"
+                style={{ backgroundColor: c }}
+              />
+            ))}
+          </div>
+          <Button
+            variant="outline"
+            size="sm"
+            className="w-full"
+            onMouseDown={(e) => e.preventDefault()}
+            onClick={() => apply(null)}
+          >
+            No fill
+          </Button>
+        </div>
+      </PopoverContent>
+    </Popover>
   );
 }
 
@@ -110,6 +181,7 @@ export function TableMenu({ editor }: { editor: Editor }) {
           >
             <Heading />
           </Item>
+          <CellFill editor={editor} />
           <span className="mx-0.5 h-6 w-px bg-border" />
           <Item label={deleteLabel} onClick={smartDelete}>
             <Trash2 />

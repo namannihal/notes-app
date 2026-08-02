@@ -232,6 +232,12 @@ body {
   .no-print * {
     visibility: hidden !important;
   }
+  /* Keep table cell fills (and other backgrounds) when printing. */
+  [data-print-root],
+  [data-print-root] * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }
 
 .tiptap :where(table) {

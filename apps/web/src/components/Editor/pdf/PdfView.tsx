@@ -19,18 +19,27 @@ export function PdfView({ attachmentId, filename }: Props) {
   const [page, setPage] = useState(1);
   const [error, setError] = useState<string | null>(null);
 
-  // Load the document once.
+  // Load the document once. Any in-flight load/loaded document is torn down on
+  // unmount so rapid note switching cannot leak pdf.js documents or workers.
   useEffect(() => {
     let cancelled = false;
+    let task: ReturnType<typeof pdfjsLib.getDocument> | null = null;
+    let loaded: PDFDocumentProxy | null = null;
     async function load() {
       const url = await getAttachmentUrl(attachmentId);
+      if (cancelled) return;
       if (!url) {
-        if (!cancelled) setError('Attachment not found.');
+        setError('Attachment not found.');
         return;
       }
       try {
-        const doc = await pdfjsLib.getDocument(url).promise;
-        if (cancelled) return;
+        task = pdfjsLib.getDocument(url);
+        const doc = await task.promise;
+        if (cancelled) {
+          void doc.destroy();
+          return;
+        }
+        loaded = doc;
         docRef.current = doc;
         setPageCount(doc.numPages);
         setPage(1);
@@ -41,12 +50,17 @@ export function PdfView({ attachmentId, filename }: Props) {
     void load();
     return () => {
       cancelled = true;
+      docRef.current = null;
+      if (loaded) void loaded.destroy();
+      else if (task) void task.destroy();
     };
   }, [attachmentId]);
 
-  // Render the current page whenever it changes.
+  // Render the current page whenever it changes. The previous render task is
+  // cancelled so overlapping renders never target the same canvas.
   useEffect(() => {
     let cancelled = false;
+    let renderTask: { cancel: () => void; promise: Promise<void> } | null = null;
     async function render() {
       const doc = docRef.current;
       const canvas = canvasRef.current;
@@ -59,14 +73,16 @@ export function PdfView({ attachmentId, filename }: Props) {
         if (!ctx) return;
         canvas.width = viewport.width;
         canvas.height = viewport.height;
-        await pdfPage.render({ canvasContext: ctx, viewport }).promise;
+        renderTask = pdfPage.render({ canvasContext: ctx, viewport });
+        await renderTask.promise;
       } catch {
-        /* ignore transient render errors while navigating */
+        /* ignore transient render errors while navigating or unmounting */
       }
     }
     void render();
     return () => {
       cancelled = true;
+      renderTask?.cancel();
     };
   }, [page, pageCount]);
 

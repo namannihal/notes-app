@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useReducer, useRef } from 'react';
 import type { Editor } from '@tiptap/react';
 import {
   AlignCenter,
@@ -55,6 +55,32 @@ const FONT_SIZES = ['12px', '14px', '16px', '18px', '24px', '32px'];
 const TEXT_COLORS = ['#1a1a1a', '#dc2626', '#ea580c', '#ca8a04', '#16a34a', '#2563eb', '#7c3aed', '#db2777'];
 const HIGHLIGHTS = ['#fde68a', '#bbf7d0', '#bfdbfe', '#fbcfe8', '#e9d5ff', '#fed7aa'];
 
+/**
+ * Font size shared by the entire selection, or null when it is mixed (or the
+ * text uses the document default). Used to label the size control.
+ */
+function selectionFontSize(editor: Editor): string | null {
+  const { state } = editor;
+  const { from, to, empty } = state.selection;
+
+  if (empty) {
+    const fs = editor.getAttributes('textStyle').fontSize;
+    return typeof fs === 'string' ? fs : null;
+  }
+
+  let common: string | null | undefined;
+  let mixed = false;
+  state.doc.nodesBetween(from, to, (node) => {
+    if (mixed || !node.isText) return;
+    const mark = node.marks.find((m) => m.type.name === 'textStyle');
+    const fs = (mark?.attrs.fontSize as string | undefined) ?? null;
+    if (common === undefined) common = fs;
+    else if (common !== fs) mixed = true;
+  });
+
+  return mixed || common === undefined ? null : common;
+}
+
 function TB({
   onClick,
   active,
@@ -99,6 +125,19 @@ export function Toolbar({ editor, noteId, onFind }: Props) {
   const setTableBorderShade = useAppStore((s) => s.setTableBorderShade);
   const editorFont = useAppStore((s) => s.editorFont);
   const setEditorFont = useAppStore((s) => s.setEditorFont);
+
+  // Keep the size label in sync with the caret / selection.
+  const [, rerender] = useReducer((x: number) => x + 1, 0);
+  useEffect(() => {
+    editor.on('selectionUpdate', rerender);
+    editor.on('update', rerender);
+    return () => {
+      editor.off('selectionUpdate', rerender);
+      editor.off('update', rerender);
+    };
+  }, [editor]);
+
+  const currentSize = selectionFontSize(editor);
 
   async function onImage(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -246,7 +285,7 @@ export function Toolbar({ editor, noteId, onFind }: Props) {
             <TooltipTrigger asChild>
               <DropdownMenuTrigger asChild>
                 <Button type="button" variant="ghost" size="sm" onMouseDown={(e) => e.preventDefault()}>
-                  Size
+                  {currentSize ? currentSize.replace('px', '') : 'Size'}
                 </Button>
               </DropdownMenuTrigger>
             </TooltipTrigger>

@@ -15,8 +15,6 @@ import TaskList from '@tiptap/extension-task-list';
 import TaskItem from '@tiptap/extension-task-item';
 import Table from '@tiptap/extension-table';
 import TableRow from '@tiptap/extension-table-row';
-import TableHeader from '@tiptap/extension-table-header';
-import TableCell from '@tiptap/extension-table-cell';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { Download, FileText, Pin, Printer, X as XIcon } from 'lucide-react';
 import { db } from '../../db/db';
@@ -39,6 +37,10 @@ import { Indent } from './extensions/Indent';
 import { SlashCommand } from './extensions/SlashCommand';
 import { SearchReplace } from './extensions/SearchReplace';
 import { TableKeymap } from './extensions/TableKeymap';
+import {
+  TableCellWithBackground,
+  TableHeaderWithBackground,
+} from './extensions/TableCellBackground';
 import { Toolbar } from './Toolbar';
 import { TableMenu } from './TableMenu';
 import { TableControls } from './TableControls';
@@ -136,8 +138,8 @@ function NoteEditor({ note }: { note: Note }) {
       SearchReplace,
       Table.configure({ resizable: true }),
       TableRow,
-      TableHeader,
-      TableCell,
+      TableHeaderWithBackground,
+      TableCellWithBackground,
       TableKeymap,
       AttachmentImage.configure({ inline: true }),
       PdfBlock,

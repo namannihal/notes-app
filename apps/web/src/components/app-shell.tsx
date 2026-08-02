@@ -218,7 +218,7 @@ function Shell() {
         </header>
 
         {activeNote ? (
-          <EditorErrorBoundary>
+          <EditorErrorBoundary resetKey={activeNote.id}>
             <Editor noteId={activeNote.id} />
           </EditorErrorBoundary>
         ) : (
