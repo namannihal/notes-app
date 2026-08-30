@@ -13,6 +13,13 @@ syncRouter.get('/pull', async (req, res) => {
   const since = sinceRaw ? new Date(sinceRaw) : new Date(0);
   const where = { userId: req.userId!, updatedAt: { gt: since } };
 
+  // The cursor MUST be sampled before the reads. Sampling it afterwards leaves a
+  // window: any row committed between a query's snapshot and the timestamp would
+  // be excluded from this response *and* from every later one (the next pull asks
+  // for `updatedAt > serverTime`), silently losing it forever. Sampling first can
+  // only ever re-send a row we already sent, which merges idempotently.
+  const serverTime = new Date().toISOString();
+
   const [buckets, stacks, notebooks, notes, attachments] = await Promise.all([
     prisma.bucket.findMany({ where }),
     prisma.stack.findMany({ where }),
@@ -21,7 +28,7 @@ syncRouter.get('/pull', async (req, res) => {
     prisma.attachment.findMany({ where }),
   ]);
 
-  res.json({ buckets, stacks, notebooks, notes, attachments, serverTime: new Date().toISOString() });
+  res.json({ buckets, stacks, notebooks, notes, attachments, serverTime });
 });
 
 const changeSchema = z.object({

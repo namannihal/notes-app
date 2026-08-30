@@ -5,11 +5,13 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 /**
- * Seeds the single account from SEED_EMAIL / SEED_PASSWORD. Idempotent: if the
- * user already exists, it does nothing.
+ * Seeds the bootstrap account from SEED_EMAIL / SEED_PASSWORD. Idempotent: if
+ * the user already exists, it does nothing. Registration is the normal path for
+ * additional accounts — this exists so the very first one can be created before
+ * anyone can sign in.
  */
 async function main() {
-  const email = process.env.SEED_EMAIL;
+  const email = process.env.SEED_EMAIL?.trim().toLowerCase();
   const password = process.env.SEED_PASSWORD;
   if (!email || !password) {
     throw new Error('Set SEED_EMAIL and SEED_PASSWORD in .env to seed the account.');

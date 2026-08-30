@@ -10,9 +10,14 @@ import { notesRouter } from './routes/notes.js';
 import { syncRouter } from './routes/sync.js';
 import { attachmentsRouter } from './routes/attachments.js';
 import { importRouter } from './routes/import.js';
+import { activityRouter } from './routes/activity.js';
 import { ensureContainer } from './storage/blob.js';
 
 const app = express();
+
+// App Service terminates TLS and proxies; without this req.ip is the proxy's
+// address and every caller would share one rate-limit bucket.
+app.set('trust proxy', 1);
 
 app.use(
   cors({
@@ -36,6 +41,7 @@ app.use('/api/notes', requireAuth, notesRouter);
 app.use('/api/sync', requireAuth, syncRouter);
 app.use('/api/attachments', requireAuth, attachmentsRouter);
 app.use('/api/import', requireAuth, importRouter);
+app.use('/api/activity', requireAuth, activityRouter);
 
 // Fallback error handler.
 app.use(

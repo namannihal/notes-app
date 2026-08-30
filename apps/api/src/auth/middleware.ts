@@ -1,46 +1,19 @@
 import type { NextFunction, Request, Response } from 'express';
-import jwt from 'jsonwebtoken';
-import { env } from '../env.js';
+import { ACCESS_COOKIE, verifyAccessToken } from './tokens.js';
 
-export const COOKIE_NAME = 'sthir_token';
-const MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
-
-interface TokenPayload {
-  sub: string;
-  email: string;
-}
-
-export function issueToken(res: Response, payload: TokenPayload): string {
-  const token = jwt.sign(payload, env.JWT_SECRET, { expiresIn: '30d' });
-  res.cookie(COOKIE_NAME, token, {
-    httpOnly: true,
-    secure: env.COOKIE_SECURE,
-    // Cross-site (web and API on different domains) needs SameSite=None; that
-    // requires Secure, so only in production (HTTPS). Dev over http uses Lax.
-    sameSite: env.COOKIE_SECURE ? 'none' : 'lax',
-    maxAge: MAX_AGE_MS,
-    path: '/',
-  });
-  return token;
-}
-
-export function clearToken(res: Response): void {
-  res.clearCookie(COOKIE_NAME, { path: '/', sameSite: env.COOKIE_SECURE ? 'none' : 'lax', secure: env.COOKIE_SECURE });
-}
-
-/** Attaches req.userId; rejects with 401 when no valid token is present. */
+/** Attaches req.userId; rejects with 401 when no valid access token is present. */
 export function requireAuth(req: Request, res: Response, next: NextFunction): void {
   // Prefer the Authorization: Bearer header (works on mobile browsers that
   // block cross-site cookies); fall back to the httpOnly cookie.
   const header = req.headers.authorization;
   const bearer = header?.startsWith('Bearer ') ? header.slice(7) : undefined;
-  const token = bearer ?? req.cookies?.[COOKIE_NAME];
+  const token = bearer ?? req.cookies?.[ACCESS_COOKIE];
   if (!token) {
     res.status(401).json({ error: 'Unauthorized' });
     return;
   }
   try {
-    const decoded = jwt.verify(token, env.JWT_SECRET) as TokenPayload;
+    const decoded = verifyAccessToken(token);
     req.userId = decoded.sub;
     req.userEmail = decoded.email;
     next();
