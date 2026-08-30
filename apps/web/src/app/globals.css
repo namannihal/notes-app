@@ -32,6 +32,8 @@
 
   --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
+
+  --shadow-tint: oklch(0.145 0 0 / 10%);
 }
 
 .dark {
@@ -58,6 +60,10 @@
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
+
+  /* Dark surfaces sit on a dark ground, so elevation reads through a deeper,
+     more opaque shadow than the light theme needs. */
+  --shadow-tint: oklch(0 0 0 / 44%);
 }
 
 @theme inline {
@@ -92,6 +98,13 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 10px);
+
+  /* One elevation ramp for the whole app. Shadows are tinted with the
+     foreground rather than pure black so they stay honest in dark mode. */
+  --shadow-e1: 0 1px 2px -1px var(--shadow-tint), 0 1px 3px -1px var(--shadow-tint);
+  --shadow-e2: 0 2px 4px -2px var(--shadow-tint), 0 4px 12px -4px var(--shadow-tint);
+  --shadow-e3: 0 8px 24px -8px var(--shadow-tint), 0 2px 8px -4px var(--shadow-tint);
 }
 
 * {
@@ -108,6 +121,96 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+/* --- Welcome screen ------------------------------------------------------
+   Entirely CSS: two slow-drifting radial washes, a fine grain and a vignette.
+   No images, so the landing costs nothing to download and cannot flash. */
+
+.welcome-root {
+  background: var(--background);
+  isolation: isolate;
+}
+
+.welcome-aurora {
+  position: absolute;
+  inset: -30%;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+  will-change: transform;
+}
+
+.welcome-aurora-a {
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklch, var(--primary) 26%, transparent),
+    transparent
+  );
+  animation: welcome-drift-a 34s ease-in-out infinite alternate;
+}
+
+.welcome-aurora-b {
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklch, var(--primary) 14%, transparent),
+    transparent
+  );
+  animation: welcome-drift-b 46s ease-in-out infinite alternate;
+}
+
+.dark .welcome-aurora {
+  opacity: 0.34;
+}
+
+/* Fine noise breaks up the gradient banding that large blurred washes show on
+   8-bit displays. Inline SVG so there is no extra request. */
+.welcome-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+.welcome-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 42%,
+    color-mix(in oklch, var(--background) 82%, transparent) 100%
+  );
+}
+
+@keyframes welcome-drift-a {
+  from {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(7%, 5%, 0) scale(1.14);
+  }
+}
+
+@keyframes welcome-drift-b {
+  from {
+    transform: translate3d(9%, 7%, 0) scale(1.12);
+  }
+  to {
+    transform: translate3d(-6%, -4%, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-aurora {
+    animation: none;
+  }
 }
 
 /* --- TipTap / ProseMirror content --------------------------------------- */
@@ -263,6 +366,13 @@ body {
 .tiptap .tableWrapper {
   overflow-x: auto;
   margin: 0.75em 0;
+  /* Cells cannot be rounded individually under border-collapse: collapse, so the
+     table's outer corners are softened by clipping them at the wrapper. Keeps
+     the user-configurable cell border width/shade untouched. */
+  border-radius: var(--radius-md);
+}
+.tiptap .tableWrapper > table {
+  margin: 0;
 }
 .tiptap .column-resize-handle {
   position: absolute;

@@ -90,3 +90,18 @@ export interface BlobRecord {
   pinned: boolean;
   lastAccessed: number;
 }
+
+/**
+ * One calendar day on which the user wrote something. Keyed by the local-time
+ * day so the streak matches the user's sense of "today" rather than UTC.
+ * Recorded separately from note timestamps because `updatedAt` is overwritten on
+ * every edit and therefore cannot reconstruct history.
+ */
+export interface ActivityDay {
+  /** 'YYYY-MM-DD' in the user's local timezone. */
+  day: string;
+  /** Number of distinct notes touched that day; purely informational. */
+  noteCount: number;
+  /** Local-only: not yet synced. Dexie cannot index booleans, so 0 | 1. */
+  _dirty?: 0 | 1;
+}

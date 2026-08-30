@@ -46,6 +46,10 @@ import type { Stack } from '@/db/types';
 const COLLAPSED_KEY = 'sthir-collapsed-stacks';
 const COLLAPSED_BUCKETS_KEY = 'sthir-collapsed-buckets';
 
+/** Stable ordering that tolerates a missing/duplicate position. */
+const byPosition = (a: { position?: number; title: string }, b: { position?: number; title: string }) =>
+  (a.position ?? 0) - (b.position ?? 0) || a.title.localeCompare(b.title);
+
 export function Tree() {
   const { selectedNotebookId, selectNotebook, toggleTree } = useAppStore();
   const dialog = useDialog();
@@ -107,16 +111,20 @@ export function Tree() {
     });
   }
 
+  // Read the whole table and sort in memory rather than using Dexie's
+  // orderBy('position'): orderBy walks the IndexedDB index, and IndexedDB omits
+  // any record whose indexed property is undefined. A single bucket missing a
+  // position would silently vanish from the sidebar rather than sort oddly.
   const buckets = useLiveQuery(
-    async () => (await db.buckets.orderBy('position').toArray()).filter((b) => !b.deletedAt),
+    async () => (await db.buckets.toArray()).filter((b) => !b.deletedAt).sort(byPosition),
     [],
   );
   const stacks = useLiveQuery(
-    async () => (await db.stacks.orderBy('position').toArray()).filter((s) => !s.deletedAt),
+    async () => (await db.stacks.toArray()).filter((s) => !s.deletedAt).sort(byPosition),
     [],
   );
   const notebooks = useLiveQuery(
-    async () => (await db.notebooks.orderBy('position').toArray()).filter((n) => !n.deletedAt),
+    async () => (await db.notebooks.toArray()).filter((n) => !n.deletedAt).sort(byPosition),
     [],
   );
 
@@ -380,8 +388,8 @@ export function Tree() {
         onChange={onEnexFile}
       />
       <TrashDialog open={trashOpen} onOpenChange={setTrashOpen} />
-      <header className="flex h-12 items-center justify-between border-b px-3">
-        <h2 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+      <header className="flex h-12 shrink-0 items-center justify-between gap-1 border-b px-3">
+        <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
           Library
         </h2>
         <div className="flex items-center gap-0.5">
@@ -474,7 +482,7 @@ export function Tree() {
         {/* Ungrouped stacks (top level) */}
         {ungrouped.length > 0 && (buckets?.length ?? 0) > 0 && (
           <div
-            className="mt-2 px-1 pb-1 pt-2 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground/70"
+            className="mt-2 px-1 pb-1 pt-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground/70"
             onDragOver={(e) => e.preventDefault()}
             onDrop={(e) => {
               const stackId = e.dataTransfer.getData('sthir/stack');

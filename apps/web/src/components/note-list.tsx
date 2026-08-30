@@ -173,7 +173,7 @@ export function NoteList() {
         className="hidden"
         onChange={onImportJson}
       />
-      <header className="flex h-12 items-center justify-between gap-1 border-b px-3">
+      <header className="flex h-12 shrink-0 items-center justify-between gap-1 border-b px-3">
         <h2 className="truncate text-sm font-semibold">
           {notebook && !notebook.deletedAt ? notebook.title : 'Notes'}
         </h2>
@@ -244,10 +244,10 @@ export function NoteList() {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 space-y-0.5 overflow-y-auto py-2">
         {tagFilter ? (
           <>
-            <div className="flex items-center justify-between border-b px-3 py-2 text-xs">
+            <div className="mx-2 mb-1 flex items-center justify-between rounded-lg bg-muted/60 px-3 py-2 text-xs">
               <span className="font-medium">Tagged #{tagFilter}</span>
               <button
                 type="button"
@@ -264,7 +264,7 @@ export function NoteList() {
               <button
                 key={note.id}
                 className={cn(
-                  'flex w-full flex-col items-start border-b px-3 py-3 text-left hover:bg-accent',
+                  'mx-2 flex w-[calc(100%-1rem)] flex-col items-start gap-0.5 rounded-lg px-3 py-2.5 text-left transition-colors hover:bg-accent',
                   selectedNoteId === note.id && 'bg-accent',
                 )}
                 onClick={() => {
@@ -290,7 +290,7 @@ export function NoteList() {
               <button
                 key={note.id}
                 className={cn(
-                  'flex w-full flex-col items-start border-b px-3 py-3 text-left hover:bg-accent',
+                  'mx-2 flex w-[calc(100%-1rem)] flex-col items-start gap-0.5 rounded-lg px-3 py-2.5 text-left transition-colors hover:bg-accent',
                   selectedNoteId === note.id && 'bg-accent',
                 )}
                 onClick={() => {
@@ -327,8 +327,9 @@ export function NoteList() {
                 onDragOver={(e) => e.preventDefault()}
                 onDrop={() => onDrop(note.id)}
                 className={cn(
-                  'group relative flex cursor-pointer items-start gap-1 border-b px-3 py-3 hover:bg-accent',
-                  selectedNoteId === note.id && 'bg-accent shadow-[inset_3px_0_0_var(--primary)]',
+                  'group relative mx-2 flex cursor-pointer items-start gap-1 rounded-lg px-3 py-2.5 transition-colors hover:bg-accent',
+                  selectedNoteId === note.id &&
+                    'bg-accent shadow-[inset_2px_0_0_var(--primary)]',
                 )}
                 onClick={() => selectNote(note.id)}
               >
@@ -345,7 +346,7 @@ export function NoteList() {
                   variant="ghost"
                   size="icon-sm"
                   className={cn(
-                    'absolute right-9 top-2 size-7',
+                    'absolute right-9 top-1.5 size-7',
                     note.pinned ? 'opacity-100' : 'opacity-0 group-hover:opacity-100',
                   )}
                   title={note.pinned ? 'Unpin' : 'Pin'}
@@ -363,7 +364,7 @@ export function NoteList() {
                 <Button
                   variant="ghost"
                   size="icon-sm"
-                  className="absolute right-2 top-2 size-7 opacity-0 group-hover:opacity-100"
+                  className="absolute right-2 top-1.5 size-7 opacity-0 group-hover:opacity-100"
                   title="Delete note"
                   onClick={(e) => {
                     e.stopPropagation();

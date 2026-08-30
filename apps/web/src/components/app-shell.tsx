@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import {
   Cloud,
@@ -22,11 +22,13 @@ import { useAppStore } from '@/stores/useAppStore';
 import { useAuthStore } from '@/stores/useAuthStore';
 import { useTheme } from '@/hooks/useTheme';
 import { useSync } from '@/sync/useSync';
-import { resetSyncCursor } from '@/sync/engine';
 import { cn } from '@/lib/utils';
+import { quoteForDay } from '@/lib/quotes';
 import { Button } from '@/components/ui/button';
 import { DialogProvider } from '@/components/dialog-provider';
 import { LoginScreen } from '@/components/login-screen';
+import { WelcomeScreen, shouldShowWelcome } from '@/components/welcome-screen';
+import { StreakBadge } from '@/components/streak-badge';
 import { ChangePasswordDialog } from '@/components/change-password-dialog';
 import { Toaster } from '@/components/toaster';
 import { toast } from '@/stores/useToast';
@@ -83,10 +85,7 @@ function SyncStatus() {
         variant="ghost"
         size="icon-sm"
         title="Sign out"
-        onClick={() => {
-          resetSyncCursor();
-          void logout();
-        }}
+        onClick={() => void logout()}
       >
         <LogOut />
       </Button>
@@ -178,7 +177,7 @@ function Shell() {
           'md:flex',
         )}
       >
-        <header className="flex h-12 items-center justify-between border-b px-3">
+        <header className="flex h-12 shrink-0 items-center justify-between gap-1 border-b px-3">
           <div className="flex items-center gap-1">
             <Button
               variant="ghost"
@@ -210,6 +209,7 @@ function Shell() {
             </Button>
           </div>
           <div className="flex items-center gap-1">
+            <StreakBadge />
             <SyncStatus />
             <Button variant="ghost" size="icon-sm" title="Toggle theme" onClick={toggle}>
               {theme === 'dark' ? <Sun /> : <Moon />}
@@ -222,28 +222,61 @@ function Shell() {
             <Editor noteId={activeNote.id} />
           </EditorErrorBoundary>
         ) : (
-          <div className="flex flex-1 items-center justify-center p-8 text-sm text-muted-foreground">
-            Select or create a note to start writing.
-          </div>
+          <EmptyState />
         )}
       </main>
     </div>
   );
 }
 
+/** Shown when no note is selected. Quiet by design — it is a resting state the
+ *  user passes through constantly, not a place to be sold anything. */
+function EmptyState() {
+  const quote = useMemo(() => quoteForDay(), []);
+  return (
+    <div className="flex flex-1 flex-col items-center justify-center gap-8 px-8 py-12 text-center">
+      <div className="max-w-md">
+        <blockquote className="font-serif text-lg leading-relaxed text-foreground/75">
+          {quote.text}
+        </blockquote>
+        <cite className="mt-3 block text-xs not-italic text-muted-foreground">{quote.author}</cite>
+      </div>
+      <div className="h-px w-10 bg-border" />
+      <p className="text-sm text-muted-foreground">Select a note, or create one to start writing.</p>
+    </div>
+  );
+}
+
 export function AppShell() {
   const status = useAuthStore((s) => s.status);
+  const user = useAuthStore((s) => s.user);
   const checkSession = useAuthStore((s) => s.checkSession);
+  const [welcomed, setWelcomed] = useState(false);
 
   useEffect(() => {
     void checkSession();
   }, [checkSession]);
 
+  // Resolved once on mount: reading sessionStorage during render would differ
+  // between the server and client passes and desynchronise hydration.
+  useEffect(() => {
+    if (!shouldShowWelcome()) setWelcomed(true);
+  }, []);
+
   // Offline-first: show the app immediately (local data). Only swap to the
   // login screen if the server is reachable and explicitly rejects the session.
   return (
     <DialogProvider>
-      {status === 'anon' ? <LoginScreen /> : <Shell />}
+      {status === 'anon' ? (
+        <LoginScreen />
+      ) : status === 'checking' ? null : welcomed ? (
+        <Shell />
+      ) : (
+        <WelcomeScreen
+          name={user?.displayName ?? null}
+          onEnter={() => setWelcomed(true)}
+        />
+      )}
       <Toaster />
     </DialogProvider>
   );

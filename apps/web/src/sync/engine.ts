@@ -202,8 +202,13 @@ async function mergeInto<T extends { id: string; updatedAt: number; _dirty?: boo
 ): Promise<void> {
   for (const rec of incoming) {
     const local = await table.get(rec.id);
-    // Local unsynced edits that are newer win; they'll be pushed next round.
-    if (local && local._dirty && local.updatedAt >= rec.updatedAt) continue;
+    // A dirty record has local edits that have not been accepted by the server
+    // yet. The server stamps its own `updatedAt` on write, so its copy is always
+    // marginally newer than ours — comparing timestamps here would clobber edits
+    // the user made while the sync cycle was in flight. Skip instead: the next
+    // push sends them, and last-write-wins is resolved server-side where it
+    // belongs.
+    if (local?._dirty) continue;
     await table.put(rec);
   }
 }
@@ -224,6 +229,30 @@ async function pullChanges(): Promise<void> {
   localStorage.setItem(LAST_SYNC_KEY, res.serverTime);
 }
 
+/**
+ * Writing days sync outside the entity sync protocol: they are append-only and
+ * keyed by day, so there is nothing to reconcile — push the unsent ones, then
+ * take the union of what the server holds.
+ */
+async function syncActivity(): Promise<void> {
+  const pending = await db.activity.where('_dirty').equals(1).toArray();
+  if (pending.length > 0) {
+    await api.recordActivity(pending.map((a) => a.day));
+    await db.transaction('rw', db.activity, async () => {
+      for (const a of pending) await db.activity.update(a.day, { _dirty: 0 });
+    });
+  }
+
+  const { days } = await api.listActivity();
+  await db.transaction('rw', db.activity, async () => {
+    for (const d of days) {
+      const local = await db.activity.get(d.day);
+      if (local?._dirty) continue;
+      await db.activity.put({ day: d.day, noteCount: d.noteCount, _dirty: 0 });
+    }
+  });
+}
+
 /** One full sync cycle: push local changes, upload blobs, pull server changes. */
 export async function runSync(): Promise<void> {
   if (running) return;
@@ -232,6 +261,7 @@ export async function runSync(): Promise<void> {
     await pushChanges();
     await uploadAttachments();
     await pullChanges();
+    await syncActivity();
   } finally {
     running = false;
   }

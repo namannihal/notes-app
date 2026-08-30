@@ -1,6 +1,7 @@
 import { v4 as uuid } from 'uuid';
 import type { JSONContent } from '@tiptap/react';
 import { db } from './db';
+import { recordWritingDay } from './activity';
 import type { Bucket, Note, Notebook, Stack } from './types';
 
 const now = () => Date.now();
@@ -167,6 +168,7 @@ export async function saveNote(
     updatedAt: now(),
     _dirty: true,
   });
+  void recordWritingDay();
 }
 
 export async function deleteNote(id: string): Promise<void> {
