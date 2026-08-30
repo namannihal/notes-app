@@ -261,7 +261,16 @@ export async function runSync(): Promise<void> {
     await pushChanges();
     await uploadAttachments();
     await pullChanges();
-    await syncActivity();
+    // Streaks are cosmetic and must never be able to fail the note sync that
+    // has already succeeded above: a missing or failing /api/activity (an older
+    // API, a transient 5xx) would otherwise surface as "sync failed" and make
+    // the user believe their notes are not reaching the server. Retried on the
+    // next cycle.
+    try {
+      await syncActivity();
+    } catch (e) {
+      console.warn('Writing-streak sync skipped:', e);
+    }
   } finally {
     running = false;
   }

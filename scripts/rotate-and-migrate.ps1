@@ -46,20 +46,16 @@ function Note([string]$m) { Write-Host "    $m" -ForegroundColor DarkGray }
 
 # PowerShell does not raise a terminating error when a native command exits
 # non-zero, so every az call has to be checked explicitly or failures sail past.
+# Args are passed as one explicit array: with ValueFromRemainingArguments,
+# PowerShell would try to bind az switches such as -o to this function and fail
+# with "the parameter name 'o' is ambiguous".
 function Invoke-Az {
-    param([Parameter(ValueFromRemainingArguments = $true)][string[]]$AzArgs)
+    param([Parameter(Mandatory = $true)][string[]]$AzArgs)
     $output = & $azExe @AzArgs 2>&1
     if ($LASTEXITCODE -ne 0) {
         throw ("az " + ($AzArgs -join ' ') + " failed ($LASTEXITCODE):`n" + ($output -join "`n"))
     }
     return $output
-}
-
-# Same call, but returns $false instead of throwing (used for probing).
-function Test-Az {
-    param([Parameter(ValueFromRemainingArguments = $true)][string[]]$AzArgs)
-    & $azExe @AzArgs 2>&1 | Out-Null
-    return ($LASTEXITCODE -eq 0)
 }
 
 function New-RandomToken([int]$Length) {
@@ -74,10 +70,10 @@ if (-not (Test-Path $sqlFile)) { throw "Migration file not found: $sqlFile" }
 
 # --- 0. Confirm we are pointed at the right subscription --------------------
 Step 'Checking Azure context'
-$acct = (Invoke-Az account show -o json) | ConvertFrom-Json
+$acct = (Invoke-Az -AzArgs @('account','show','-o','json')) | ConvertFrom-Json
 Note "Subscription: $($acct.name)"
 Note "Tenant:       $($acct.tenantId)"
-Invoke-Az group show -n $ResourceGroup -o none | Out-Null
+Invoke-Az -AzArgs @('group','show','-n',$ResourceGroup,'-o','none') | Out-Null
 Note "Resource group '$ResourceGroup' is reachable."
 
 # --- 1. Temporarily allow this machine through the Postgres firewall --------
@@ -86,20 +82,18 @@ $myIp = (Invoke-RestMethod -Uri 'https://api.ipify.org?format=json').ip
 $ruleName = 'tmp-migrate-' + (Get-Date -Format 'yyyyMMddHHmmss')
 Note "Public IP: $myIp  (rule: $ruleName)"
 
-$pgKind = 'flexible'
-if (-not (Test-Az postgres flexible-server firewall-rule create -g $ResourceGroup -n $PgServer `
-            --rule-name $ruleName --start-ip-address $myIp --end-ip-address $myIp -o none)) {
-    Note 'Not a Flexible Server; falling back to Single Server.'
-    $pgKind = 'single'
-    Invoke-Az postgres server firewall-rule create -g $ResourceGroup -s $PgServer `
-        -n $ruleName --start-ip-address $myIp --end-ip-address $myIp -o none | Out-Null
-}
+# Flexible Server only. An earlier version probed and fell back to Single Server
+# on any failure, which turned a simple wrong-argument error into a bogus
+# "this must be a Single Server" conclusion. Fail loudly instead.
+Invoke-Az -AzArgs @('postgres','flexible-server','firewall-rule','create','-g',$ResourceGroup,'-s',$PgServer,
+    '-n',$ruleName,'--start-ip-address',$myIp,'--end-ip-address',$myIp,'-o','none') | Out-Null
+Note 'Firewall rule created.'
 
 try {
     # --- 2. Apply the schema using the CURRENT connection string ------------
     Step 'Applying the schema migration'
-    $currentDbUrl = Invoke-Az webapp config appsettings list -g $ResourceGroup -n $ApiApp `
-        --query "[?name=='DATABASE_URL'].value | [0]" -o tsv
+    $currentDbUrl = Invoke-Az -AzArgs @('webapp','config','appsettings','list','-g',$ResourceGroup,'-n',$ApiApp,
+        '--query',"[?name=='DATABASE_URL'].value | [0]",'-o','tsv')
     if ([string]::IsNullOrWhiteSpace($currentDbUrl)) {
         throw "DATABASE_URL is not set on $ApiApp, so the database cannot be reached."
     }
@@ -123,13 +117,8 @@ try {
         # avoids Postgres/CLI quoting surprises.
         $newPgPassword = New-RandomToken 32
 
-        if ($pgKind -eq 'flexible') {
-            Invoke-Az postgres flexible-server update -g $ResourceGroup -n $PgServer `
-                --admin-password $newPgPassword -o none | Out-Null
-        } else {
-            Invoke-Az postgres server update -g $ResourceGroup -n $PgServer `
-                --admin-password $newPgPassword -o none | Out-Null
-        }
+        Invoke-Az -AzArgs @('postgres','flexible-server','update','-g',$ResourceGroup,'-n',$PgServer,
+            '--admin-password',$newPgPassword,'-o','none') | Out-Null
 
         $newDbUrl = 'postgresql://' + $PgAdmin + ':' + $newPgPassword + '@' +
                     $PgServer + '.postgres.database.azure.com:5432/' +
@@ -138,9 +127,9 @@ try {
 
         # --- 4. Rotate the storage account key -----------------------------
         Step 'Rotating the storage account key (key1)'
-        Invoke-Az storage account keys renew -g $ResourceGroup -n $StorageAccount --key key1 -o none | Out-Null
-        $newStorageKey = Invoke-Az storage account keys list -g $ResourceGroup -n $StorageAccount `
-            --query "[?keyName=='key1'].value | [0]" -o tsv
+        Invoke-Az -AzArgs @('storage','account','keys','renew','-g',$ResourceGroup,'-n',$StorageAccount,'--key','key1','-o','none') | Out-Null
+        $newStorageKey = Invoke-Az -AzArgs @('storage','account','keys','list','-g',$ResourceGroup,'-n',$StorageAccount,
+            '--query',"[?keyName=='key1'].value | [0]",'-o','tsv')
         if ([string]::IsNullOrWhiteSpace($newStorageKey)) { throw 'Could not read the new storage key.' }
         Note 'Storage key1 rotated.'
     }
@@ -158,12 +147,12 @@ try {
     )
     if ($newStorageKey) { $settings += "AZURE_STORAGE_KEY=$newStorageKey" }
 
-    Invoke-Az webapp config appsettings set -g $ResourceGroup -n $ApiApp --settings @settings -o none | Out-Null
+    Invoke-Az -AzArgs (@('webapp','config','appsettings','set','-g',$ResourceGroup,'-n',$ApiApp,'--settings') + $settings + @('-o','none')) | Out-Null
     Note 'Settings written.'
 
     # --- 6. Restart and verify ---------------------------------------------
     Step 'Restarting the API'
-    Invoke-Az webapp restart -g $ResourceGroup -n $ApiApp -o none | Out-Null
+    Invoke-Az -AzArgs @('webapp','restart','-g',$ResourceGroup,'-n',$ApiApp,'-o','none') | Out-Null
 
     $health = "https://$ApiApp.azurewebsites.net/api/health"
     Note "Waiting for $health ..."
@@ -189,13 +178,8 @@ finally {
     # --- 7. Always close the firewall back up -------------------------------
     Step 'Removing the temporary firewall rule'
     try {
-        if ($pgKind -eq 'flexible') {
-            Invoke-Az postgres flexible-server firewall-rule delete -g $ResourceGroup -n $PgServer `
-                --rule-name $ruleName --yes -o none | Out-Null
-        } else {
-            Invoke-Az postgres server firewall-rule delete -g $ResourceGroup -s $PgServer `
-                -n $ruleName --yes -o none | Out-Null
-        }
+        Invoke-Az -AzArgs @('postgres','flexible-server','firewall-rule','delete','-g',$ResourceGroup,'-s',$PgServer,
+            '-n',$ruleName,'--yes','-o','none') | Out-Null
         Note 'Removed.'
     } catch {
         Write-Warning "Could not remove firewall rule '$ruleName'; delete it manually."
